@@ -1,0 +1,18 @@
+﻿<Window x:Class="IgrejaOnline.Views.index"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IgrejaOnline.Views"
+        mc:Ignorable="d"
+        Title="index" Height="450" Width="942.5">
+    <Grid Margin="0,0,58,0">
+        <Button x:Name="Btn01" Content="Cultos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" Height="39" Click="Button_Click"/>
+        <Button Content="Consultoria&#xD;&#xA; Espiritual" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" Width="123" Height="39" Click="Button_Click_1"/>
+        <Button Content="Dizimitas" HorizontalAlignment="Left" Margin="379,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="625,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
+        <Button Content="Pastores" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
+        <Button Content="Doações" HorizontalAlignment="Left" Margin="502,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
+
+    </Grid>
+</Window>
