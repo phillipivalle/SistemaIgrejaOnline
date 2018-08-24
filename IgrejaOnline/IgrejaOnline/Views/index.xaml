@@ -13,6 +13,7 @@
         <Button Content="Login" HorizontalAlignment="Left" Margin="625,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
         <Button Content="Pastores" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
         <Button Content="Doações" HorizontalAlignment="Left" Margin="502,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="307,166,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
