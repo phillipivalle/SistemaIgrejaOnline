@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Cultos.xaml.cs">
+      <DependentUpon>Cultos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Cultos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

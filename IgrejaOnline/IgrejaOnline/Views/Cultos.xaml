@@ -1,0 +1,16 @@
+﻿<Window x:Class="IgrejaOnline.Views.Cultos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IgrejaOnline.Views"
+        mc:Ignorable="d"
+        Title="Cultos" Height="450" Width="800">
+    <Grid>
+        <Label Content="DOMINGO&#xD;&#xA;Manhã&#xD;&#xA;09:00 1° Culto Matutino&#xD;&#xA;09:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)&#xD;&#xA;09:00 CFM – Escola de Líderes – Saiba mais&#xD;&#xA;09:00 Escola Bíblica – Saiba mais&#xD;&#xA;10:30 Culto em Inglês (Capela)&#xD;&#xA;11:00 2° Culto Matutino&#xD;&#xA;11:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)&#xD;&#xA;11:00 Escola Bíblica – Saiba mais&#xD;&#xA;&#xD;&#xA;Tarde&#xD;&#xA;17:00 Culto em Italiano (2º domingo do mês)&#xD;&#xA;&#xD;&#xA;Noite&#xD;&#xA;19:00 Culto Vespertino&#xD;&#xA;19:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)" HorizontalAlignment="Left" Margin="28,39,0,0" VerticalAlignment="Top" Height="288" Width="664"/>
+        <Button Content="Domingo" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="28,332,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="28,369,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
