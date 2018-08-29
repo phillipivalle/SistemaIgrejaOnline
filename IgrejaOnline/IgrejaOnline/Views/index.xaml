@@ -6,14 +6,28 @@
         xmlns:local="clr-namespace:IgrejaOnline.Views"
         mc:Ignorable="d"
         Title="index" Height="450" Width="942.5">
-    <Grid Margin="0,0,58,0">
-        <Button x:Name="Btn01" Content="Cultos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" Height="39" Click="Button_Click"/>
-        <Button Content="Consultoria&#xD;&#xA; Espiritual" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" Width="123" Height="39" Click="Button_Click_1"/>
-        <Button Content="Dizimitas" HorizontalAlignment="Left" Margin="379,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="625,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
-        <Button Content="Pastores" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
-        <Button Content="Doações" HorizontalAlignment="Left" Margin="502,10,0,0" VerticalAlignment="Top" Width="123" Height="39"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="307,166,0,0" VerticalAlignment="Top" Width="75"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnLogin" Grid.Column="3" Grid.Row="1" BorderBrush="#FF707070" Content="Entrar" />
+        
+       
+
+
 
     </Grid>
 </Window>
