@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para PaginaInicial.xaml
+    /// Lógica interna para CadastroDizimista.xaml
     /// </summary>
-    public partial class PaginaInicial : Window
+    public partial class CadastroDizimista : Window
     {
-        public PaginaInicial()
+        public CadastroDizimista()
         {
             InitializeComponent();
         }
-
-      
     }
 }

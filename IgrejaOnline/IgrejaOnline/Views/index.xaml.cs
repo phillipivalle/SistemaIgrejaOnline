@@ -23,5 +23,12 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            PaginaInicial iniciando = new PaginaInicial();
+            iniciando.ShowDialog();
+
+        }
     }
 }

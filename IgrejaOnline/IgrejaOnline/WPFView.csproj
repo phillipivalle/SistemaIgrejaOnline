@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\CadastroDizimista.xaml.cs">
+      <DependentUpon>CadastroDizimista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Cultos.xaml.cs">
       <DependentUpon>Cultos.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\CadastroDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Cultos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
