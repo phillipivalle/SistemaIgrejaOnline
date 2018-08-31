@@ -134,5 +134,17 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\corpus-christi-pomba-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\amex.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
