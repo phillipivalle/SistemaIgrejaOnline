@@ -11,23 +11,33 @@
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="#FF7EB0BB"/>
                 <GradientStop Color="#FFE3E3E3" Offset="0.534"/>
-                <GradientStop Color="#FF807474" Offset="1"/>
+                <GradientStop Color="#FF84B3BE" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        
+
         <DockPanel x:Name="Menu" HorizontalAlignment="Center" Height="34" LastChildFill="False" VerticalAlignment="Top" Width="792" Background="#FF84B3BE" OpacityMask="#FFE3E3E3" Margin="0,10,0,0">
-            <Button x:Name="btnDizimistas" Content="Dizimistas" Height="34" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4" Foreground="#FF000506" HorizontalAlignment="Center" Cursor="None"/>
+
             <Button x:Name="btnPastores" Content="Pastores" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
             <Button x:Name="btnCultos" Content="Cultos" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
             <Button x:Name="btnFinanceiro" Content="Financeiro" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
             <Button x:Name="btnNovoCadastro" Content="Novos Cadastros" Height="34" VerticalAlignment="Top" Width="104" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
             <Button x:Name="btnIgrejas" Content="Igrejas" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
 
+            <Menu x:Name="MenuDizimista" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuDizimo" Header="Dizimistas" Height="34" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">
+                    <MenuItem Header="Novo Dizimista"/>
+                    <MenuItem Header="Aniversariantes"/>
+                    <MenuItem Header="Top10 Dizimistas"/>
+
+                </MenuItem>
+
+            </Menu>
+
+
+
+
+
 
         </DockPanel>
-
-
-
-
     </Grid>
 </Window>
