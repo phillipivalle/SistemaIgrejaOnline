@@ -49,10 +49,10 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="boxUsuario" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="34,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.ColumnSpan="3" Grid.Row="1" TextAlignment="Center" Background="#FFF3E7E7" BorderBrush="#FFD5D9E6" FontFamily="Franklin Gothic Book"/>
-        <TextBox x:Name="boxSenha" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="34,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" TextAlignment="Center" Background="#FFF5ECEC"/>
         <Label x:Name="labelUsuário" Content=" Usuário " Grid.Column="2" HorizontalAlignment="Left" Margin="12,47,0,0" VerticalAlignment="Top" Width="72" Grid.RowSpan="2"/>
         <Label x:Name="labelSenha" Content=" Senha" Grid.Column="2" HorizontalAlignment="Left" Margin="12,42,0,0" VerticalAlignment="Top" Width="72" Grid.Row="1"/>
         <Image x:Name="Pomba" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="0,48,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100" Source="corpus-christi-pomba-4.jpg"/>
+        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="34,0,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="153" Height="25" Background="#FFF3E7E7"/>
 
 
 

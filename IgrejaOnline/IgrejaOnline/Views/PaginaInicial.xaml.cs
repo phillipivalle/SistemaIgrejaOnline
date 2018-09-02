@@ -187,5 +187,7 @@ namespace IgrejaOnline.Views
             DespesasWPF UltimasDespesas = new DespesasWPF();
             UltimasDespesas.ShowDialog();
         }
+
+    
     }
 }
