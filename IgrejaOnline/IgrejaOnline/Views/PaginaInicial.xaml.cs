@@ -30,5 +30,24 @@ namespace IgrejaOnline.Views
 
             cadastrarFiel.ShowDialog();
         }
+
+        private void btnTotalDizimistas_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultaDizimista ListDizimista = new ConsultaDizimista();
+
+            ListDizimista.ShowDialog();
+        }
+
+        private void btnTotHomens_Click(object sender, RoutedEventArgs e)
+        {
+            ListaHomens ListHomensDizimistas = new ListaHomens();
+            ListHomensDizimistas.ShowDialog();
+        }
+
+        private void btnTotMulheres_Click(object sender, RoutedEventArgs e)
+        {
+            ListaMulheres ListMulheresDizimistas = new ListaMulheres();
+            ListMulheresDizimistas.ShowDialog();
+        }
     }
 }
