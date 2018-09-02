@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IgrejaOnline.Views"
         mc:Ignorable="d"
         Title="PaginaInicial" Height="450" Width="800">
-    <Grid x:Name="PaginaInicial1">
+    <Grid x:Name="PaginaInicial1" OpacityMask="#FFD11919">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="#FF7EB0BB"/>
@@ -17,25 +17,67 @@
 
         <DockPanel x:Name="Menu" HorizontalAlignment="Center" Height="34" LastChildFill="False" VerticalAlignment="Top" Width="792" Background="#FF84B3BE" OpacityMask="#FFE3E3E3" Margin="0,10,0,0">
 
-            <Button x:Name="btnPastores" Content="Pastores" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
-            <Button x:Name="btnCultos" Content="Cultos" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
-            <Button x:Name="btnFinanceiro" Content="Financeiro" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
-            <Button x:Name="btnNovoCadastro" Content="Novos Cadastros" Height="34" VerticalAlignment="Top" Width="104" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
-            <Button x:Name="btnIgrejas" Content="Igrejas" Height="34" VerticalAlignment="Top" Width="75" Background="#FF84B3BE" BorderBrush="#FF95BCC4"/>
-
             <Menu x:Name="MenuDizimista" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
-                <MenuItem x:Name="MenuDizimo" Header="Dizimistas" Height="34" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">
-                    <MenuItem Header="Novo Dizimista"/>
-                    <MenuItem Header="Aniversariantes"/>
-                    <MenuItem Header="Top10 Dizimistas"/>
+                <MenuItem x:Name="MenuDizimo" Header="Dizimistas" Height="34" Width="74" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnNovoDizimista" Header="Novo Dizimista" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-19,0" Width="195" Click="btnNovoDizimista_Click"/>
+                    <MenuItem x:Name="btnConsulta" Header="Consultas" Background="#FF84B3BE" BorderBrush="#FF84B3BE" OpacityMask="#FF84B3BE" Margin="0,0,-26,0">
+                        <Menu x:Name="MenuConsultas" Height="50" VerticalAlignment="Top" Width="86" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                            <MenuItem x:Name="btnTotalDizimistas" Header="Total" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <MenuItem x:Name="btnTotHomens" Header="Homens" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <MenuItem x:Name="btnTotMulheres" Header="Mulheres" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Menu>
+                    </MenuItem>
+                    <MenuItem x:Name="MenuFaixaEtaria" Header="Faixa Etária" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="195" Margin="-1,0,-18,0">
+                        <Menu x:Name="MenuFaixa" Height="63" VerticalAlignment="Top" Width="76" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                            <MenuItem x:Name="FaixaCrianca" Header="Crianças" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <MenuItem x:Name="FaixaAdolescente" Header="Adolescentes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <MenuItem x:Name="FaixaAdultos" Header="Adultos" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <MenuItem x:Name="FaixaIdosos" Header="Idosos" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Menu>
+                    </MenuItem>
+                    <MenuItem x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-13,0" Width="189"/>
+                    <MenuItem x:Name="btnFielEdit" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201"/>
+                    <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202"/>
 
                 </MenuItem>
-
             </Menu>
 
+            <Menu x:Name="MenuPastores" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuPastor" Header="Pastores" Height="34" Width="75" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnNewPastor" Header="Novo Pastor" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnConsultarPastor" Header="Consultar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnPastorEdit" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnPastorDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="MenuIgrejas" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuIgreja" Header="Igrejas" Height="34" Width="75" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem Header="Nova igreja" x:Name="btnNewIgreja" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="ConsultarIgreja" Header="Consultar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="igrejaEdit" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="igrejaDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="MenuCultos" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuCulto" Header="Cultos" Height="34" Width="75" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnHorarioCulto" Header="Horários" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="MenuDoacoes" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuDoacao" Header="Doações" Height="34" Width="75" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnDeposito" Header="Depósito" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnCartao" Header="Cartão" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnBoleto" Header="Boleto" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="MenuReceitas" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                <MenuItem x:Name="MenuReceita" Header="Financeiro" Height="34" Width="75" FontSize="14" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnSaldo" Header="Saldo" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnReceita" Header="Receita" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnDespesas" Header="Despesa" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-
-
+                </MenuItem>
+            </Menu>
 
 
         </DockPanel>

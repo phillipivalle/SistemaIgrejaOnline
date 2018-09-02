@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para PaginaInicial.xaml
+    /// Lógica interna para ConsultaDizimista.xaml
     /// </summary>
-    public partial class PaginaInicial : Window
+    public partial class ConsultaDizimista : Window
     {
-        public PaginaInicial()
+        public ConsultaDizimista()
         {
             InitializeComponent();
-        }
-
-        private void btnNovoDizimista_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroDizimista cadastrarFiel = new CadastroDizimista();
-
-            cadastrarFiel.ShowDialog();
         }
     }
 }

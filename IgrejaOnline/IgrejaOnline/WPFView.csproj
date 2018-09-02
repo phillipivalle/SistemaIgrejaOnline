@@ -66,11 +66,20 @@
     <Compile Include="Views\CadastroDizimista.xaml.cs">
       <DependentUpon>CadastroDizimista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConsultaDizimista.xaml.cs">
+      <DependentUpon>ConsultaDizimista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Cultos.xaml.cs">
       <DependentUpon>Cultos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaHomens.xaml.cs">
+      <DependentUpon>ListaHomens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaMulheres.xaml.cs">
+      <DependentUpon>ListaMulheres.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PaginaInicial.xaml.cs">
       <DependentUpon>PaginaInicial.xaml</DependentUpon>
@@ -91,11 +100,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ConsultaDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Cultos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaHomens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaMulheres.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
