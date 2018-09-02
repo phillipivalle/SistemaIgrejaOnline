@@ -49,5 +49,47 @@ namespace IgrejaOnline.Views
             ListaMulheres ListMulheresDizimistas = new ListaMulheres();
             ListMulheresDizimistas.ShowDialog();
         }
+
+        private void FaixaCrianca_Click(object sender, RoutedEventArgs e)
+        {
+            ListaCrianças ListCrianca = new ListaCrianças();
+            ListCrianca.ShowDialog();
+        }
+
+        private void FaixaAdolescente_Click(object sender, RoutedEventArgs e)
+        {
+            ListAdolescentes ListAdolescente = new ListAdolescentes();
+            ListAdolescente.ShowDialog();
+        }
+
+        private void FaixaAdultos_Click(object sender, RoutedEventArgs e)
+        {
+            ListaAdultos ListAdultos = new ListaAdultos();
+            ListAdultos.ShowDialog();
+        }
+
+        private void FaixaIdosos_Click(object sender, RoutedEventArgs e)
+        {
+            ListaIdosos ListIdosos = new ListaIdosos();
+            ListIdosos.ShowDialog();
+        }
+
+        private void btnFielEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditarDizimista FielEdit = new EditarDizimista();
+            FielEdit.ShowDialog();
+        }
+
+        private void btnFielDelete_Click(object sender, RoutedEventArgs e)
+        {
+            ExcluindoDizimista FielDelete = new ExcluindoDizimista();
+            FielDelete.ShowDialog();
+        }
+
+        private void btnAniversariantes_Click(object sender, RoutedEventArgs e)
+        {
+            ListaAniversariantes ListNiver = new ListaAniversariantes();
+            ListNiver.ShowDialog();
+        }
     }
 }

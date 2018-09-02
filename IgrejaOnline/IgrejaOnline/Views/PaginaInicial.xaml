@@ -27,18 +27,18 @@
                             <MenuItem x:Name="btnTotMulheres" FlowDirection="LeftToRight" Header="Mulheres" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTotMulheres_Click"/>
                             <MenuItem x:Name="MenuFaixaEtaria" Header="Faixa Etária" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92">
                                 <Menu x:Name="MenuFaixa" Height="63" FlowDirection="LeftToRight" VerticalAlignment="Top" Width="76" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
-                                    <MenuItem x:Name="FaixaCrianca" FlowDirection="LeftToRight" Header="Crianças" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    <MenuItem x:Name="FaixaAdolescente" FlowDirection="LeftToRight" Header="Adolescentes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    <MenuItem x:Name="FaixaAdultos" Header="Adultos" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    <MenuItem x:Name="FaixaIdosos" FlowDirection="LeftToRight" Header="Idosos" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <MenuItem x:Name="FaixaCrianca" FlowDirection="LeftToRight" Header="Crianças" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaCrianca_Click"/>
+                                    <MenuItem x:Name="FaixaAdolescente" FlowDirection="LeftToRight" Header="Adolescentes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaAdolescente_Click"/>
+                                    <MenuItem x:Name="FaixaAdultos" Header="Adultos" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaAdultos_Click"/>
+                                    <MenuItem x:Name="FaixaIdosos" FlowDirection="LeftToRight" Header="Idosos" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaIdosos_Click"/>
                                 </Menu>
                             </MenuItem>
-                            <MenuItem FlowDirection="LeftToRight"  x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92"/>
+                            <MenuItem FlowDirection="LeftToRight"  x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Click="btnAniversariantes_Click"/>
 
                         </Menu>
                     </MenuItem>
-                    <MenuItem x:Name="btnFielEdit" FlowDirection="LeftToRight" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201"/>
-                    <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202"/>
+                    <MenuItem x:Name="btnFielEdit" FlowDirection="LeftToRight" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201" Click="btnFielEdit_Click"/>
+                    <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202" Click="btnFielDelete_Click"/>
                 </MenuItem>
             </Menu>
 

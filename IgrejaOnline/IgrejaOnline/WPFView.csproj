@@ -72,11 +72,32 @@
     <Compile Include="Views\Cultos.xaml.cs">
       <DependentUpon>Cultos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditarDizimista.xaml.cs">
+      <DependentUpon>EditarDizimista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcluindoDizimista.xaml.cs">
+      <DependentUpon>ExcluindoDizimista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListaAdultos.xaml.cs">
+      <DependentUpon>ListaAdultos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaAniversariantes.xaml.cs">
+      <DependentUpon>ListaAniversariantes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaCrianças.xaml.cs">
+      <DependentUpon>ListaCrianças.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListAdolescentes.xaml.cs">
+      <DependentUpon>ListAdolescentes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ListaHomens.xaml.cs">
       <DependentUpon>ListaHomens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaIdosos.xaml.cs">
+      <DependentUpon>ListaIdosos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaMulheres.xaml.cs">
       <DependentUpon>ListaMulheres.xaml</DependentUpon>
@@ -108,11 +129,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EditarDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExcluindoDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ListaAdultos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaAniversariantes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaCrianças.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListAdolescentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ListaHomens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaIdosos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
