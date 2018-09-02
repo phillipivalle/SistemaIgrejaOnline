@@ -66,17 +66,47 @@
     <Compile Include="Views\CadastroDizimista.xaml.cs">
       <DependentUpon>CadastroDizimista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastroNewIgreja.xaml.cs">
+      <DependentUpon>CadastroNewIgreja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastroPastor.xaml.cs">
+      <DependentUpon>CadastroPastor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsultaDizimista.xaml.cs">
       <DependentUpon>ConsultaDizimista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultaIgreja.xaml.cs">
+      <DependentUpon>ConsultaIgreja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultaPastor.xaml.cs">
+      <DependentUpon>ConsultaPastor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Cultos.xaml.cs">
       <DependentUpon>Cultos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DepositosWPF.xaml.cs">
+      <DependentUpon>DepositosWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DespesasWPF.xaml.cs">
+      <DependentUpon>DespesasWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoacaoBoletoWPF.xaml.cs">
+      <DependentUpon>DoacaoBoletoWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoacaoCartaoWPF.xaml.cs">
+      <DependentUpon>DoacaoCartaoWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditarDizimista.xaml.cs">
       <DependentUpon>EditarDizimista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditarNewIgreja.xaml.cs">
+      <DependentUpon>EditarNewIgreja.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExcluindoDizimista.xaml.cs">
       <DependentUpon>ExcluindoDizimista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcluindoIgreja.xaml.cs">
+      <DependentUpon>ExcluindoIgreja.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
@@ -102,8 +132,26 @@
     <Compile Include="Views\ListaMulheres.xaml.cs">
       <DependentUpon>ListaMulheres.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewCultoWPF.xaml.cs">
+      <DependentUpon>NewCultoWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PaginaInicial.xaml.cs">
       <DependentUpon>PaginaInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PastorEdit.xaml.cs">
+      <DependentUpon>PastorEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PastorExcluir.xaml.cs">
+      <DependentUpon>PastorExcluir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReceitaWPF.xaml.cs">
+      <DependentUpon>ReceitaWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaldosWPF.xaml.cs">
+      <DependentUpon>SaldosWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WPFListHorarios.xaml.cs">
+      <DependentUpon>WPFListHorarios.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -121,7 +169,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastroNewIgreja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastroPastor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConsultaDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultaIgreja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultaPastor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,11 +193,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DepositosWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DespesasWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoacaoBoletoWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoacaoCartaoWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EditarDizimista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EditarNewIgreja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ExcluindoDizimista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExcluindoIgreja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,7 +257,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\NewCultoWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PaginaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PastorEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PastorExcluir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReceitaWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SaldosWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WPFListHorarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

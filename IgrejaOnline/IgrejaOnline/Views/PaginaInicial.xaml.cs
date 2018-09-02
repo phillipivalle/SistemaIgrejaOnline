@@ -91,5 +91,101 @@ namespace IgrejaOnline.Views
             ListaAniversariantes ListNiver = new ListaAniversariantes();
             ListNiver.ShowDialog();
         }
+
+        private void btnNewPastor_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroPastor CadastrandoPastor = new CadastroPastor();
+            CadastrandoPastor.ShowDialog();
+        }
+
+        private void btnConsultarPastor_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultaPastor ListPastor = new ConsultaPastor();
+            ListPastor.ShowDialog();
+        }
+
+        private void btnPastorEdit_Click(object sender, RoutedEventArgs e)
+        {
+            PastorEdit EditandoPastor = new PastorEdit();
+            EditandoPastor.ShowDialog();
+        }
+
+        private void btnPastorDelete_Click(object sender, RoutedEventArgs e)
+        {
+            PastorExcluir DeletePastor = new PastorExcluir();
+            DeletePastor.ShowDialog();
+        }
+
+        private void btnNewIgreja_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroNewIgreja CadastrandoIgreja = new CadastroNewIgreja();
+            CadastrandoIgreja.ShowDialog();
+        }
+
+        private void btnNewCulto_Click(object sender, RoutedEventArgs e)
+        {
+            NewCultoWPF NovoCulto = new NewCultoWPF();
+            NovoCulto.ShowDialog();
+        }
+
+        private void ConsultarIgreja_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultaIgreja ListIgreja = new ConsultaIgreja();
+            ListIgreja.ShowDialog();
+        }
+
+        private void igrejaEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditarNewIgreja EditandoIgreja = new EditarNewIgreja();
+            EditandoIgreja.ShowDialog();
+        }
+
+        private void igrejaDelete_Click(object sender, RoutedEventArgs e)
+        {
+            ExcluindoIgreja DeletandoIgrejas = new ExcluindoIgreja();
+            DeletandoIgrejas.ShowDialog();
+        }
+
+        private void btnHorarioCulto_Click(object sender, RoutedEventArgs e)
+        {
+            WPFListHorarios ListaHorario = new WPFListHorarios();
+            ListaHorario.ShowDialog();
+        }
+
+        private void btnDeposito_Click(object sender, RoutedEventArgs e)
+        {
+            DepositosWPF DepositoDoacao = new DepositosWPF();
+            DepositoDoacao.ShowDialog();
+        }
+
+        private void btnCartao_Click(object sender, RoutedEventArgs e)
+        {
+            DoacaoCartaoWPF CartaoDoacao = new DoacaoCartaoWPF();
+            CartaoDoacao.ShowDialog();
+        }
+
+        private void btnBoleto_Click(object sender, RoutedEventArgs e)
+        {
+            DoacaoBoletoWPF BoletoDoacao = new DoacaoBoletoWPF();
+            BoletoDoacao.ShowDialog();
+        }
+
+        private void btnSaldo_Click(object sender, RoutedEventArgs e)
+        {
+            SaldosWPF SaldoAtual = new SaldosWPF();
+            SaldoAtual.ShowDialog();
+        }
+
+        private void btnReceita_Click(object sender, RoutedEventArgs e)
+        {
+            ReceitaWPF Receitas = new ReceitaWPF();
+            Receitas.ShowDialog();
+        }
+
+        private void btnDespesas_Click(object sender, RoutedEventArgs e)
+        {
+            DespesasWPF UltimasDespesas = new DespesasWPF();
+            UltimasDespesas.ShowDialog();
+        }
     }
 }
