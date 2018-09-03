@@ -78,10 +78,10 @@
             </Menu>
             <Button Visibility="Hidden" Width="270" />
             <Menu x:Name="NovosUsuarios" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
-                <MenuItem x:Name="NovoUsuario" Header="Financeiro" Height="34" Width="81" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <MenuItem x:Name="btnCadastrarNovoUsuario" Header="Saldo" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <MenuItem x:Name="btnEditarNovoUsuario" Header="Receita" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <MenuItem x:Name="btnExcluirNovoUsuario" Header="Despesa" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <MenuItem x:Name="NovoUsuario" Header="Novo Usuario" Height="34" Width="81" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem x:Name="btnCadastrarNovoUsuario" Header="Cadastrar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnEditarNovoUsuario" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnExcluirNovoUsuario" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 </MenuItem>
             </Menu>
 
