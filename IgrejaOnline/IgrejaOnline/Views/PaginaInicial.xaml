@@ -19,7 +19,8 @@
             
                 <Menu x:Name="MenuDizimista" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
                     <MenuItem x:Name="MenuDizimo" Header="Dizimistas" Height="40" Width="78" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <MenuItem x:Name="btnNovoDizimista" Header="Novo Dizimista" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-19,0" Width="195" Click="btnNovoDizimista_Click"/>
+                        <MenuItem 
+x:Name="btnNovoDizimista" Header="Novo Dizimista" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-19,0" Width="195" Click="btnNovoDizimista_Click"/>
                         <MenuItem x:Name="btnConsulta" Header="Consultas" Background="#FF84B3BE" BorderBrush="#FF84B3BE" OpacityMask="#FF84B3BE" Margin="0,0,-26,0">
                             <Menu x:Name="MenuConsultas" Height="78" VerticalAlignment="Top" Width="91" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
                                 <MenuItem x:Name="btnTotalDizimistas" FlowDirection="LeftToRight" Header="Total" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTotalDizimistas_Click"/>
@@ -79,9 +80,9 @@
             <Button Visibility="Hidden" Width="280" />
             <Menu x:Name="NovosUsuarios" Height="34" VerticalAlignment="Top" Width="114" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
                 <MenuItem x:Name="NovoUsuario" Header="Novo Usuario" Height="34" Width="99" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <MenuItem x:Name="btnCadastrarNovoUsuario" Header="Cadastrar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <MenuItem x:Name="btnEditarNovoUsuario" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <MenuItem x:Name="btnExcluirNovoUsuario" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <MenuItem x:Name="btnCadastrarNovoUsuario" Header="Cadastrar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnCadastrarNovoUsuario_Click"/>
+                    <MenuItem x:Name="btnEditarNovoUsuario" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnEditarNovoUsuario_Click"/>
+                    <MenuItem x:Name="btnExcluirNovoUsuario" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnExcluirNovoUsuario_Click"/>
                 </MenuItem>
             </Menu>
 

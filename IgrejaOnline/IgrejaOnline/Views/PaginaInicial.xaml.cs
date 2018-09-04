@@ -188,6 +188,22 @@ namespace IgrejaOnline.Views
             UltimasDespesas.ShowDialog();
         }
 
-    
+        private void btnCadastrarNovoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            NovoUsuarioWPF CadastroNewUsuario = new NovoUsuarioWPF();
+            CadastroNewUsuario.ShowDialog();
+        }
+
+        private void btnEditarNovoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            EditUsuarioNew EditandoUsuario = new EditUsuarioNew();
+            EditandoUsuario.ShowDialog();
+        }
+
+        private void btnExcluirNovoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteUsuarioNew DeletandoUsuario = new DeleteUsuarioNew();
+            DeletandoUsuario.ShowDialog();
+        }
     }
 }

@@ -15,22 +15,13 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para index.xaml
+    /// Lógica interna para DeleteUsuarioNew.xaml
     /// </summary>
-    public partial class index : Window
+    public partial class DeleteUsuarioNew : Window
     {
-        public index()
+        public DeleteUsuarioNew()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            index comeco = new index();
-            comeco.Close();
-            PaginaInicial iniciando = new PaginaInicial();
-            iniciando.Show();
-          
         }
     }
 }

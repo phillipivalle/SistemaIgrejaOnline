@@ -84,6 +84,9 @@
     <Compile Include="Views\Cultos.xaml.cs">
       <DependentUpon>Cultos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DeleteUsuarioNew.xaml.cs">
+      <DependentUpon>DeleteUsuarioNew.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DepositosWPF.xaml.cs">
       <DependentUpon>DepositosWPF.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,9 @@
     </Compile>
     <Compile Include="Views\EditarNewIgreja.xaml.cs">
       <DependentUpon>EditarNewIgreja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditUsuarioNew.xaml.cs">
+      <DependentUpon>EditUsuarioNew.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ExcluindoDizimista.xaml.cs">
       <DependentUpon>ExcluindoDizimista.xaml</DependentUpon>
@@ -135,8 +141,20 @@
     <Compile Include="Views\NewCultoWPF.xaml.cs">
       <DependentUpon>NewCultoWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NovoUsuarioWPF.xaml.cs">
+      <DependentUpon>NovoUsuarioWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PaginaInicial.xaml.cs">
       <DependentUpon>PaginaInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaInicialGestorDePessoas.xaml.cs">
+      <DependentUpon>PaginaInicialGestorDePessoas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaInicialGestorEventos.xaml.cs">
+      <DependentUpon>PaginaInicialGestorEventos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaInicialTesoureiro.xaml.cs">
+      <DependentUpon>PaginaInicialTesoureiro.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PastorEdit.xaml.cs">
       <DependentUpon>PastorEdit.xaml</DependentUpon>
@@ -193,6 +211,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DeleteUsuarioNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DepositosWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -214,6 +236,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EditarNewIgreja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditUsuarioNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,7 +287,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\NovoUsuarioWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PaginaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PaginaInicialGestorDePessoas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PaginaInicialGestorEventos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PaginaInicialTesoureiro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
