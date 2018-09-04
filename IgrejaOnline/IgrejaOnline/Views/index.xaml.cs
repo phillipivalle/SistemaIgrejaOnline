@@ -26,8 +26,8 @@ namespace IgrejaOnline.Views
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            index comeco = new index();
-            comeco.Close();
+            index inicio = new index();
+            
             PaginaInicial iniciando = new PaginaInicial();
             iniciando.Show();
           
