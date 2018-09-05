@@ -34,6 +34,64 @@
 
         </Grid.RowDefinitions>
         <Label x:Name="TitleEditDizimistas" Content="Editando informações" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
-
+        <Label x:Name="nome" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="5,0,0,0" Width="112"/>
+        <TextBox x:Name="boxNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC5D4D7" Grid.RowSpan="2"/>
+        <Label x:Name="labelCpf" Content="CPF:&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book"/>
+        <TextBox x:Name="boxCpf" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
+        <Label x:Name="labelSexo" Content="Sexo:&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="130,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book"/>
+        <RadioButton x:Name="radioMasc" Content="Masculino" Grid.Column="1" HorizontalAlignment="Left" Margin="130,0,0,13" Grid.Row="2" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
+        <RadioButton x:Name="radioFem" Content="Feminino" Grid.Column="1" HorizontalAlignment="Left" Margin="226,21,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
+        <Label x:Name="labelNasc" Content="Data de nascimento:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="338,0,0,0"/>
+        <Label x:Name="nome_Copy" Content="Endereço:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
+        <TextBox x:Name="boxEnd" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,27,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
+        <Label x:Name="labelNum" Content="Nº&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="130,50,0,0" Grid.Row="2" VerticalAlignment="Top" Width="44" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book" Height="26" Grid.RowSpan="2"/>
+        <TextBox x:Name="boxCpf_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="215,26,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Background="#FFC5D4D7"/>
+        <Label x:Name="nome_Copy1" Content="CEP:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
+        <TextBox x:Name="boxCpf_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
+        <Label x:Name="labelCity" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="130,0,0,0"/>
+        <TextBox x:Name="boxCpf_Copy2" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
+        <Label x:Name="nome_Copy2" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="208,0,0,0"/>
+        <TextBox x:Name="boxCpf_Copy3" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="214,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Background="#FFC5D4D7"/>
+        <Label x:Name="labelNumCartao" Content="Nº Cartão" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,47,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="nome_Copy4" Content="Cód. de segurança:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="208,47,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="labelCity_Copy" Content="Validade:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="130,0,0,0"/>
+        <Label x:Name="nome_Copy3" Content="Bairro:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="214,50,0,0" Grid.RowSpan="2"/>
+        <TextBox x:Name="boxEnd_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,27,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
+        <TextBox x:Name="boxNumCartao" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
+        <TextBox x:Name="boxValidade" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,21,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
+        <TextBox x:Name="boxSeguranca" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="215,21,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Background="#FFC5D4D7"/>
+        <Label x:Name="nomeCartao" Content="Nome impresso:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
+        <TextBox x:Name="boxNomeCard" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,26,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FFC5D4D7"/>
+        <Label x:Name="BandeiraCard" Content="Nº Cartão" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="215,0,0,0"/>
+        <RadioButton x:Name="radioMasc_Copy" Content="MasterCard" Grid.Column="1" HorizontalAlignment="Left" Margin="214,0,0,5" Grid.Row="6" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
+        <RadioButton x:Name="radioMasc_Copy1" Content="Visa" Grid.Column="1" HorizontalAlignment="Left" Margin="347,0,0,5" Grid.Row="6" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
+        <RadioButton x:Name="radioMasc_Copy2" Content="Amex" Grid.Column="1" HorizontalAlignment="Left" Margin="423,0,0,5" Grid.Row="6" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
+        <Image x:Name="MC" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="307,26,0,0" Grid.Row="6" VerticalAlignment="Top" Width="35" Source="master.png"/>
+        <Image x:Name="Visa" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="396,26,0,0" Grid.Row="6" VerticalAlignment="Top" Width="60" Source="visa.png"/>
+        <Image x:Name="MC_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="479,26,0,0" Grid.Row="6" VerticalAlignment="Top" Width="35" Source="amex.png"/>
+        <DatePicker x:Name="DataNascimento" Grid.Column="1" HorizontalAlignment="Left" Margin="338,18,0,0" Grid.Row="2" VerticalAlignment="Top" Width="180" Foreground="#FF0C0D0D">
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FFC5D4D7" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+            <DatePicker.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC5D4D7" Offset="0"/>
+                    <GradientStop Color="#FFC5D4D7" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.Background>
+        </DatePicker>
+        <Button Margin="10,0,0,5" x:Name="btnCadastrarNewDizimista" Grid.Column="1" Grid.Row="7" BorderBrush="#FF707070" Content="CADASTRAR" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="504" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF182729" Offset="0"/>
+                    <GradientStop Color="#FF7BB3B6" Offset="0.456"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
