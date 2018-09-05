@@ -35,7 +35,7 @@
         </Grid.RowDefinitions>
 
         <Label x:Name="TitleCadastro" Content="Cadastro De Dizimistas" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
-        <Label x:Name="nome" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
+        <Label x:Name="nome" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="5,0,0,0" Width="112"/>
         <TextBox x:Name="boxNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC5D4D7" Grid.RowSpan="2"/>
         <Label x:Name="labelCpf" Content="CPF:&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book"/>
         <TextBox x:Name="boxCpf" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>

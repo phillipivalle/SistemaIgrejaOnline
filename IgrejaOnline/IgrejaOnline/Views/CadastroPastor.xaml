@@ -59,11 +59,25 @@
         <RadioButton x:Name="radioMasc" Content="Masculino" Grid.Column="1" HorizontalAlignment="Left" Margin="157,0,0,13" Grid.Row="2" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
         <RadioButton x:Name="radioFem" Content="Feminino" Grid.Column="1" HorizontalAlignment="Left" Margin="242,22,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17"/>
         <Label x:Name="EnderecoPastor" Content="Endereço:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
-        <TextBox x:Name="boxEndPastor" Grid.Column="1" Height="26" Margin="10,26,212,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFC5D4D7"/>
-        <Label x:Name="labelCpf_Copy" Content="CEP:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book" Margin="10,0,0,0" Height="25"/>
+        <TextBox x:Name="boxEndPastor" Grid.Column="1" Height="26" Margin="10,26,291,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFC5D4D7"/>
+        <Label x:Name="label" Content="CEP:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book" Margin="10,0,0,0" Height="25"/>
         <Label x:Name="labelBairro" Content="Bairro:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="157,52,0,0" Grid.RowSpan="2"/>
         <TextBox x:Name="boxCEP" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,25,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Background="#FFC5D4D7"/>
-        <TextBox x:Name="Boxbox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="157,25,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Background="#FFC5D4D7"/>
+        <TextBox x:Name="BoxBairro" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="157,25,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Background="#FFC5D4D7"/>
+        <Label x:Name="labelCidade" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="107" Foreground="#FF000064" FontSize="14" FontFamily="Franklin Gothic Book" Margin="10,0,0,0" Height="25"/>
+        <TextBox x:Name="boxCidade" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,25,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Background="#FFC5D4D7"/>
+        <TextBox x:Name="BoxUF" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="157,25,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Background="#FFC5D4D7"/>
+        <Label x:Name="labelUF" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="157,48,0,0" Grid.RowSpan="2"/>
+        <Button Margin="10,10,0,42" x:Name="btnCadastrarNewPastor" Grid.Column="1" Grid.Row="6" BorderBrush="#FF707070" Content="CADASTRAR" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="508" Grid.RowSpan="2" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF182729" Offset="0"/>
+                    <GradientStop Color="#FF7BB3B6" Offset="0.456"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labelNum" Content="Nº:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="242,0,0,0"/>
+        <TextBox x:Name="boxNum" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="242,26,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Background="#FFC5D4D7"/>
     </Grid>
 
 </Window>

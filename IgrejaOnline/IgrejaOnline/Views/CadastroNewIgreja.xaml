@@ -34,6 +34,18 @@
 
         </Grid.RowDefinitions>
         <Label x:Name="TitleCadastroNovaIgreja" Content="Cadastrando Nova Igreja" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
+        <Label x:Name="NomeIgreja" Content="Nome da igreja:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="5,0,0,0" Width="112"/>
+        <TextBox x:Name="boxNomeIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC5D4D7"/>
+        <Label x:Name="CNPJIgreja" Content="Número do CNPJ:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,51,0,0" Width="112" Grid.RowSpan="2"/>
+        <Label x:Name="enderecoIgreja" Content="Endereço:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0" Width="112"/>
+        <TextBox x:Name="boxNumCNPJ_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,23,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="#FFC5D4D7"/>
+        <TextBox x:Name="boxNumIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="210,23,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Background="#FFC5D4D7"/>
+        <Label x:Name="labelIgrejaNum" Content="Nº:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="210,49,0,0" Width="112" Grid.RowSpan="2"/>
+        <Label x:Name="LabelBairroIgreja" Content="Bairro:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0" Width="112"/>
+        <TextBox x:Name="boxBairroIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,25,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="#FFC5D4D7"/>
+        <Label x:Name="labelUFIgreja" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="210,49,0,0" Width="112" Grid.RowSpan="2"/>
+        <TextBox x:Name="boxUFIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="210,25,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Background="#FFC5D4D7"/>
+        <TextBox x:Name="boxBairroIgreja_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,24,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="#FFC5D4D7"/>
 
     </Grid>
 
