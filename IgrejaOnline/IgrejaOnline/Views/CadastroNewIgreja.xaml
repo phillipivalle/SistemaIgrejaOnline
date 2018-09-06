@@ -46,6 +46,16 @@
         <Label x:Name="labelUFIgreja" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="210,49,0,0" Width="112" Grid.RowSpan="2"/>
         <TextBox x:Name="boxUFIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="210,25,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Background="#FFC5D4D7"/>
         <TextBox x:Name="boxBairroIgreja_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,24,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="#FFC5D4D7"/>
+        <Button Margin="10,52,0,0" x:Name="btnCadastrarNewPastor" Grid.Column="1" Grid.Row="5" BorderBrush="#FF707070" Content="CADASTRAR" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="508" Grid.RowSpan="2" Click="btnCadastrarNewPastor_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF182729" Offset="0"/>
+                    <GradientStop Color="#FF7BB3B6" Offset="0.456"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="SiteIgreja" Content="Site:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,50,0,0" Width="112" Grid.RowSpan="2"/>
+        <TextBox x:Name="BoxSiteIgreja" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,17,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="#FFC5D4D7"/>
 
     </Grid>
 

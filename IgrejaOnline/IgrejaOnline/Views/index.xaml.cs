@@ -26,11 +26,10 @@ namespace IgrejaOnline.Views
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            index inicio = new index();
+
+                PaginaInicial iniciando = new PaginaInicial();
+                iniciando.Show();
             
-            PaginaInicial iniciando = new PaginaInicial();
-            iniciando.Show();
-          
         }
     }
 }
