@@ -23,5 +23,10 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void GridListDizimista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
