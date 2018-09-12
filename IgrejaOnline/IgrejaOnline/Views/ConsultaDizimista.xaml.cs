@@ -23,7 +23,5 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
-
-       
     }
 }
