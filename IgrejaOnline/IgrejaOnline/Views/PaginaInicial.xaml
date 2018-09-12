@@ -37,8 +37,8 @@ x:Name="btnNovoDizimista" Header="Novo Dizimista" BorderBrush="#FF84B3BE" Backgr
                                 <MenuItem FlowDirection="LeftToRight"  x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Click="btnAniversariantes_Click"/>
                             </Menu>
                         </MenuItem>
-                        <MenuItem x:Name="btnFielEdit" FlowDirection="LeftToRight" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201" Click="btnFielEdit_Click"/>
-                        <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202" Click="btnFielDelete_Click"/>
+                        <MenuItem x:Name="btnFielEdit" FlowDirection="LeftToRight" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201"/>
+                        <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202" />
                     </MenuItem>
                 </Menu>
                 <Menu x:Name="MenuPastores" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">

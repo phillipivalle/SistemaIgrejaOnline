@@ -165,6 +165,9 @@
     <Compile Include="Views\SaldosWPF.xaml.cs">
       <DependentUpon>SaldosWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UsuariosCadastros.xaml.cs">
+      <DependentUpon>UsuariosCadastros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WPFListHorarios.xaml.cs">
       <DependentUpon>WPFListHorarios.xaml</DependentUpon>
     </Compile>
@@ -313,6 +316,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SaldosWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UsuariosCadastros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
