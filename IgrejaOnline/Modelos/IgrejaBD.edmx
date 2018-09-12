@@ -14,6 +14,12 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="IgrejaBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="IgrejaBDContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DizimistaSet" EntityType="IgrejaBD.Dizimista" />
+          <EntitySet Name="UserSet" EntityType="IgrejaBD.User" />
+          <EntitySet Name="EmailSet" EntityType="IgrejaBD.Email" />
+          <AssociationSet Name="EmailUser" Association="IgrejaBD.EmailUser">
+            <End Role="Email" EntitySet="EmailSet" />
+            <End Role="User" EntitySet="UserSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Dizimista">
           <Key>
@@ -21,6 +27,28 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Senha" Type="String" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Email">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EndEmail" Type="String" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="IgrejaBD.EmailUser" FromRole="Email" ToRole="User" />
+        </EntityType>
+        <Association Name="EmailUser">
+          <End Type="IgrejaBD.Email" Role="Email" Multiplicity="1" />
+          <End Type="IgrejaBD.User" Role="User" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

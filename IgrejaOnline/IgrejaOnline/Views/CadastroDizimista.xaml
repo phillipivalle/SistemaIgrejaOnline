@@ -51,12 +51,12 @@
         <TextBox x:Name="boxCpf_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
         <Label x:Name="labelCity" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="130,0,0,0"/>
         <TextBox x:Name="boxCpf_Copy2" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
-        <Label x:Name="nome_Copy2" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="208,0,0,0"/>
+        <Label x:Name="nome_Copy2" Content="UF:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="215,52,0,0" Grid.RowSpan="2"/>
         <TextBox x:Name="boxCpf_Copy3" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="214,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Background="#FFC5D4D7"/>
         <Label x:Name="labelNumCartao" Content="Nº Cartão" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,47,0,0" Grid.RowSpan="2"/>
-        <Label x:Name="nome_Copy4" Content="Cód. de segurança:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="208,47,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="nome_Copy4" Content="Cód. de seg:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="214,47,0,0" Grid.RowSpan="2"/>
         <Label x:Name="labelCity_Copy" Content="Validade:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="130,0,0,0"/>
-        <Label x:Name="nome_Copy3" Content="Bairro:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="214,50,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="nome_Copy3" Content="Bairro:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="214,0,0,0" Width="48"/>
         <TextBox x:Name="boxEnd_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,27,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
         <TextBox x:Name="boxNumCartao" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Background="#FFC5D4D7"/>
         <TextBox x:Name="boxValidade" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="130,21,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Background="#FFC5D4D7"/>
@@ -94,6 +94,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label x:Name="SalarioDizimista" Content="Salário:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="338,0,0,0"/>
+        <TextBox x:Name="boxSalario" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="338,26,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Background="#FFC5D4D7"/>
 
     </Grid>
 </Window>

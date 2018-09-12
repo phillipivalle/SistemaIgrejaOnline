@@ -74,18 +74,6 @@ namespace IgrejaOnline.Views
             ListIdosos.ShowDialog();
         }
 
-        private void btnFielEdit_Click(object sender, RoutedEventArgs e)
-        {
-            EditarDizimista FielEdit = new EditarDizimista();
-            FielEdit.ShowDialog();
-        }
-
-        private void btnFielDelete_Click(object sender, RoutedEventArgs e)
-        {
-            ExcluindoDizimista FielDelete = new ExcluindoDizimista();
-            FielDelete.ShowDialog();
-        }
-
         private void btnAniversariantes_Click(object sender, RoutedEventArgs e)
         {
             ListaAniversariantes ListNiver = new ListaAniversariantes();
