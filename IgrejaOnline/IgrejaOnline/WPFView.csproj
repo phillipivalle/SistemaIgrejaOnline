@@ -84,17 +84,8 @@
     <Compile Include="Views\DeleteUsuarioNew.xaml.cs">
       <DependentUpon>DeleteUsuarioNew.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DepositosWPF.xaml.cs">
-      <DependentUpon>DepositosWPF.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DespesasWPF.xaml.cs">
-      <DependentUpon>DespesasWPF.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DoacaoBoletoWPF.xaml.cs">
-      <DependentUpon>DoacaoBoletoWPF.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DoacaoCartaoWPF.xaml.cs">
-      <DependentUpon>DoacaoCartaoWPF.xaml</DependentUpon>
+    <Compile Include="Views\DoacoesWPF.xaml.cs">
+      <DependentUpon>DoacoesWPF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EditarDizimista.xaml.cs">
       <DependentUpon>EditarDizimista.xaml</DependentUpon>
@@ -159,17 +150,11 @@
     <Compile Include="Views\PastorExcluir.xaml.cs">
       <DependentUpon>PastorExcluir.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReceitaWPF.xaml.cs">
-      <DependentUpon>ReceitaWPF.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\SaldosWPF.xaml.cs">
       <DependentUpon>SaldosWPF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UsuariosCadastros.xaml.cs">
       <DependentUpon>UsuariosCadastros.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Doações.xaml.cs">
-      <DependentUpon>Doações.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WPFListHorarios.xaml.cs">
       <DependentUpon>WPFListHorarios.xaml</DependentUpon>
@@ -214,19 +199,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DepositosWPF.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DespesasWPF.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DoacaoBoletoWPF.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DoacaoCartaoWPF.xaml">
+    <Page Include="Views\DoacoesWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -314,19 +287,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ReceitaWPF.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\SaldosWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UsuariosCadastros.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Doações.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

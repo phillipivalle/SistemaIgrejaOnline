@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para DoacaoCartaoWPF.xaml
+    /// Lógica interna para DoacoesWPF.xaml
     /// </summary>
-    public partial class DoacaoCartaoWPF : Window
+    public partial class DoacoesWPF : Window
     {
-        public DoacaoCartaoWPF()
+        public DoacoesWPF()
         {
             InitializeComponent();
         }

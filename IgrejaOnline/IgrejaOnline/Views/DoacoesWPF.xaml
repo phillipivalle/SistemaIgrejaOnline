@@ -1,4 +1,4 @@
-﻿<Window x:Class="IgrejaOnline.Views.ValoresRecebidos"
+﻿<Window x:Class="IgrejaOnline.Views.DoacoesWPF"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ValoresRecebidos" Height="450" Width="800">
     <Grid>
-        <Grid x:Name="CadastroDizimistas">
+        <Grid x:Name="TelaDoacoes">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF7EB0BB"/>
@@ -29,7 +29,7 @@
                 <RowDefinition Height="1*"/>
 
             </Grid.RowDefinitions>
-            <Label x:Name="TitleCadastro" Content="Valores Recebidos" Grid.Column="1" Grid.Row="0" Margin="0,0,10,20" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" FontStyle="Italic" FontWeight="Bold"/>
+            <Label x:Name="TitleDoacao" Content="Valores Recebidos" Grid.Column="1" Grid.Row="0" Margin="0,0,10,20" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" FontStyle="Italic" FontWeight="Bold"/>
             <Label x:Name="labelNomeBusca" Content="Nome Dizimista:" Grid.Column="1" Margin="10,0,371,51" FontFamily="Franklin Gothic Book" FontSize="20" Foreground="#FF02298E" Grid.Row="1"/>
             <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="174,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Background="#FFC8D5D8" Grid.Row="1"/>
             <DataGrid  AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,66,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book">
@@ -49,7 +49,7 @@
                     </LinearGradientBrush>
                 </DataGrid.Background>
             </DataGrid>
-            <Label x:Name="labelNomeBusca_Copy" Content="Valor recebido R$:" Grid.Column="1" Margin="10,33,297,19" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E"/>
+            <Label x:Name="ValorDoado" Content="Valor recebido R$:" Grid.Column="1" Margin="10,33,297,19" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E"/>
             <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="174,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Background="#FFC8D5D8"/>
         </Grid>
         <Button Content="Ok" HorizontalAlignment="Left" Margin="653,122,0,0" VerticalAlignment="Top" Width="32" Height="22"/>

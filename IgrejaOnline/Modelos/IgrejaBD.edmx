@@ -13,19 +13,39 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="IgrejaBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="IgrejaBDContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DizimistaSet" EntityType="IgrejaBD.Dizimista" />
+          <EntitySet Name="DizimistasSet" EntityType="IgrejaBD.Dizimistas" />
           <EntitySet Name="UserSet" EntityType="IgrejaBD.User" />
           <EntitySet Name="EmailSet" EntityType="IgrejaBD.Email" />
           <AssociationSet Name="EmailUser" Association="IgrejaBD.EmailUser">
             <End EntitySet="EmailSet" Role="Email" />
             <End EntitySet="UserSet" Role="User" />
           </AssociationSet>
+          <EntitySet Name="PastoresSet" EntityType="IgrejaBD.Pastores" />
+          <EntitySet Name="IgrejasSet" EntityType="IgrejaBD.Igrejas" />
+          <EntitySet Name="CultosSet" EntityType="IgrejaBD.Cultos" />
+          <EntitySet Name="FinanceiroSet" EntityType="IgrejaBD.Financeiro" />
         </EntityContainer>
-        <EntityType Name="Dizimista">
+        <EntityType Name="Dizimistas">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="CPF" Type="String" Nullable="false" />
+          <Property Name="Sexo" Type="String" Nullable="false" />
+          <Property Name="DataNasci" Type="DateTime" Nullable="false" />
+          <Property Name="Endereco" Type="String" Nullable="false" />
+          <Property Name="Numero" Type="Int32" Nullable="false" />
+          <Property Name="Bairro" Type="String" Nullable="false" />
+          <Property Name="CEP" Type="String" Nullable="false" />
+          <Property Name="Cidade" Type="String" Nullable="false" />
+          <Property Name="UF" Type="String" Nullable="false" />
+          <Property Name="NCartao" Type="String" Nullable="false" />
+          <Property Name="Validade" Type="DateTime" Nullable="false" />
+          <Property Name="CodSeguranca" Type="String" Nullable="false" />
+          <Property Name="Salario" Type="Decimal" Nullable="false" />
+          <Property Name="NomeImpresso" Type="String" Nullable="false" />
+          <Property Name="Bandeira" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -49,6 +69,55 @@
           <End Type="IgrejaBD.Email" Multiplicity="1" Role="Email" />
           <End Type="IgrejaBD.User" Multiplicity="1" Role="User" />
         </Association>
+        <EntityType Name="Pastores">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="PastorCPF" Type="String" Nullable="false" />
+          <Property Name="PastorSexo" Type="String" Nullable="false" />
+          <Property Name="DataNascPastor" Type="DateTime" Nullable="false" />
+          <Property Name="EnderecoPastor" Type="String" Nullable="false" />
+          <Property Name="NumeroPastor" Type="Int32" Nullable="false" />
+          <Property Name="CEPPastor" Type="String" Nullable="false" />
+          <Property Name="BairroPastor" Type="String" Nullable="false" />
+          <Property Name="CidadePastor" Type="String" Nullable="false" />
+          <Property Name="UFPastor" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Igrejas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeIgreja" Type="String" Nullable="false" />
+          <Property Name="EnderecoIgreja" Type="String" Nullable="false" />
+          <Property Name="NumeroIgreja" Type="Int32" Nullable="false" />
+          <Property Name="BairroIgreja" Type="String" Nullable="false" />
+          <Property Name="UFIgreja" Type="String" Nullable="false" />
+          <Property Name="CNPJIgreja" Type="String" Nullable="false" />
+          <Property Name="SiteIgreja" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cultos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataCulto" Type="DateTime" Nullable="false" />
+          <Property Name="HorarioCulto" Type="String" Nullable="false" />
+          <Property Name="LocalCulto" Type="String" Nullable="false" />
+          <Property Name="PastorCulto" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Financeiro">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaldoTot" Type="String" Nullable="false" />
+          <Property Name="ValorDoado" Type="Decimal" Nullable="false" />
+          <Property Name="DizimistaDoador" Type="String" Nullable="false" />
+          <Property Name="IgrejaBeneficiada" Type="String" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

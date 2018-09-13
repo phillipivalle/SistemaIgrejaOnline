@@ -140,40 +140,10 @@ namespace IgrejaOnline.Views
             ListaHorario.ShowDialog();
         }
 
-        private void btnDeposito_Click(object sender, RoutedEventArgs e)
-        {
-            DepositosWPF DepositoDoacao = new DepositosWPF();
-            DepositoDoacao.ShowDialog();
-        }
-
-        private void btnCartao_Click(object sender, RoutedEventArgs e)
-        {
-            DoacaoCartaoWPF CartaoDoacao = new DoacaoCartaoWPF();
-            CartaoDoacao.ShowDialog();
-        }
-
-        private void btnBoleto_Click(object sender, RoutedEventArgs e)
-        {
-            DoacaoBoletoWPF BoletoDoacao = new DoacaoBoletoWPF();
-            BoletoDoacao.ShowDialog();
-        }
-
         private void btnSaldo_Click(object sender, RoutedEventArgs e)
         {
             SaldosWPF SaldoAtual = new SaldosWPF();
             SaldoAtual.ShowDialog();
-        }
-
-        private void btnReceita_Click(object sender, RoutedEventArgs e)
-        {
-            ReceitaWPF Receitas = new ReceitaWPF();
-            Receitas.ShowDialog();
-        }
-
-        private void btnDespesas_Click(object sender, RoutedEventArgs e)
-        {
-            DespesasWPF UltimasDespesas = new DespesasWPF();
-            UltimasDespesas.ShowDialog();
         }
 
         private void btnCadastrarNovoUsuario_Click(object sender, RoutedEventArgs e)
@@ -192,6 +162,18 @@ namespace IgrejaOnline.Views
         {
             DeleteUsuarioNew DeletandoUsuario = new DeleteUsuarioNew();
             DeletandoUsuario.ShowDialog();
+        }
+
+        private void btnUsuarioCadastrado_Click(object sender, RoutedEventArgs e)
+        {
+            UsuariosCadastros ListUsuariosCadastrados = new UsuariosCadastros();
+            ListUsuariosCadastrados.ShowDialog();
+        }
+
+        private void btnFazendoDoacao_Click(object sender, RoutedEventArgs e)
+        {
+            DoacoesWPF Doacao = new DoacoesWPF();
+            Doacao.ShowDialog();
         }
     }
 }

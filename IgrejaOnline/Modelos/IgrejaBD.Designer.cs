@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Phillipi\source\repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
