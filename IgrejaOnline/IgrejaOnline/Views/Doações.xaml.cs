@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para SaldosWPF.xaml
+    /// Lógica interna para ValoresRecebidos.xaml
     /// </summary>
-    public partial class SaldosWPF : Window
+    public partial class ValoresRecebidos : Window
     {
-        public SaldosWPF()
+        public ValoresRecebidos()
         {
             InitializeComponent();
-        }
-
-        private void GridListDizimista_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

@@ -168,6 +168,9 @@
     <Compile Include="Views\UsuariosCadastros.xaml.cs">
       <DependentUpon>UsuariosCadastros.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Doações.xaml.cs">
+      <DependentUpon>Doações.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WPFListHorarios.xaml.cs">
       <DependentUpon>WPFListHorarios.xaml</DependentUpon>
     </Compile>
@@ -320,6 +323,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UsuariosCadastros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Doações.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
