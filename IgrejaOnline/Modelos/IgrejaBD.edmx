@@ -17,25 +17,25 @@
           <EntitySet Name="UserSet" EntityType="IgrejaBD.User" />
           <EntitySet Name="EmailSet" EntityType="IgrejaBD.Email" />
           <AssociationSet Name="EmailUser" Association="IgrejaBD.EmailUser">
-            <End Role="Email" EntitySet="EmailSet" />
-            <End Role="User" EntitySet="UserSet" />
+            <End EntitySet="EmailSet" Role="Email" />
+            <End EntitySet="UserSet" Role="User" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Dizimista">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Login" Type="String" Nullable="false" />
-          <Property Name="Senha" Type="String" Nullable="false" />
-          <Property Name="Nome" Type="String" Nullable="false" />
-          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Login" Nullable="false" Type="String" />
+          <Property Name="Senha" Nullable="false" Type="String" />
+          <Property Name="Nome" Nullable="false" Type="String" />
+          <Property Name="Email" Nullable="false" Type="String" />
         </EntityType>
         <EntityType Name="Email">
           <Key>
@@ -46,8 +46,8 @@
           <NavigationProperty Name="User" Relationship="IgrejaBD.EmailUser" FromRole="Email" ToRole="User" />
         </EntityType>
         <Association Name="EmailUser">
-          <End Type="IgrejaBD.Email" Role="Email" Multiplicity="1" />
-          <End Type="IgrejaBD.User" Role="User" Multiplicity="1" />
+          <End Type="IgrejaBD.Email" Multiplicity="1" Role="Email" />
+          <End Type="IgrejaBD.User" Multiplicity="1" Role="User" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
