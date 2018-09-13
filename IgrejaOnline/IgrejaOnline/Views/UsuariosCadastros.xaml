@@ -1,0 +1,60 @@
+﻿<Window x:Class="IgrejaOnline.Views.UsuariosCadastros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IgrejaOnline.Views"
+        mc:Ignorable="d"
+        Title="UsuariosCadastros" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="ListaIgreja" >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7EB0BB"/>
+                    <GradientStop Color="#FFE3E3E3" Offset="0.534"/>
+                    <GradientStop Color="#FF807474" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Label x:Name="TitleListaIgrejas" Content="Usuários Cadastrados" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
+            <Label x:Name="labelNomeBusca" Content="Informe um nome para buscar:" Grid.Column="1" Margin="124,32,133,42" Width="271" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E" Grid.RowSpan="3"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC8D5D8"/>
+            <DataGrid  AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,45,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" >
+                <!--ItemsSource="{Binding LocalDaLista}"-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="220" x:Name="ColumName" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
+                    <DataGridTextColumn Width="199" x:Name="ColumCNPJ" Binding="{Binding CNPF}" Header="CNPJ"/>
+                    <DataGridTextColumn Width="45" x:Name="ColumCidade"  Header="Editar"/>
+                    <DataGridTextColumn x:Name="ColumDataNasc" Header="Excluir"/>
+                </DataGrid.Columns>
+
+                <DataGrid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC8D5D8" Offset="1"/>
+                        <GradientStop Color="#FFC8D5D8"/>
+                    </LinearGradientBrush>
+                </DataGrid.Background>
+            </DataGrid>
+
+        </Grid>
+
+    </Grid>
+</Window>
