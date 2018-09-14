@@ -23,6 +23,37 @@ namespace Controllers
             return contexto.DizimistasSet.ToList();
         }
 
+        List<Dizimistas> ListarDizimistasHomens(string sexo)
+        {
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
+
+            var lista = from d in contexto.DizimistasSet
+                        where d.Sexo.Equals(sexo)
+                        select d;
+            return lista.ToList();   
+        }
+
+        List<Dizimistas> ListarDizimistasMulheres(string sexo)
+        {
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
+            var lista = from d in contexto.DizimistasSet
+                        where d.Sexo == "radioFem"
+                        select d;
+            return lista.ToList();
+        }
+
+        List<Dizimistas> ListarDizimistasCrianca(int DataNasc)
+        {
+            DateTime hj = DateTime.Now;
+
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
+            var lista = from d in contexto.DizimistasSet
+                        where d.DataNasci < hj.AddYears(-12)
+                        select d;
+            return lista.ToList();
+        }
+
+
         Dizimistas BuscarPorNome(string nome)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
