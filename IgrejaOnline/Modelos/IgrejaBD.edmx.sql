@@ -1,0 +1,251 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
+-- --------------------------------------------------
+-- Date Created: 09/13/2018 20:58:18
+-- Generated from EDMX file: C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx
+-- --------------------------------------------------
+
+SET QUOTED_IDENTIFIER OFF;
+GO
+USE [DBIgreja];
+GO
+IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
+GO
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'DizimistasSet'
+CREATE TABLE [dbo].[DizimistasSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Nome] nvarchar(max)  NOT NULL,
+    [CPF] nvarchar(max)  NOT NULL,
+    [Sexo] nvarchar(max)  NOT NULL,
+    [DataNasci] datetime  NOT NULL,
+    [Endereco] nvarchar(max)  NOT NULL,
+    [Numero] int  NOT NULL,
+    [Bairro] nvarchar(max)  NOT NULL,
+    [CEP] nvarchar(max)  NOT NULL,
+    [Cidade] nvarchar(max)  NOT NULL,
+    [UF] nvarchar(max)  NOT NULL,
+    [NCartao] nvarchar(max)  NOT NULL,
+    [Validade] datetime  NOT NULL,
+    [CodSeguranca] nvarchar(max)  NOT NULL,
+    [Salario] decimal(18,0)  NOT NULL,
+    [NomeImpresso] nvarchar(max)  NOT NULL,
+    [Bandeira] nvarchar(max)  NOT NULL,
+    [Financeiro_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'UserSet'
+CREATE TABLE [dbo].[UserSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Login] nvarchar(max)  NOT NULL,
+    [Senha] nvarchar(max)  NOT NULL,
+    [Nome] nvarchar(max)  NOT NULL,
+    [Email] nvarchar(max)  NOT NULL,
+    [Funcao] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'EmailSet'
+CREATE TABLE [dbo].[EmailSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [EndEmail] nvarchar(max)  NOT NULL,
+    [User_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'PastoresSet'
+CREATE TABLE [dbo].[PastoresSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Nome] nvarchar(max)  NOT NULL,
+    [PastorCPF] nvarchar(max)  NOT NULL,
+    [PastorSexo] nvarchar(max)  NOT NULL,
+    [DataNascPastor] datetime  NOT NULL,
+    [EnderecoPastor] nvarchar(max)  NOT NULL,
+    [NumeroPastor] int  NOT NULL,
+    [CEPPastor] nvarchar(max)  NOT NULL,
+    [BairroPastor] nvarchar(max)  NOT NULL,
+    [CidadePastor] nvarchar(max)  NOT NULL,
+    [UFPastor] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'IgrejasSet'
+CREATE TABLE [dbo].[IgrejasSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [NomeIgreja] nvarchar(max)  NOT NULL,
+    [EnderecoIgreja] nvarchar(max)  NOT NULL,
+    [NumeroIgreja] int  NOT NULL,
+    [BairroIgreja] nvarchar(max)  NOT NULL,
+    [UFIgreja] nvarchar(max)  NOT NULL,
+    [CNPJIgreja] nvarchar(max)  NOT NULL,
+    [SiteIgreja] nvarchar(max)  NOT NULL,
+    [Financeiro_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'CultosSet'
+CREATE TABLE [dbo].[CultosSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [DataCulto] datetime  NOT NULL,
+    [HorarioCulto] nvarchar(max)  NOT NULL,
+    [LocalCulto] nvarchar(max)  NOT NULL,
+    [PastorCulto] nvarchar(max)  NOT NULL,
+    [PastoresId] int  NOT NULL,
+    [Igrejas_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'FinanceiroSet'
+CREATE TABLE [dbo].[FinanceiroSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [SaldoTot] nvarchar(max)  NOT NULL,
+    [ValorDoado] decimal(18,0)  NOT NULL,
+    [DizimistaDoador] nvarchar(max)  NOT NULL,
+    [IgrejaBeneficiada] nvarchar(max)  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [Id] in table 'DizimistasSet'
+ALTER TABLE [dbo].[DizimistasSet]
+ADD CONSTRAINT [PK_DizimistasSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'UserSet'
+ALTER TABLE [dbo].[UserSet]
+ADD CONSTRAINT [PK_UserSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'EmailSet'
+ALTER TABLE [dbo].[EmailSet]
+ADD CONSTRAINT [PK_EmailSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'PastoresSet'
+ALTER TABLE [dbo].[PastoresSet]
+ADD CONSTRAINT [PK_PastoresSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'IgrejasSet'
+ALTER TABLE [dbo].[IgrejasSet]
+ADD CONSTRAINT [PK_IgrejasSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CultosSet'
+ALTER TABLE [dbo].[CultosSet]
+ADD CONSTRAINT [PK_CultosSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'FinanceiroSet'
+ALTER TABLE [dbo].[FinanceiroSet]
+ADD CONSTRAINT [PK_FinanceiroSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [User_Id] in table 'EmailSet'
+ALTER TABLE [dbo].[EmailSet]
+ADD CONSTRAINT [FK_EmailUser]
+    FOREIGN KEY ([User_Id])
+    REFERENCES [dbo].[UserSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_EmailUser'
+CREATE INDEX [IX_FK_EmailUser]
+ON [dbo].[EmailSet]
+    ([User_Id]);
+GO
+
+-- Creating foreign key on [Financeiro_Id] in table 'DizimistasSet'
+ALTER TABLE [dbo].[DizimistasSet]
+ADD CONSTRAINT [FK_DizimistasFinanceiro]
+    FOREIGN KEY ([Financeiro_Id])
+    REFERENCES [dbo].[FinanceiroSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_DizimistasFinanceiro'
+CREATE INDEX [IX_FK_DizimistasFinanceiro]
+ON [dbo].[DizimistasSet]
+    ([Financeiro_Id]);
+GO
+
+-- Creating foreign key on [Financeiro_Id] in table 'IgrejasSet'
+ALTER TABLE [dbo].[IgrejasSet]
+ADD CONSTRAINT [FK_IgrejasFinanceiro]
+    FOREIGN KEY ([Financeiro_Id])
+    REFERENCES [dbo].[FinanceiroSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_IgrejasFinanceiro'
+CREATE INDEX [IX_FK_IgrejasFinanceiro]
+ON [dbo].[IgrejasSet]
+    ([Financeiro_Id]);
+GO
+
+-- Creating foreign key on [Igrejas_Id] in table 'CultosSet'
+ALTER TABLE [dbo].[CultosSet]
+ADD CONSTRAINT [FK_IgrejasCultos]
+    FOREIGN KEY ([Igrejas_Id])
+    REFERENCES [dbo].[IgrejasSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_IgrejasCultos'
+CREATE INDEX [IX_FK_IgrejasCultos]
+ON [dbo].[CultosSet]
+    ([Igrejas_Id]);
+GO
+
+-- Creating foreign key on [PastoresId] in table 'CultosSet'
+ALTER TABLE [dbo].[CultosSet]
+ADD CONSTRAINT [FK_PastoresCultos]
+    FOREIGN KEY ([PastoresId])
+    REFERENCES [dbo].[PastoresSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PastoresCultos'
+CREATE INDEX [IX_FK_PastoresCultos]
+ON [dbo].[CultosSet]
+    ([PastoresId]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------

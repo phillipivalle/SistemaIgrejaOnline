@@ -50,12 +50,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cultos.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dizimistas.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IgrejaBD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IgrejaBD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IgrejaBD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
     <Compile Include="IgrejaBD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IgrejaBD.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Igrejas.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pastores.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>IgrejaBD.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +98,22 @@
       <DependentUpon>IgrejaBD.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IgrejaBD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IgrejaBD.Context.cs</LastGenOutput>
+      <DependentUpon>IgrejaBD.edmx</DependentUpon>
+    </Content>
+    <Content Include="IgrejaBD.edmx.sql" />
+    <Content Include="IgrejaBD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IgrejaBD.cs</LastGenOutput>
+      <DependentUpon>IgrejaBD.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

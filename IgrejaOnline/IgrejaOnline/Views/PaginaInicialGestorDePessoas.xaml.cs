@@ -36,17 +36,6 @@ namespace IgrejaOnline.Views
             ListandoDizimistaGestor.ShowDialog();
         }
 
-        private void btnFielEdit_Click(object sender, RoutedEventArgs e)
-        {
-            EditarDizimista EditandoDizimistaGestor = new EditarDizimista();
-            EditandoDizimistaGestor.ShowDialog();
-        }
-
-        private void btnFielDelete_Click(object sender, RoutedEventArgs e)
-        {
-            ExcluindoDizimista ExcluindoDizimistaGestor = new ExcluindoDizimista();
-            ExcluindoDizimistaGestor.ShowDialog();
-        }
 
         private void btnTotalDizimistas_Click(object sender, RoutedEventArgs e)
         {
@@ -106,18 +95,6 @@ namespace IgrejaOnline.Views
         {
             ConsultaPastor GestorListaPastor = new ConsultaPastor();
             GestorListaPastor.ShowDialog();
-        }
-
-        private void btnPastorEdit_Click(object sender, RoutedEventArgs e)
-        {
-            PastorEdit GestorEditaPastor = new PastorEdit();
-            GestorEditaPastor.ShowDialog();
-        }
-
-        private void btnPastorDelete_Click(object sender, RoutedEventArgs e)
-        {
-            PastorExcluir GestorExcluiPastor = new PastorExcluir();
-            GestorExcluiPastor.ShowDialog();
         }
     }
 }

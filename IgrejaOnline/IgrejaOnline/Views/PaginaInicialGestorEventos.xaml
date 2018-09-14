@@ -52,8 +52,6 @@
                 <MenuItem x:Name="MenuIgreja" Header="Igrejas" Height="34" Width="60" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Top" AutomationProperties.IsRowHeader="True">
                     <MenuItem Header="Nova igreja" x:Name="btnNewIgreja" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnNewIgreja_Click"/>
                     <MenuItem x:Name="ConsultarIgreja" Header="Consultar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ConsultarIgreja_Click"/>
-                    <MenuItem x:Name="igrejaEdit" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="igrejaEdit_Click"/>
-                    <MenuItem x:Name="igrejaDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="igrejaDelete_Click"/>
                 </MenuItem>
             </Menu>
             <Menu x:Name="MenuCultos" Height="34" VerticalAlignment="Top" Width="54" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">

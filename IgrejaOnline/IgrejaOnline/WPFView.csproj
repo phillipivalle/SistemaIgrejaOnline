@@ -81,9 +81,6 @@
     <Compile Include="Views\ConsultaPastor.xaml.cs">
       <DependentUpon>ConsultaPastor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DeleteUsuarioNew.xaml.cs">
-      <DependentUpon>DeleteUsuarioNew.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\DoacoesWPF.xaml.cs">
       <DependentUpon>DoacoesWPF.xaml</DependentUpon>
     </Compile>
@@ -192,10 +189,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultaPastor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DeleteUsuarioNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

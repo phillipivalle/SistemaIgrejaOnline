@@ -36,16 +36,12 @@
                             <MenuItem FlowDirection="LeftToRight"  x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Click="btnAniversariantes_Click"/>
                         </Menu>
                     </MenuItem>
-                    <MenuItem x:Name="btnFielEdit" FlowDirection="LeftToRight" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-24,0" Width="201" Click="btnFielEdit_Click"/>
-                    <MenuItem x:Name="btnFielDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,0,-25,0" Width="202" Click="btnFielDelete_Click"/>
                 </MenuItem>
             </Menu>
             <Menu x:Name="MenuPastores" Height="34" VerticalAlignment="Top" Width="74" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
                 <MenuItem x:Name="MenuPastor" Header="Pastores" Height="34" Width="74" FontSize="16" BorderBrush="#FF88B5C0" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" Background="{x:Null}" Foreground="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <MenuItem x:Name="btnNewPastor" Header="Novo Pastor" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnNewPastor_Click"/>
                     <MenuItem x:Name="btnConsultarPastor" Header="Consultar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnConsultarPastor_Click"/>
-                    <MenuItem x:Name="btnPastorEdit" Header="Editar" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPastorEdit_Click"/>
-                    <MenuItem x:Name="btnPastorDelete" Header="Excluir" BorderBrush="#FF84B3BE" Background="#FF84B3BE" Margin="0" Width="170" RenderTransformOrigin="0.759,0.591" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPastorDelete_Click"/>
                 </MenuItem>
             </Menu>
             <Menu x:Name="MenuIgrejas" Height="34" VerticalAlignment="Top" Width="55" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">

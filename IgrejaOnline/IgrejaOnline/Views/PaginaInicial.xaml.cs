@@ -158,12 +158,6 @@ namespace IgrejaOnline.Views
             EditandoUsuario.ShowDialog();
         }
 
-        private void btnExcluirNovoUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteUsuarioNew DeletandoUsuario = new DeleteUsuarioNew();
-            DeletandoUsuario.ShowDialog();
-        }
-
         private void btnUsuarioCadastrado_Click(object sender, RoutedEventArgs e)
         {
             UsuariosCadastros ListUsuariosCadastrados = new UsuariosCadastros();

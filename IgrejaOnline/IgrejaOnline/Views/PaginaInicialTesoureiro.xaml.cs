@@ -24,23 +24,7 @@ namespace IgrejaOnline.Views
             InitializeComponent();
         }
 
-        private void btnDeposito_Click(object sender, RoutedEventArgs e)
-        {
-            DepositosWPF depositoTesoureiro = new DepositosWPF();
-            depositoTesoureiro.ShowDialog();
-        }
 
-        private void btnCartao_Click(object sender, RoutedEventArgs e)
-        {
-            DoacaoCartaoWPF cartaoTesoureiroDoacao = new DoacaoCartaoWPF();
-            cartaoTesoureiroDoacao.ShowDialog();
-        }
-
-        private void btnBoleto_Click(object sender, RoutedEventArgs e)
-        {
-            DoacaoBoletoWPF boletoDoacaoTesoureiro = new DoacaoBoletoWPF();
-            boletoDoacaoTesoureiro.ShowDialog();
-        }
 
         private void btnSaldo_Click(object sender, RoutedEventArgs e)
         {
@@ -48,16 +32,10 @@ namespace IgrejaOnline.Views
             SaldoTesoureiro.ShowDialog();
         }
 
-        private void btnReceita_Click(object sender, RoutedEventArgs e)
+        private void btnFazendoDoacao_Click(object sender, RoutedEventArgs e)
         {
-            ReceitaWPF receitaTesoureiro = new ReceitaWPF();
-            receitaTesoureiro.ShowDialog();
-        }
-
-        private void btnDespesas_Click(object sender, RoutedEventArgs e)
-        {
-            DespesasWPF despesaTesoureiro = new DespesasWPF();
-            despesaTesoureiro.ShowDialog();
+            DoacoesWPF doacaoTesoureiro = new DoacoesWPF();
+            doacaoTesoureiro.ShowDialog();
         }
     }
 }

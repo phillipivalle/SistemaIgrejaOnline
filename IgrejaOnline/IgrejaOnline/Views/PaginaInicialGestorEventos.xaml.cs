@@ -36,18 +36,6 @@ namespace IgrejaOnline.Views
             consultarIgrejaGestor.ShowDialog();
         }
 
-        private void igrejaEdit_Click(object sender, RoutedEventArgs e)
-        {
-            EditarNewIgreja EditandoIgrejaGestor = new EditarNewIgreja();
-            EditandoIgrejaGestor.ShowDialog();
-        }
-
-        private void igrejaDelete_Click(object sender, RoutedEventArgs e)
-        {
-            ExcluindoIgreja DeletandoIgrejaGestor = new ExcluindoIgreja();
-            DeletandoIgrejaGestor.ShowDialog();
-        }
-
         private void btnNewCulto_Click(object sender, RoutedEventArgs e)
         {
             NewCultoWPF NovoCultoGestor = new NewCultoWPF();

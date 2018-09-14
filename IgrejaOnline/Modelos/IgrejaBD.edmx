@@ -4,11 +4,191 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="IgrejaBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="IgrejaBDTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="IgrejaBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="IgrejaBDStoreContainer">
+    <EntitySet Name="DizimistasSet" EntityType="IgrejaBD.Store.DizimistasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet" EntityType="IgrejaBD.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmailSet" EntityType="IgrejaBD.Store.EmailSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PastoresSet" EntityType="IgrejaBD.Store.PastoresSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IgrejasSet" EntityType="IgrejaBD.Store.IgrejasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CultosSet" EntityType="IgrejaBD.Store.CultosSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FinanceiroSet" EntityType="IgrejaBD.Store.FinanceiroSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="EmailUser" Association="IgrejaBD.Store.EmailUser">
+      <End Role="Email" EntitySet="EmailSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="DizimistasFinanceiro" Association="IgrejaBD.Store.DizimistasFinanceiro">
+      <End Role="Dizimistas" EntitySet="DizimistasSet" />
+      <End Role="Financeiro" EntitySet="FinanceiroSet" />
+    </AssociationSet>
+    <AssociationSet Name="IgrejasFinanceiro" Association="IgrejaBD.Store.IgrejasFinanceiro">
+      <End Role="Igrejas" EntitySet="IgrejasSet" />
+      <End Role="Financeiro" EntitySet="FinanceiroSet" />
+    </AssociationSet>
+    <AssociationSet Name="IgrejasCultos" Association="IgrejaBD.Store.IgrejasCultos">
+      <End Role="Igrejas" EntitySet="IgrejasSet" />
+      <End Role="Cultos" EntitySet="CultosSet" />
+    </AssociationSet>
+    <AssociationSet Name="PastoresCultos" Association="IgrejaBD.Store.PastoresCultos">
+      <End Role="Pastores" EntitySet="PastoresSet" />
+      <End Role="Cultos" EntitySet="CultosSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DizimistasSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CPF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNasci" Type="datetime" Nullable="false" />
+    <Property Name="Endereco" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Bairro" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CEP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NCartao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Validade" Type="datetime" Nullable="false" />
+    <Property Name="CodSeguranca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Salario" Type="decimal" Nullable="false" />
+    <Property Name="NomeImpresso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bandeira" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Financeiro_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Funcao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmailSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EndEmail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PastoresSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PastorCPF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PastorSexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNascPastor" Type="datetime" Nullable="false" />
+    <Property Name="EnderecoPastor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumeroPastor" Type="int" Nullable="false" />
+    <Property Name="CEPPastor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BairroPastor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CidadePastor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UFPastor" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IgrejasSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EnderecoIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumeroIgreja" Type="int" Nullable="false" />
+    <Property Name="BairroIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UFIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CNPJIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SiteIgreja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Financeiro_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CultosSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataCulto" Type="datetime" Nullable="false" />
+    <Property Name="HorarioCulto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LocalCulto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PastorCulto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PastoresId" Type="int" Nullable="false" />
+    <Property Name="Igrejas_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FinanceiroSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaldoTot" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValorDoado" Type="decimal" Nullable="false" />
+    <Property Name="DizimistaDoador" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IgrejaBeneficiada" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="EmailUser">
+    <End Role="Email" Type="IgrejaBD.Store.EmailSet" Multiplicity="*" />
+    <End Role="User" Type="IgrejaBD.Store.UserSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DizimistasFinanceiro">
+    <End Role="Dizimistas" Type="IgrejaBD.Store.DizimistasSet" Multiplicity="*" />
+    <End Role="Financeiro" Type="IgrejaBD.Store.FinanceiroSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Financeiro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dizimistas">
+        <PropertyRef Name="Financeiro_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IgrejasFinanceiro">
+    <End Role="Igrejas" Type="IgrejaBD.Store.IgrejasSet" Multiplicity="*" />
+    <End Role="Financeiro" Type="IgrejaBD.Store.FinanceiroSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Financeiro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Igrejas">
+        <PropertyRef Name="Financeiro_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IgrejasCultos">
+    <End Role="Igrejas" Type="IgrejaBD.Store.IgrejasSet" Multiplicity="1" />
+    <End Role="Cultos" Type="IgrejaBD.Store.CultosSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Igrejas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cultos">
+        <PropertyRef Name="Igrejas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PastoresCultos">
+    <End Role="Pastores" Type="IgrejaBD.Store.PastoresSet" Multiplicity="1" />
+    <End Role="Cultos" Type="IgrejaBD.Store.CultosSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pastores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cultos">
+        <PropertyRef Name="PastoresId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="IgrejaBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -24,6 +204,22 @@
           <EntitySet Name="IgrejasSet" EntityType="IgrejaBD.Igrejas" />
           <EntitySet Name="CultosSet" EntityType="IgrejaBD.Cultos" />
           <EntitySet Name="FinanceiroSet" EntityType="IgrejaBD.Financeiro" />
+          <AssociationSet Name="DizimistasFinanceiro" Association="IgrejaBD.DizimistasFinanceiro">
+            <End Role="Dizimistas" EntitySet="DizimistasSet" />
+            <End Role="Financeiro" EntitySet="FinanceiroSet" />
+          </AssociationSet>
+          <AssociationSet Name="IgrejasFinanceiro" Association="IgrejaBD.IgrejasFinanceiro">
+            <End Role="Igrejas" EntitySet="IgrejasSet" />
+            <End Role="Financeiro" EntitySet="FinanceiroSet" />
+          </AssociationSet>
+          <AssociationSet Name="IgrejasCultos" Association="IgrejaBD.IgrejasCultos">
+            <End Role="Igrejas" EntitySet="IgrejasSet" />
+            <End Role="Cultos" EntitySet="CultosSet" />
+          </AssociationSet>
+          <AssociationSet Name="PastoresCultos" Association="IgrejaBD.PastoresCultos">
+            <End Role="Pastores" EntitySet="PastoresSet" />
+            <End Role="Cultos" EntitySet="CultosSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Dizimistas">
           <Key>
@@ -46,6 +242,7 @@
           <Property Name="Salario" Type="Decimal" Nullable="false" />
           <Property Name="NomeImpresso" Type="String" Nullable="false" />
           <Property Name="Bandeira" Type="String" Nullable="false" />
+          <NavigationProperty Name="Financeiro" Relationship="IgrejaBD.DizimistasFinanceiro" FromRole="Dizimistas" ToRole="Financeiro" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -56,6 +253,7 @@
           <Property Name="Senha" Nullable="false" Type="String" />
           <Property Name="Nome" Nullable="false" Type="String" />
           <Property Name="Email" Nullable="false" Type="String" />
+          <Property Name="Funcao" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Email">
           <Key>
@@ -84,6 +282,7 @@
           <Property Name="BairroPastor" Type="String" Nullable="false" />
           <Property Name="CidadePastor" Type="String" Nullable="false" />
           <Property Name="UFPastor" Type="String" Nullable="false" />
+          <NavigationProperty Name="Cultos" Relationship="IgrejaBD.PastoresCultos" FromRole="Pastores" ToRole="Cultos" />
         </EntityType>
         <EntityType Name="Igrejas">
           <Key>
@@ -97,7 +296,9 @@
           <Property Name="UFIgreja" Type="String" Nullable="false" />
           <Property Name="CNPJIgreja" Type="String" Nullable="false" />
           <Property Name="SiteIgreja" Type="String" Nullable="false" />
-        </EntityType>
+          <NavigationProperty Name="Financeiro" Relationship="IgrejaBD.IgrejasFinanceiro" FromRole="Igrejas" ToRole="Financeiro" />
+          <NavigationProperty Name="Cultos" Relationship="IgrejaBD.IgrejasCultos" FromRole="Igrejas" ToRole="Cultos" />
+          </EntityType>
         <EntityType Name="Cultos">
           <Key>
             <PropertyRef Name="Id" />
@@ -107,6 +308,9 @@
           <Property Name="HorarioCulto" Type="String" Nullable="false" />
           <Property Name="LocalCulto" Type="String" Nullable="false" />
           <Property Name="PastorCulto" Type="String" Nullable="false" />
+          <NavigationProperty Name="Igrejas" Relationship="IgrejaBD.IgrejasCultos" FromRole="Cultos" ToRole="Igrejas" />
+          <NavigationProperty Name="Pastores" Relationship="IgrejaBD.PastoresCultos" FromRole="Cultos" ToRole="Pastores" />
+          <Property Name="PastoresId" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Financeiro">
           <Key>
@@ -117,18 +321,170 @@
           <Property Name="ValorDoado" Type="Decimal" Nullable="false" />
           <Property Name="DizimistaDoador" Type="String" Nullable="false" />
           <Property Name="IgrejaBeneficiada" Type="String" Nullable="false" />
+          <NavigationProperty Name="Dizimistas" Relationship="IgrejaBD.DizimistasFinanceiro" FromRole="Financeiro" ToRole="Dizimistas" />
+          <NavigationProperty Name="Igrejas" Relationship="IgrejaBD.IgrejasFinanceiro" FromRole="Financeiro" ToRole="Igrejas" />
         </EntityType>
+        <Association Name="DizimistasFinanceiro">
+          <End Type="IgrejaBD.Dizimistas" Role="Dizimistas" Multiplicity="1" />
+          <End Type="IgrejaBD.Financeiro" Role="Financeiro" Multiplicity="1" />
+        </Association>
+        <Association Name="IgrejasFinanceiro">
+          <End Type="IgrejaBD.Igrejas" Role="Igrejas" Multiplicity="1" />
+          <End Type="IgrejaBD.Financeiro" Role="Financeiro" Multiplicity="1" />
+        </Association>
+        <Association Name="IgrejasCultos">
+          <End Type="IgrejaBD.Igrejas" Role="Igrejas" Multiplicity="1" />
+          <End Type="IgrejaBD.Cultos" Role="Cultos" Multiplicity="*" />
+        </Association>
+        <Association Name="PastoresCultos">
+          <End Type="IgrejaBD.Pastores" Role="Pastores" Multiplicity="1" />
+          <End Type="IgrejaBD.Cultos" Role="Cultos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pastores">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cultos">
+              <PropertyRef Name="PastoresId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="IgrejaBD" />
-        <Alias Key="Target" Value="IgrejaBD.Store" />
-        <EntityContainerMapping CdmEntityContainer="IgrejaBDContainer" StorageEntityContainer="IgrejaBDTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IgrejaBDStoreContainer" CdmEntityContainer="IgrejaBDContainer">
+    <EntitySetMapping Name="DizimistasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Dizimistas)">
+        <MappingFragment StoreEntitySet="DizimistasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DataNasci" ColumnName="DataNasci" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="NCartao" ColumnName="NCartao" />
+          <ScalarProperty Name="Validade" ColumnName="Validade" />
+          <ScalarProperty Name="CodSeguranca" ColumnName="CodSeguranca" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="NomeImpresso" ColumnName="NomeImpresso" />
+          <ScalarProperty Name="Bandeira" ColumnName="Bandeira" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Email)">
+        <MappingFragment StoreEntitySet="EmailSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EndEmail" ColumnName="EndEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PastoresSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Pastores)">
+        <MappingFragment StoreEntitySet="PastoresSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="PastorCPF" ColumnName="PastorCPF" />
+          <ScalarProperty Name="PastorSexo" ColumnName="PastorSexo" />
+          <ScalarProperty Name="DataNascPastor" ColumnName="DataNascPastor" />
+          <ScalarProperty Name="EnderecoPastor" ColumnName="EnderecoPastor" />
+          <ScalarProperty Name="NumeroPastor" ColumnName="NumeroPastor" />
+          <ScalarProperty Name="CEPPastor" ColumnName="CEPPastor" />
+          <ScalarProperty Name="BairroPastor" ColumnName="BairroPastor" />
+          <ScalarProperty Name="CidadePastor" ColumnName="CidadePastor" />
+          <ScalarProperty Name="UFPastor" ColumnName="UFPastor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IgrejasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Igrejas)">
+        <MappingFragment StoreEntitySet="IgrejasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NomeIgreja" ColumnName="NomeIgreja" />
+          <ScalarProperty Name="EnderecoIgreja" ColumnName="EnderecoIgreja" />
+          <ScalarProperty Name="NumeroIgreja" ColumnName="NumeroIgreja" />
+          <ScalarProperty Name="BairroIgreja" ColumnName="BairroIgreja" />
+          <ScalarProperty Name="UFIgreja" ColumnName="UFIgreja" />
+          <ScalarProperty Name="CNPJIgreja" ColumnName="CNPJIgreja" />
+          <ScalarProperty Name="SiteIgreja" ColumnName="SiteIgreja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CultosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Cultos)">
+        <MappingFragment StoreEntitySet="CultosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataCulto" ColumnName="DataCulto" />
+          <ScalarProperty Name="HorarioCulto" ColumnName="HorarioCulto" />
+          <ScalarProperty Name="LocalCulto" ColumnName="LocalCulto" />
+          <ScalarProperty Name="PastorCulto" ColumnName="PastorCulto" />
+          <ScalarProperty Name="PastoresId" ColumnName="PastoresId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinanceiroSet">
+      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Financeiro)">
+        <MappingFragment StoreEntitySet="FinanceiroSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SaldoTot" ColumnName="SaldoTot" />
+          <ScalarProperty Name="ValorDoado" ColumnName="ValorDoado" />
+          <ScalarProperty Name="DizimistaDoador" ColumnName="DizimistaDoador" />
+          <ScalarProperty Name="IgrejaBeneficiada" ColumnName="IgrejaBeneficiada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EmailUser" TypeName="IgrejaBD.EmailUser" StoreEntitySet="EmailSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+      <EndProperty Name="Email">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DizimistasFinanceiro" TypeName="IgrejaBD.DizimistasFinanceiro" StoreEntitySet="DizimistasSet">
+      <EndProperty Name="Financeiro">
+        <ScalarProperty Name="Id" ColumnName="Financeiro_Id" />
+      </EndProperty>
+      <EndProperty Name="Dizimistas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IgrejasFinanceiro" TypeName="IgrejaBD.IgrejasFinanceiro" StoreEntitySet="IgrejasSet">
+      <EndProperty Name="Financeiro">
+        <ScalarProperty Name="Id" ColumnName="Financeiro_Id" />
+      </EndProperty>
+      <EndProperty Name="Igrejas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IgrejasCultos" TypeName="IgrejaBD.IgrejasCultos" StoreEntitySet="CultosSet">
+      <EndProperty Name="Igrejas">
+        <ScalarProperty Name="Id" ColumnName="Igrejas_Id" />
+      </EndProperty>
+      <EndProperty Name="Cultos">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -142,6 +498,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
