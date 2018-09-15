@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DizimistaController.cs" />
+    <Compile Include="FinanceiroController.cs" />
     <Compile Include="IgrejaController.cs" />
     <Compile Include="PastorController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
