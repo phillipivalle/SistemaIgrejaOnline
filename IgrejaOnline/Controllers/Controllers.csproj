@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CultoController.cs" />
     <Compile Include="DizimistaController.cs" />
     <Compile Include="FinanceiroController.cs" />
     <Compile Include="IgrejaController.cs" />
