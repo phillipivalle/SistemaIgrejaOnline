@@ -11,7 +11,7 @@ namespace Controllers
     {
         void inserirPastor(Pastores e)
         {
-            Modelos.IgrejaBDContainer contexto = new IgrejaBDContainer();
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.PastoresSet.Add(e);
             contexto.SaveChanges();
         }
