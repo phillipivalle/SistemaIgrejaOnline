@@ -23,5 +23,10 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void btnCadastrarNewDizimista_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

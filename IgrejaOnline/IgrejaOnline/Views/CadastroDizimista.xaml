@@ -86,7 +86,7 @@
                 </LinearGradientBrush>
             </DatePicker.Background>
         </DatePicker>
-        <Button Margin="10,0,0,5" x:Name="btnCadastrarNewDizimista" Grid.Column="1" Grid.Row="7" BorderBrush="#FF707070" Content="CADASTRAR" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="504" >
+        <Button Margin="10,0,0,5" x:Name="btnCadastrarNewDizimista" Grid.Column="1" Grid.Row="7" BorderBrush="#FF707070" Content="CADASTRAR" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="504" Click="btnCadastrarNewDizimista_Click" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF182729" Offset="0"/>
