@@ -22,7 +22,7 @@ namespace Controllers
             return contexto.IgrejasSet.ToList();
         }
 
-        Dizimistas BuscarPorNome(string nome)
+        Igrejas BuscarPorNome(string nome)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.IgrejasSet.Find(nome);

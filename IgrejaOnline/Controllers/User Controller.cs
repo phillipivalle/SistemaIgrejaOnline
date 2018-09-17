@@ -37,7 +37,7 @@ namespace Controllers
             if (dExcluir != null)
             {
                 IgrejaBDContainer contexto = new IgrejaBDContainer();
-                contexto.DizimistasSet.Remove(dExcluir);
+                contexto.UserSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
         }
@@ -54,8 +54,6 @@ namespace Controllers
                 UserAntigo.Funcao = NovosDadosUser.Funcao;
                 UserAntigo.Email = NovosDadosUser.Email;
                 
-     
-
                 IgrejaBDContainer contexto = new IgrejaBDContainer();
 
                 contexto.Entry(UserAntigo).State = System.Data.Entity.EntityState.Modified;

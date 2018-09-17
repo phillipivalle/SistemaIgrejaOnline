@@ -23,14 +23,11 @@ namespace Controllers
             return contexto.DizimistasSet.ToList();
         }
 
-        List<Dizimistas> ListarDizimistasHomens(string sexo)
+        List<Dizimistas> ListarDizimistasHomens(String sexom)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
 
-            var lista = from d in contexto.DizimistasSet
-                        where d.Sexo.Equals(sexo)
-                        select d;
-            return lista.ToList();   
+            return contexto.DizimistasSet.ToList();
         }
 
         List<Dizimistas> ListarDizimistasMulheres(string sexo)

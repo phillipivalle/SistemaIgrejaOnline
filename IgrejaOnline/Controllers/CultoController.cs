@@ -12,7 +12,7 @@ namespace Controllers
         void inserirCulto(Cultos h)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
-            contexto.DizimistasSet.Add(h);
+            contexto.CultosSet.Add(h);
             contexto.SaveChanges();
         }
 

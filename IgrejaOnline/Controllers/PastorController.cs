@@ -18,7 +18,7 @@ namespace Controllers
 
         List<Pastores> ListarTodosPastores()
         {
-            Modelos.IgrejaBDContainer contexto = new IgrejaBDContainer();
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.PastoresSet.ToList();
         }
 
@@ -30,12 +30,12 @@ namespace Controllers
 
         void Excluir (string nome)
         {
-            Pastores eExcluir = BuscarPorNome(nome);
+            Pastores dExcluir = BuscarPorNome(nome);
 
             if(dExcluir != null)
             {
                 IgrejaBDContainer contexto = new IgrejaBDContainer();
-                contexto.DizimistasSet.Remove(dExcluir);
+                contexto.PastoresSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
         }

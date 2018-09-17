@@ -12,7 +12,7 @@ namespace Controllers
         void inserir(Financeiro g)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
-            contexto.DizimistasSet.Add(g);
+            contexto.FinanceiroSet.Add(g);
             contexto.SaveChanges();
         }
 
@@ -36,7 +36,7 @@ namespace Controllers
             if (dExcluir != null)
             {
                 IgrejaBDContainer contexto = new IgrejaBDContainer();
-                contexto.DizimistasSet.Remove(dExcluir);
+                contexto.FinanceiroSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
         }
