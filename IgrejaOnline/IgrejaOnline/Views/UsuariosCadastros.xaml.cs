@@ -19,9 +19,16 @@ namespace IgrejaOnline.Views
     /// </summary>
     public partial class UsuariosCadastros : Window
     {
+
+
         public UsuariosCadastros()
         {
             InitializeComponent();
+
+            Controllers.User_Controller uc = new Controllers.User_Controller();
+            uc.ListarTodosUser();
         }
     }
-}
+    }
+    
+

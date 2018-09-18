@@ -25,19 +25,16 @@ namespace IgrejaOnline.Views
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {             
+        {
             {
-                //instancia user controller
-                Controllers.User_Controller uc = new Controllers.User_Controller();
-
-                uc.BuscarLoginSenha(boxUsuario.Text, BoxSenhaUsu.Password);
-
-
-                PaginaInicial iniciando = new PaginaInicial();
-                iniciando.Show();
-
+              
+                {
+                    PaginaInicial iniciando = new PaginaInicial();
+                    iniciando.Show();
+                }
             }
         }
-    }
-}
+            }
+        }
+   
 

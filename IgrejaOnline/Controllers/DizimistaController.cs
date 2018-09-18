@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class DizimistaController
+    public class DizimistaController
     {
-        void inserirDizimista(Dizimistas d)
+      public  void inserirDizimista(Dizimistas d)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.DizimistasSet.Add(d);
@@ -17,7 +17,7 @@ namespace Controllers
         }
 
 
-        List<Dizimistas> ListarTodosDizimistas()
+       public List<Dizimistas> ListarTodosDizimistas()
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.DizimistasSet.ToList();
