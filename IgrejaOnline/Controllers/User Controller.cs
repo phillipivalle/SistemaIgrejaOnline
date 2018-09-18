@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    internal class User_Controller
+    public class User_Controller
     {
-        void inserirUser(User d)
+      public  void inserirUser(User d)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.UserSet.Add(d);
@@ -17,13 +17,13 @@ namespace Controllers
         }
 
        
-        List<User> ListarTodosUser()
+      public  List<User> ListarTodosUser()
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.UserSet.ToList();
         }
 
-        User BuscarLoginSenha(string nome, string senha)
+     public   User BuscarLoginSenha(string nome, string senha)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
 

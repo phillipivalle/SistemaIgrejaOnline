@@ -344,5 +344,15 @@
   <ItemGroup>
     <Resource Include="Image2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{d4fb333c-4d2e-41d0-92fb-f2f34648c85c}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{734cdd29-6727-4a49-963c-f32ec152bd52}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

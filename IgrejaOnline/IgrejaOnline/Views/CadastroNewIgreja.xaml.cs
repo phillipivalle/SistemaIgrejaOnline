@@ -26,6 +26,9 @@ namespace IgrejaOnline.Views
 
         private void btnCadastrarNewPastor_Click(object sender, RoutedEventArgs e)
         {
+          
+             
+
 
         }
     }
