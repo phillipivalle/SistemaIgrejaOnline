@@ -14,6 +14,12 @@ namespace Modelos
     
     public partial class Dizimistas
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Dizimistas()
+        {
+            this.Financeiro = new HashSet<Financeiro>();
+        }
+    
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
@@ -32,6 +38,7 @@ namespace Modelos
         public string NomeImpresso { get; set; }
         public string Bandeira { get; set; }
     
-        public virtual Financeiro Financeiro { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Financeiro> Financeiro { get; set; }
     }
 }

@@ -9,34 +9,20 @@ namespace Controllers
 {
     public class User_Controller
     {
-      
-        public  void inserirUser(User d)
+
+        public void inserirUser(User d)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.UserSet.Add(d);
             contexto.SaveChanges();
         }
 
-       
-      public  List<User> ListarTodosUser()
+
+        public List<User> ListarTodosUser()
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.UserSet.ToList();
         }
-
-        
-
-     public List<User> Acesso (string login, string senha)
-        {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
-            var agora = from a in contexto.UserSet
-                        where a.Login.Equals(login)
-                        && a.Senha.Equals(senha)
-                        select a;
-            return contexto.UserSet.ToList();
-        }
-
-
 
         User BuscarPorNome(string nome)
         {

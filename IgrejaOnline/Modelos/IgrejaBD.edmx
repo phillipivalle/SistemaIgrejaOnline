@@ -55,7 +55,6 @@
     <Property Name="Salario" Type="decimal" Nullable="false" />
     <Property Name="NomeImpresso" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Bandeira" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Financeiro_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UserSet">
     <Key>
@@ -127,6 +126,7 @@
     <Property Name="ValorDoado" Type="decimal" Nullable="false" />
     <Property Name="DizimistaDoador" Type="nvarchar(max)" Nullable="false" />
     <Property Name="IgrejaBeneficiada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Dizimistas_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="EmailUser">
     <End Role="Email" Type="IgrejaBD.Store.EmailSet" Multiplicity="*" />
@@ -141,14 +141,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DizimistasFinanceiro">
-    <End Role="Dizimistas" Type="IgrejaBD.Store.DizimistasSet" Multiplicity="*" />
-    <End Role="Financeiro" Type="IgrejaBD.Store.FinanceiroSet" Multiplicity="1" />
+    <End Role="Dizimistas" Type="IgrejaBD.Store.DizimistasSet" Multiplicity="1" />
+    <End Role="Financeiro" Type="IgrejaBD.Store.FinanceiroSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Financeiro">
+      <Principal Role="Dizimistas">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Dizimistas">
-        <PropertyRef Name="Financeiro_Id" />
+      <Dependent Role="Financeiro">
+        <PropertyRef Name="Dizimistas_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -326,7 +326,7 @@
         </EntityType>
         <Association Name="DizimistasFinanceiro">
           <End Type="IgrejaBD.Dizimistas" Role="Dizimistas" Multiplicity="1" />
-          <End Type="IgrejaBD.Financeiro" Role="Financeiro" Multiplicity="1" />
+          <End Type="IgrejaBD.Financeiro" Role="Financeiro" Multiplicity="*" />
         </Association>
         <Association Name="IgrejasFinanceiro">
           <End Type="IgrejaBD.Igrejas" Role="Igrejas" Multiplicity="1" />
@@ -459,11 +459,11 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="DizimistasFinanceiro" TypeName="IgrejaBD.DizimistasFinanceiro" StoreEntitySet="DizimistasSet">
-      <EndProperty Name="Financeiro">
-        <ScalarProperty Name="Id" ColumnName="Financeiro_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="DizimistasFinanceiro" TypeName="IgrejaBD.DizimistasFinanceiro" StoreEntitySet="FinanceiroSet">
       <EndProperty Name="Dizimistas">
+        <ScalarProperty Name="Id" ColumnName="Dizimistas_Id" />
+      </EndProperty>
+      <EndProperty Name="Financeiro">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

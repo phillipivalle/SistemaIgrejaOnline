@@ -34,27 +34,31 @@ namespace IgrejaOnline.Views
             Modelos.Dizimistas fiel = new Modelos.Dizimistas();
 
 
-            string nu = boxN.ToString();
-            string temp = DataNascimento.ToString();
+            string nu = boxN.Text;
+            string temp = DataNascimento.Text;
 
             fiel.Nome = boxNome.Text;
             fiel.CPF = boxCpf.Text;
-            
             fiel.Sexo = sexoTemp;
-            fiel.Endereco = boxEnd.ToString();
-            fiel.Numero = Convert.ToInt32(nu);
-            fiel.Bairro = boxBairro.ToString();
             fiel.DataNasci = Convert.ToDateTime(temp);
-            fiel.CEP = boxCEP.ToString();
-            fiel.Cidade = boxCidade.ToString();
-            fiel.UF = boxUF.ToString();
-            fiel.NCartao = boxNumCartao.ToString();
-            fiel.Validade = Convert.ToDateTime(boxValidade);
-            fiel.Salario = Convert.ToDecimal(boxSalario);
-            fiel.NomeImpresso = boxNomeCard.ToString();
+            fiel.Endereco = boxEnd.Text;
+            fiel.Numero = Convert.ToInt32(nu);
+            fiel.Bairro = boxBairro.Text;
+            
+            fiel.CEP = boxCEP.Text;
+            fiel.Cidade = boxCidade.Text;
+            fiel.UF = boxUF.Text;
+            fiel.NCartao = boxNumCartao.Text;
+            fiel.Validade = Convert.ToDateTime(boxValidade.Text);
+            fiel.CodSeguranca = boxCodSeg.Text;
+            fiel.Salario = Convert.ToDecimal(boxSalario.Text);
+            fiel.NomeImpresso = boxNomeCard.Text;
             fiel.Bandeira = bandeiraTemp;
+            
+            
 
             dc.inserirDizimista(fiel);
+            
         }
 
         private void radioFem_Checked(object sender, RoutedEventArgs e)

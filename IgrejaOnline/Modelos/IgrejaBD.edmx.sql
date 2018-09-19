@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/13/2018 20:58:18
+-- Date Created: 09/18/2018 22:23:04
 -- Generated from EDMX file: C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,47 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_EmailUser]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EmailSet] DROP CONSTRAINT [FK_EmailUser];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DizimistasFinanceiro]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DizimistasSet] DROP CONSTRAINT [FK_DizimistasFinanceiro];
+GO
+IF OBJECT_ID(N'[dbo].[FK_IgrejasFinanceiro]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[IgrejasSet] DROP CONSTRAINT [FK_IgrejasFinanceiro];
+GO
+IF OBJECT_ID(N'[dbo].[FK_IgrejasCultos]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CultosSet] DROP CONSTRAINT [FK_IgrejasCultos];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PastoresCultos]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CultosSet] DROP CONSTRAINT [FK_PastoresCultos];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[DizimistasSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DizimistasSet];
+GO
+IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UserSet];
+GO
+IF OBJECT_ID(N'[dbo].[EmailSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EmailSet];
+GO
+IF OBJECT_ID(N'[dbo].[PastoresSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PastoresSet];
+GO
+IF OBJECT_ID(N'[dbo].[IgrejasSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[IgrejasSet];
+GO
+IF OBJECT_ID(N'[dbo].[CultosSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CultosSet];
+GO
+IF OBJECT_ID(N'[dbo].[FinanceiroSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[FinanceiroSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -45,8 +81,7 @@ CREATE TABLE [dbo].[DizimistasSet] (
     [CodSeguranca] nvarchar(max)  NOT NULL,
     [Salario] decimal(18,0)  NOT NULL,
     [NomeImpresso] nvarchar(max)  NOT NULL,
-    [Bandeira] nvarchar(max)  NOT NULL,
-    [Financeiro_Id] int  NOT NULL
+    [Bandeira] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -117,7 +152,8 @@ CREATE TABLE [dbo].[FinanceiroSet] (
     [SaldoTot] nvarchar(max)  NOT NULL,
     [ValorDoado] decimal(18,0)  NOT NULL,
     [DizimistaDoador] nvarchar(max)  NOT NULL,
-    [IgrejaBeneficiada] nvarchar(max)  NOT NULL
+    [IgrejaBeneficiada] nvarchar(max)  NOT NULL,
+    [Dizimistas_Id] int  NOT NULL
 );
 GO
 
@@ -186,19 +222,19 @@ ON [dbo].[EmailSet]
     ([User_Id]);
 GO
 
--- Creating foreign key on [Financeiro_Id] in table 'DizimistasSet'
-ALTER TABLE [dbo].[DizimistasSet]
+-- Creating foreign key on [Dizimistas_Id] in table 'FinanceiroSet'
+ALTER TABLE [dbo].[FinanceiroSet]
 ADD CONSTRAINT [FK_DizimistasFinanceiro]
-    FOREIGN KEY ([Financeiro_Id])
-    REFERENCES [dbo].[FinanceiroSet]
+    FOREIGN KEY ([Dizimistas_Id])
+    REFERENCES [dbo].[DizimistasSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_DizimistasFinanceiro'
 CREATE INDEX [IX_FK_DizimistasFinanceiro]
-ON [dbo].[DizimistasSet]
-    ([Financeiro_Id]);
+ON [dbo].[FinanceiroSet]
+    ([Dizimistas_Id]);
 GO
 
 -- Creating foreign key on [Financeiro_Id] in table 'IgrejasSet'

@@ -1,21 +1,27 @@
 ﻿using Modelos;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Controllers
 {
+
     public class DizimistaController
     {
-      public  void inserirDizimista(Dizimistas d)
-        {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
-            contexto.DizimistasSet.Add(d);
-            contexto.SaveChanges();
-        }
 
+        public void inserirDizimista(Dizimistas fiel)
+        {
+             IgrejaBDContainer contexto = new IgrejaBDContainer();
+    
+            {
+                contexto.DizimistasSet.Add(fiel);
+                contexto.SaveChanges();
+
+            }
+        }
 
        public List<Dizimistas> ListarTodosDizimistas()
         {
@@ -34,7 +40,7 @@ namespace Controllers
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             var lista = from d in contexto.DizimistasSet
-                        where d.Sexo == "radioFem"
+                        where d.Sexo == "M"
                         select d;
             return lista.ToList();
         }
