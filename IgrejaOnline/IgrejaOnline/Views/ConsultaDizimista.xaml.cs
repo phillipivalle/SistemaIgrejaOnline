@@ -22,6 +22,13 @@ namespace IgrejaOnline.Views
         public ConsultaDizimista()
         {
             InitializeComponent();
+
+            Controllers.DizimistaController dc = new Controllers.DizimistaController();
+            List<Modelos.Dizimistas> listaDizimista = new List<Modelos.Dizimistas>();
+
+            
+            listaDizimista = dc.ListarTodosDizimistas();
         }
+        
     }
 }

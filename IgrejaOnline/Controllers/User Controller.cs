@@ -1,6 +1,8 @@
 ﻿using Modelos;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,10 +32,36 @@ namespace Controllers
             return contexto.UserSet.Find(nome);
         }
 
-
-        void Excluir(string nome)
+        User BuscarLogin(String login)
         {
-            User dExcluir = BuscarPorNome(nome);
+            IgrejaBDContainer contexto = new IgrejaBDContainer();
+            return contexto.UserSet.Find(login);
+        }
+
+        //public bool VerificarLogin(string login, string senha)
+        //{
+        //    IgrejaBDContainer contexto = new IgrejaBDContainer();
+        //    SqlCommand sql = new SqlCommand("select * from UserSet WHERE login = '" + login + "' AND senha = '" + senha + "' ");
+        //    sql.CommandType = CommandType.Text;
+        //    SqlDataAdapter adapter = new SqlDataAdapter();
+        //    adapter.SelectCommand = sql;
+        //    DataSet dataset = new DataSet();
+        //    adapter.Fill(dataset);
+
+        //    if (dataset.Tables[0].Rows.Count > 0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+
+      public  void Excluir(string login)
+        {
+            User dExcluir = BuscarLogin(login);
 
             if (dExcluir != null)
             {
@@ -43,7 +71,7 @@ namespace Controllers
             }
         }
 
-        void Editar(string nome, User NovosDadosUser)
+       public void Editar(string nome, User NovosDadosUser)
         {
             User UserAntigo = BuscarPorNome(nome);
 

@@ -98,12 +98,6 @@ namespace IgrejaOnline.Views
             EditandoPastor.ShowDialog();
         }
 
-        private void btnPastorDelete_Click(object sender, RoutedEventArgs e)
-        {
-            PastorExcluir DeletePastor = new PastorExcluir();
-            DeletePastor.ShowDialog();
-        }
-
         private void btnNewIgreja_Click(object sender, RoutedEventArgs e)
         {
             CadastroNewIgreja CadastrandoIgreja = new CadastroNewIgreja();

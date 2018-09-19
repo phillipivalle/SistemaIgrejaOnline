@@ -28,38 +28,45 @@ namespace IgrejaOnline.Views
 
         private void btnCadastrarNewDizimista_Click(object sender, RoutedEventArgs e)
         {
-            // instância do dizimistra Controller "DC";
-            Controllers.DizimistaController dc = new Controllers.DizimistaController();
-            // instância do dizimista que irá receber os valores "fiel";
-            Modelos.Dizimistas fiel = new Modelos.Dizimistas();
+            try
+            {
+                // instância do dizimistra Controller "DC";
+                Controllers.DizimistaController dc = new Controllers.DizimistaController();
+                // instância do dizimista que irá receber os valores "fiel";
+                Modelos.Dizimistas fiel = new Modelos.Dizimistas();
 
 
-            string nu = boxN.Text;
-            string temp = DataNascimento.Text;
 
-            fiel.Nome = boxNome.Text;
-            fiel.CPF = boxCpf.Text;
-            fiel.Sexo = sexoTemp;
-            fiel.DataNasci = Convert.ToDateTime(temp);
-            fiel.Endereco = boxEnd.Text;
-            fiel.Numero = Convert.ToInt32(nu);
-            fiel.Bairro = boxBairro.Text;
-            
-            fiel.CEP = boxCEP.Text;
-            fiel.Cidade = boxCidade.Text;
-            fiel.UF = boxUF.Text;
-            fiel.NCartao = boxNumCartao.Text;
-            fiel.Validade = Convert.ToDateTime(boxValidade.Text);
-            fiel.CodSeguranca = boxCodSeg.Text;
-            fiel.Salario = Convert.ToDecimal(boxSalario.Text);
-            fiel.NomeImpresso = boxNomeCard.Text;
-            fiel.Bandeira = bandeiraTemp;
-            
-            
+                string temp = DataNascimento.Text;
 
-            dc.inserirDizimista(fiel);
+                fiel.Nome = boxNome.Text;
+                fiel.CPF = boxCpf.Text;
+                fiel.Sexo = sexoTemp;
+                fiel.DataNasci = Convert.ToDateTime(temp);
+                fiel.Endereco = boxEnd.Text;
+                fiel.Numero = Convert.ToInt32(boxN.Text);
+                fiel.Bairro = boxBairro.Text;
+
+                fiel.CEP = boxCEP.Text;
+                fiel.Cidade = boxCidade.Text;
+                fiel.UF = boxUF.Text;
+                fiel.NCartao = boxNumCartao.Text;
+                fiel.Validade = Convert.ToDateTime(boxValidade.Text);
+                fiel.CodSeguranca = boxCodSeg.Text;
+                fiel.Salario = Convert.ToDecimal(boxSalario.Text);
+                fiel.NomeImpresso = boxNomeCard.Text;
+                fiel.Bandeira = bandeiraTemp;
+
+                dc.inserirDizimista(fiel);
+                MessageBox.Show("Cadastrado com sucesso!!!");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor, preencha todos os campos");
+            }
+            }
             
-        }
 
         private void radioFem_Checked(object sender, RoutedEventArgs e)
         {

@@ -17,6 +17,7 @@ namespace Modelos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Igrejas()
         {
+            this.Financeiro = new HashSet<Financeiro>();
             this.Cultos = new HashSet<Cultos>();
         }
     
@@ -29,7 +30,8 @@ namespace Modelos
         public string CNPJIgreja { get; set; }
         public string SiteIgreja { get; set; }
     
-        public virtual Financeiro Financeiro { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Financeiro> Financeiro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cultos> Cultos { get; set; }
     }

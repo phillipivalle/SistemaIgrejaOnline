@@ -64,10 +64,10 @@
 
 
 
-        <Label x:Name="SalarioDizimista" Content="Salário:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="323,52,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="SalarioDizimista" Content="Salário:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="323,48,0,0" Grid.RowSpan="2"/>
         <TextBox x:Name="boxSalario" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="323,21,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Background="#FFC5D4D7"/>
-        <Label x:Name="nomeCartao" Content="Nome impresso:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
-        <TextBox x:Name="boxNomeCard" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,26,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FFC5D4D7"/>
+        <Label x:Name="nomeCartao" Content="Nome impresso:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,48,0,0" Grid.RowSpan="2"/>
+        <TextBox x:Name="boxNomeCard" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,21,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FFC5D4D7"/>
         <Label x:Name="BandeiraCard" Content="Nº Cartão" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="215,0,0,0"/>
         <RadioButton GroupName="CartoesDizimistas" x:Name="radioMaster" Content="MasterCard" Grid.Column="1" HorizontalAlignment="Left" Margin="214,0,0,5" Grid.Row="6" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17" Checked="radioMaster_Checked"/>
         <RadioButton GroupName="CartoesDizimistas" x:Name="radioVisa" Content="Visa" Grid.Column="1" HorizontalAlignment="Left" Margin="347,0,0,5" Grid.Row="6" VerticalAlignment="Bottom" Background="#FFC1CAD6" BorderBrush="#FF001280" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF001280" Height="17" Checked="radioVisa_Checked"/>

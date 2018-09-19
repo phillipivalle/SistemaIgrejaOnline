@@ -144,9 +144,6 @@
     <Compile Include="Views\PastorEdit.xaml.cs">
       <DependentUpon>PastorEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PastorExcluir.xaml.cs">
-      <DependentUpon>PastorExcluir.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\SaldosWPF.xaml.cs">
       <DependentUpon>SaldosWPF.xaml</DependentUpon>
     </Compile>
@@ -273,10 +270,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PastorEdit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\PastorExcluir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

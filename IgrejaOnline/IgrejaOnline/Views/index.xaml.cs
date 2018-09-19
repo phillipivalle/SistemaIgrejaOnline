@@ -23,21 +23,61 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
-
+        public string login, senha;
+        public bool cont;
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             {
-                
-                
-                    PaginaInicial iniciando = new PaginaInicial();
-                    iniciando.Show();
-                }
-                
-                
+                PaginaInicial comeco = new PaginaInicial();
+                comeco.Show();
+
+                //    List<Modelos.User> ucList = new List<Modelos.User>();
+                //    Modelos.User use = new Modelos.User();
+                //    login = boxUsuario.Text;
+                //    senha = BoxSenhaUsu.Password;
+                //    foreach (var login in ucList)
+                //    {
+                //        if (use.Login == login)
+                //        {
+                //            foreach (var senha in ucList)
+                //            {
+                //                cont = true;
+                //            }               
+                //        }
+                //        else
+                //        {
+                //            cont = false;
+                //        }
+                //        }
+                //    }
+
+                //if(cont == true)
+                //{
+                //    MessageBox.Show("Deuz é bão");
+                //    PaginaInicial inicialPage = new PaginaInicial();
+                //    inicialPage.Show();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Falha no engano");
+                //}
+                //    Controllers.User_Controller uc = new Controllers.User_Controller();
+                //    //if (uc.VerificarLogin(login, senha))
+                //    //{
+                //    //    MessageBox.Show("Alo diabo");
+                //    //}
+                //    //else
+                //    //{
+                //    //    MessageBox.Show("Alo gzus");
+                //    //}
+                //    //}
+
+
             }
 
         }
     }
+}
 
         
    

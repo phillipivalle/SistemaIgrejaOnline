@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class IgrejaController
+  public class IgrejaController
     {
-        void inserirIgreja(Igrejas f)
+     public   void inserirIgreja(Igrejas f)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.IgrejasSet.Add(f);
             contexto.SaveChanges();
         }
 
-        List<Igrejas> ListarTodasIgrejas()
+   public     List<Igrejas> ListarTodasIgrejas()
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.IgrejasSet.ToList();
         }
 
-        Igrejas BuscarPorNome(string nome)
+     public   Igrejas BuscarPorNome(string nome)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.IgrejasSet.Find(nome);
         }
 
 
-        void Excluir(string nome)
+     public void Excluir(string nome)
         {
             Igrejas dExcluir = BuscarPorNome(nome);
 
@@ -42,7 +42,7 @@ namespace Controllers
         }
 
 
-        void Editar(string nome, Igrejas NovosDadosIgrejas)
+      public void Editar(string nome, Igrejas NovosDadosIgrejas)
         {
             Igrejas IgrejasAntigo = BuscarPorNome(nome);
 

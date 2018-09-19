@@ -24,8 +24,23 @@ namespace IgrejaOnline.Views
         public UsuariosCadastros()
         {
             InitializeComponent();
+        }
 
+        private void GridListDizimista_Loaded(object sender, RoutedEventArgs e)
+        {
             Controllers.User_Controller uc = new Controllers.User_Controller();
+            GridListDizimista.ItemsSource = uc.ListarTodosUser();
+            
+        }
+        private string login;
+        private void ExcluirUser_Click(object sender, RoutedEventArgs e)
+        {
+            Controllers.User_Controller uc = new Controllers.User_Controller();
+            Modelos.User excluido = new Modelos.User();
+
+            login = Convert.ToString(ColumLogin);
+            
+            uc.Excluir(excluido.Login);
             uc.ListarTodosUser();
         }
     }

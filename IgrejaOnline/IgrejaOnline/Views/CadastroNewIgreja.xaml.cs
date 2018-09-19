@@ -26,10 +26,26 @@ namespace IgrejaOnline.Views
 
         private void btnCadastrarNewPastor_Click(object sender, RoutedEventArgs e)
         {
-          
-             
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            Modelos.Igrejas ig = new Modelos.Igrejas();
 
+            try
+            {
+                ig.NomeIgreja = boxNomeIgreja.Text;
+                ig.EnderecoIgreja = boxNumIgreja.Text;
+                ig.BairroIgreja = boxBairroIgreja.Text;
+                ig.UFIgreja = boxUFIgreja.Text;
+                ig.CNPJIgreja = boxCNPJ.Text;
+                ig.SiteIgreja = BoxSiteIgreja.Text;
 
+                ic.inserirIgreja(ig);
+                MessageBox.Show("Igreja Cadastrada Com Sucesso!!!");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor, preencha todos os campos!");
+            }
         }
     }
 }

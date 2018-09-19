@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/18/2018 22:23:04
+-- Date Created: 09/19/2018 00:32:22
 -- Generated from EDMX file: C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx
 -- --------------------------------------------------
 
@@ -21,7 +21,7 @@ IF OBJECT_ID(N'[dbo].[FK_EmailUser]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[EmailSet] DROP CONSTRAINT [FK_EmailUser];
 GO
 IF OBJECT_ID(N'[dbo].[FK_DizimistasFinanceiro]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[DizimistasSet] DROP CONSTRAINT [FK_DizimistasFinanceiro];
+    ALTER TABLE [dbo].[FinanceiroSet] DROP CONSTRAINT [FK_DizimistasFinanceiro];
 GO
 IF OBJECT_ID(N'[dbo].[FK_IgrejasFinanceiro]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[IgrejasSet] DROP CONSTRAINT [FK_IgrejasFinanceiro];
@@ -129,8 +129,7 @@ CREATE TABLE [dbo].[IgrejasSet] (
     [BairroIgreja] nvarchar(max)  NOT NULL,
     [UFIgreja] nvarchar(max)  NOT NULL,
     [CNPJIgreja] nvarchar(max)  NOT NULL,
-    [SiteIgreja] nvarchar(max)  NOT NULL,
-    [Financeiro_Id] int  NOT NULL
+    [SiteIgreja] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -153,7 +152,8 @@ CREATE TABLE [dbo].[FinanceiroSet] (
     [ValorDoado] decimal(18,0)  NOT NULL,
     [DizimistaDoador] nvarchar(max)  NOT NULL,
     [IgrejaBeneficiada] nvarchar(max)  NOT NULL,
-    [Dizimistas_Id] int  NOT NULL
+    [Dizimistas_Id] int  NOT NULL,
+    [Igrejas_Id] int  NOT NULL
 );
 GO
 
@@ -237,19 +237,19 @@ ON [dbo].[FinanceiroSet]
     ([Dizimistas_Id]);
 GO
 
--- Creating foreign key on [Financeiro_Id] in table 'IgrejasSet'
-ALTER TABLE [dbo].[IgrejasSet]
+-- Creating foreign key on [Igrejas_Id] in table 'FinanceiroSet'
+ALTER TABLE [dbo].[FinanceiroSet]
 ADD CONSTRAINT [FK_IgrejasFinanceiro]
-    FOREIGN KEY ([Financeiro_Id])
-    REFERENCES [dbo].[FinanceiroSet]
+    FOREIGN KEY ([Igrejas_Id])
+    REFERENCES [dbo].[IgrejasSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_IgrejasFinanceiro'
 CREATE INDEX [IX_FK_IgrejasFinanceiro]
-ON [dbo].[IgrejasSet]
-    ([Financeiro_Id]);
+ON [dbo].[FinanceiroSet]
+    ([Igrejas_Id]);
 GO
 
 -- Creating foreign key on [Igrejas_Id] in table 'CultosSet'

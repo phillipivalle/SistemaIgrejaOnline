@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class PastorController
+    public class PastorController
     {
-        void inserirPastor(Pastores e)
+     public   void inserirPastor(Pastores e)
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.PastoresSet.Add(e);
             contexto.SaveChanges();
         }
 
-        List<Pastores> ListarTodosPastores()
+      public  List<Pastores> ListarTodosPastores()
         {
             IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.PastoresSet.ToList();
