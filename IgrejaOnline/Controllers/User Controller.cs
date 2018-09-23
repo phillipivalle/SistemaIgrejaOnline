@@ -11,10 +11,39 @@ namespace Controllers
 {
     public class User_Controller
     {
+        bool senhaSim, loginSim;
+        IgrejaBDContainer contexto = new IgrejaBDContainer();
+
+        public bool verificarLogin(string log, string senha)
+        {
+            var login = from l in contexto.UserSet
+                        where l.Login == log
+                        select l;
+
+            var senh = from s in contexto.UserSet
+                       where s.Senha == senha
+                       select s;
+
+            if (login.ToList().Count > 0)
+            {
+                loginSim = true;
+            }
+            if (senh.ToList().Count > 0)
+            {
+                senhaSim = true;
+            }
+            if (loginSim && senhaSim)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void inserirUser(User d)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.UserSet.Add(d);
             contexto.SaveChanges();
         }
@@ -22,69 +51,50 @@ namespace Controllers
 
         public List<User> ListarTodosUser()
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.UserSet.ToList();
         }
 
-        User BuscarPorNome(string nome)
+        public User BuscarPorNome(string nome)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.UserSet.Find(nome);
         }
 
-        User BuscarLogin(String login)
+        public User BuscarPorLogin(string login)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
+
             return contexto.UserSet.Find(login);
         }
 
-        //public bool VerificarLogin(string login, string senha)
-        //{
-        //    IgrejaBDContainer contexto = new IgrejaBDContainer();
-        //    SqlCommand sql = new SqlCommand("select * from UserSet WHERE login = '" + login + "' AND senha = '" + senha + "' ");
-        //    sql.CommandType = CommandType.Text;
-        //    SqlDataAdapter adapter = new SqlDataAdapter();
-        //    adapter.SelectCommand = sql;
-        //    DataSet dataset = new DataSet();
-        //    adapter.Fill(dataset);
-
-        //    if (dataset.Tables[0].Rows.Count > 0)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
-
-      public  void Excluir(string login)
+        public User BuscarId(int id)
         {
-            User dExcluir = BuscarLogin(login);
+            return contexto.UserSet.Find(id);
+        }
 
+        public void Excluir(User usuario)
+        {
+            User dExcluir = BuscarId(usuario.Id);
             if (dExcluir != null)
             {
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
                 contexto.UserSet.Remove(dExcluir);
+
                 contexto.SaveChanges();
+
             }
         }
 
-       public void Editar(string nome, User NovosDadosUser)
+        public void Editar(int id, User NovosDadosUser)
         {
-            User UserAntigo = BuscarPorNome(nome);
+            User UserAntigo = BuscarId(id);
 
             if (UserAntigo != null)
             {
-
+                UserAntigo.Login = NovosDadosUser.Login;
                 UserAntigo.Nome = NovosDadosUser.Nome;
                 UserAntigo.Senha = NovosDadosUser.Senha;
                 UserAntigo.Funcao = NovosDadosUser.Funcao;
                 UserAntigo.Email = NovosDadosUser.Email;
-                
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
 
+                
                 contexto.Entry(UserAntigo).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();
             }

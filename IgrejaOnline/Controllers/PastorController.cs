@@ -9,22 +9,21 @@ namespace Controllers
 {
     public class PastorController
     {
-     public   void inserirPastor(Pastores e)
+        IgrejaBDContainer contexto = new IgrejaBDContainer();
+
+        public void inserirPastor(Pastores e)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.PastoresSet.Add(e);
             contexto.SaveChanges();
         }
 
       public  List<Pastores> ListarTodosPastores()
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.PastoresSet.ToList();
         }
 
         Pastores BuscarPorNome(string nome)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.PastoresSet.Find(nome);
         }
 
@@ -34,7 +33,6 @@ namespace Controllers
 
             if(dExcluir != null)
             {
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
                 contexto.PastoresSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
@@ -57,7 +55,6 @@ namespace Controllers
                 PastoresAntigo.CidadePastor = NovosDadosPastores.CidadePastor;
                 PastoresAntigo.UFPastor = NovosDadosPastores.UFPastor;
 
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
 
                 contexto.Entry(PastoresAntigo).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges(); 

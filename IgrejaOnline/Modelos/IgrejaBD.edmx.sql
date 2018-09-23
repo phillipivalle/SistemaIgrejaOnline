@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/19/2018 00:32:22
+-- Date Created: 09/20/2018 20:05:58
 -- Generated from EDMX file: C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx
 -- --------------------------------------------------
 
@@ -17,14 +17,11 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_EmailUser]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EmailSet] DROP CONSTRAINT [FK_EmailUser];
-GO
 IF OBJECT_ID(N'[dbo].[FK_DizimistasFinanceiro]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[FinanceiroSet] DROP CONSTRAINT [FK_DizimistasFinanceiro];
 GO
 IF OBJECT_ID(N'[dbo].[FK_IgrejasFinanceiro]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[IgrejasSet] DROP CONSTRAINT [FK_IgrejasFinanceiro];
+    ALTER TABLE [dbo].[FinanceiroSet] DROP CONSTRAINT [FK_IgrejasFinanceiro];
 GO
 IF OBJECT_ID(N'[dbo].[FK_IgrejasCultos]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CultosSet] DROP CONSTRAINT [FK_IgrejasCultos];
@@ -42,9 +39,6 @@ IF OBJECT_ID(N'[dbo].[DizimistasSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet];
-GO
-IF OBJECT_ID(N'[dbo].[EmailSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[EmailSet];
 GO
 IF OBJECT_ID(N'[dbo].[PastoresSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PastoresSet];
@@ -93,14 +87,6 @@ CREATE TABLE [dbo].[UserSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [Email] nvarchar(max)  NOT NULL,
     [Funcao] nvarchar(max)  NOT NULL
-);
-GO
-
--- Creating table 'EmailSet'
-CREATE TABLE [dbo].[EmailSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [EndEmail] nvarchar(max)  NOT NULL,
-    [User_Id] int  NOT NULL
 );
 GO
 
@@ -173,12 +159,6 @@ ADD CONSTRAINT [PK_UserSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'EmailSet'
-ALTER TABLE [dbo].[EmailSet]
-ADD CONSTRAINT [PK_EmailSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'PastoresSet'
 ALTER TABLE [dbo].[PastoresSet]
 ADD CONSTRAINT [PK_PastoresSet]
@@ -206,21 +186,6 @@ GO
 -- --------------------------------------------------
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
-
--- Creating foreign key on [User_Id] in table 'EmailSet'
-ALTER TABLE [dbo].[EmailSet]
-ADD CONSTRAINT [FK_EmailUser]
-    FOREIGN KEY ([User_Id])
-    REFERENCES [dbo].[UserSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_EmailUser'
-CREATE INDEX [IX_FK_EmailUser]
-ON [dbo].[EmailSet]
-    ([User_Id]);
-GO
 
 -- Creating foreign key on [Dizimistas_Id] in table 'FinanceiroSet'
 ALTER TABLE [dbo].[FinanceiroSet]

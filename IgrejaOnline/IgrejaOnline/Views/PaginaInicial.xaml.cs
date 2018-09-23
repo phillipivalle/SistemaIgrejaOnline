@@ -122,12 +122,6 @@ namespace IgrejaOnline.Views
             EditandoIgreja.ShowDialog();
         }
 
-        private void igrejaDelete_Click(object sender, RoutedEventArgs e)
-        {
-            ExcluindoIgreja DeletandoIgrejas = new ExcluindoIgreja();
-            DeletandoIgrejas.ShowDialog();
-        }
-
         private void btnHorarioCulto_Click(object sender, RoutedEventArgs e)
         {
             WPFListHorarios ListaHorario = new WPFListHorarios();

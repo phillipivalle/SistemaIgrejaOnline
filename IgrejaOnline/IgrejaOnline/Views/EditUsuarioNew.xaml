@@ -1,4 +1,4 @@
-﻿<Window x:Class="IgrejaOnline.Views.EditUsuarioNew"
+﻿<Window x:Name="EditUsuarios" x:Class="IgrejaOnline.Views.EditUsuarioNew"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,7 +14,6 @@
                 <GradientStop Color="#FF807474" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
@@ -33,6 +32,37 @@
             <RowDefinition Height="1*"/>
 
         </Grid.RowDefinitions>
-
+        <Label x:Name="CadastroNewUser" Content="Editando usuário" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
+        <Label x:Name="NomeUser" Content="Nome completo:" Grid.Row="1" Margin="0,0,400,19" Width="109" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1"/>
+        <Label x:Name="Login" Content="Login:" Grid.Row="1" Margin="19,47,0,24" Width="45" VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox  x:Name="BoxNameUser" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="19,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Background="#FFE9E9E9" />
+        <TextBox x:Name="BoxLoginUser" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="19,19,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Background="#FFE9E9E9"/>
+        <Label x:Name="DataNascUser" Content="Data de nascimento:" Grid.Row="1" Margin="328,0,0,19" Width="137" VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1"/>
+        <DatePicker x:Name="DataNasciUser" Grid.Column="1" HorizontalAlignment="Left" Margin="328,24,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="145" Background="#FFE9E9E9"/>
+        <Label x:Name="SenhaUser" Content="Senha:" Grid.Row="2" Margin="19,47,0,25" Width="54" VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1" Grid.RowSpan="2"/>
+        <PasswordBox x:Name="boxSenhaUser" Grid.Column="1" HorizontalAlignment="Left" Margin="19,20,0,0" Grid.Row="3" VerticalAlignment="Top" Height="23" Width="137" Background="#FFE9E9E9"/>
+        <Label x:Name="Login_Copy" Content="Função:" Grid.Row="1" Margin="156,47,0,30" Width="63" VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="27" FontSize="14" Foreground="#FF000064" Grid.Column="1" RenderTransformOrigin="0.492,0.286" Grid.RowSpan="2"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="161,19,0,0" Grid.Row="2" VerticalAlignment="Top" Width="137">
+            <ComboBoxItem x:Name="adm" Selected="adm_Selected">Administrador</ComboBoxItem>
+            <Separator/>
+            <ComboBoxItem  x:Name="tesoureiro" Selected="tesoureiro_Selected">Tesoureiro</ComboBoxItem>
+            <Separator/>
+            <ComboBoxItem x:Name="admEventos" Selected="admEventos_Selected">Administrador de eventos</ComboBoxItem>
+            <Separator/>
+            <ComboBoxItem x:Name="gestorPessoas" Selected="gestorPessoas_Selected">Gestor de pessoas</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="ConfirmarSenha" Content="Confirmar Senha:" Grid.Row="2" Margin="161,47,0,25" Width="120" VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1" Grid.RowSpan="2"/>
+        <PasswordBox x:Name="ConfirmSenha" Grid.Column="1" HorizontalAlignment="Left" Margin="161,20,0,0" Grid.Row="3" VerticalAlignment="Top" Height="23" Width="137" Background="#FFE9E9E9"/>
+        <TextBox x:Name="BoxEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="19,29,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Background="#FFE9E9E9"/>
+        <Label x:Name="EmailUser" Content="E-mail:" Grid.Row="4" Margin="0,0,464,19" Width="45" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="33" FontSize="14" Foreground="#FF000064" Grid.Column="1"/>
+        <Button Margin="19,0,0,52" x:Name="btnCadastrarNewUsuario" Grid.Column="1" Grid.Row="6" BorderBrush="#FF707070" Content="Editar usuário" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="454" Grid.RowSpan="2" Click="btnCadastrarNewUsuario_Click_1" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF182729" Offset="0"/>
+                    <GradientStop Color="#FF7BB3B6" Offset="0.456"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox  x:Name="BoxID" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="328,30,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Background="#FFE9E9E9"/>
     </Grid>
 </Window>

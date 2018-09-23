@@ -27,7 +27,6 @@ namespace Modelos
     
         public virtual DbSet<Dizimistas> DizimistasSet { get; set; }
         public virtual DbSet<User> UserSet { get; set; }
-        public virtual DbSet<Email> EmailSet { get; set; }
         public virtual DbSet<Pastores> PastoresSet { get; set; }
         public virtual DbSet<Igrejas> IgrejasSet { get; set; }
         public virtual DbSet<Cultos> CultosSet { get; set; }

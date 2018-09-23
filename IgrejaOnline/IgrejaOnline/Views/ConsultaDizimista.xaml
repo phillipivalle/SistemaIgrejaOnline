@@ -31,13 +31,28 @@
         <Label x:Name="TitleCadastro" Content="Listagem de dizimistas" Grid.Column="1" Grid.Row="0" Margin="0,0,10,20" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" FontStyle="Italic" FontWeight="Bold"/>
         <Label x:Name="labelNomeBusca" Content="Informe um nome para buscar:" Grid.Column="1" Margin="124,0,133,0" Width="271" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC8D5D8"/>
-        <DataGrid ItemsSource="{Binding listaDizimista}"  AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,66,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book">
+        <DataGrid IsReadOnly="true" AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,66,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" Loaded="GridListDizimista_Loaded">
             <!--ItemsSource="{Binding LocalDaLista}"-->
             <DataGrid.Columns>
-                <DataGridTextColumn Width="220" x:Name="ColumName" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
-                <DataGridTextColumn Width="199" x:Name="ColumCPF" Binding="{Binding CPF}" Header="CPF"/>
-                <DataGridTextColumn Width="45" x:Name="ColummEditar"  Header="Editar"/>
-                <DataGridTextColumn x:Name="ColummExclui" Header="Excluir"/>
+                <DataGridTextColumn Width="160" x:Name="ColumName" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
+                <DataGridTextColumn Width="150" x:Name="ColumCPF" Binding="{Binding CPF}" Header="CPF"/>
+                <DataGridTextColumn Width="105" x:Name="ColumSalario" Binding="{Binding Salario}" Header="Salario"/>
+               
+                <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="EditaDizimista" Content="Editar" Click="EditaDizimista_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn x:Name="ColumExcluir" Header="Excluir">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="ExcluirDizimista" Content="Excluir" Click="ExcluirDizimista_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
 
 

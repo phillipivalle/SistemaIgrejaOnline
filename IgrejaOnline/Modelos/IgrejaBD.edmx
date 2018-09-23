@@ -8,15 +8,10 @@
   <EntityContainer Name="IgrejaBDStoreContainer">
     <EntitySet Name="DizimistasSet" EntityType="IgrejaBD.Store.DizimistasSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserSet" EntityType="IgrejaBD.Store.UserSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="EmailSet" EntityType="IgrejaBD.Store.EmailSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PastoresSet" EntityType="IgrejaBD.Store.PastoresSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="IgrejasSet" EntityType="IgrejaBD.Store.IgrejasSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CultosSet" EntityType="IgrejaBD.Store.CultosSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="FinanceiroSet" EntityType="IgrejaBD.Store.FinanceiroSet" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="EmailUser" Association="IgrejaBD.Store.EmailUser">
-      <End Role="Email" EntitySet="EmailSet" />
-      <End Role="User" EntitySet="UserSet" />
-    </AssociationSet>
     <AssociationSet Name="DizimistasFinanceiro" Association="IgrejaBD.Store.DizimistasFinanceiro">
       <End Role="Dizimistas" EntitySet="DizimistasSet" />
       <End Role="Financeiro" EntitySet="FinanceiroSet" />
@@ -66,14 +61,6 @@
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Funcao" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EmailSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EndEmail" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="User_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PastoresSet">
     <Key>
@@ -128,18 +115,6 @@
     <Property Name="Dizimistas_Id" Type="int" Nullable="false" />
     <Property Name="Igrejas_Id" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="EmailUser">
-    <End Role="Email" Type="IgrejaBD.Store.EmailSet" Multiplicity="*" />
-    <End Role="User" Type="IgrejaBD.Store.UserSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Email">
-        <PropertyRef Name="User_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="DizimistasFinanceiro">
     <End Role="Dizimistas" Type="IgrejaBD.Store.DizimistasSet" Multiplicity="1" />
     <End Role="Financeiro" Type="IgrejaBD.Store.FinanceiroSet" Multiplicity="*" />
@@ -195,11 +170,7 @@
         <EntityContainer Name="IgrejaBDContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DizimistasSet" EntityType="IgrejaBD.Dizimistas" />
           <EntitySet Name="UserSet" EntityType="IgrejaBD.User" />
-          <EntitySet Name="EmailSet" EntityType="IgrejaBD.Email" />
-          <AssociationSet Name="EmailUser" Association="IgrejaBD.EmailUser">
-            <End EntitySet="EmailSet" Role="Email" />
-            <End EntitySet="UserSet" Role="User" />
-          </AssociationSet>
+          
           <EntitySet Name="PastoresSet" EntityType="IgrejaBD.Pastores" />
           <EntitySet Name="IgrejasSet" EntityType="IgrejaBD.Igrejas" />
           <EntitySet Name="CultosSet" EntityType="IgrejaBD.Cultos" />
@@ -255,18 +226,7 @@
           <Property Name="Email" Nullable="false" Type="String" />
           <Property Name="Funcao" Type="String" Nullable="false" />
         </EntityType>
-        <EntityType Name="Email">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EndEmail" Type="String" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="IgrejaBD.EmailUser" FromRole="Email" ToRole="User" />
-        </EntityType>
-        <Association Name="EmailUser">
-          <End Type="IgrejaBD.Email" Multiplicity="1" Role="Email" />
-          <End Type="IgrejaBD.User" Multiplicity="1" Role="User" />
-        </Association>
+        
         <EntityType Name="Pastores">
           <Key>
             <PropertyRef Name="Id" />
@@ -389,14 +349,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EmailSet">
-      <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Email)">
-        <MappingFragment StoreEntitySet="EmailSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="EndEmail" ColumnName="EndEmail" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PastoresSet">
       <EntityTypeMapping TypeName="IsTypeOf(IgrejaBD.Pastores)">
         <MappingFragment StoreEntitySet="PastoresSet">
@@ -451,14 +403,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="EmailUser" TypeName="IgrejaBD.EmailUser" StoreEntitySet="EmailSet">
-      <EndProperty Name="User">
-        <ScalarProperty Name="Id" ColumnName="User_Id" />
-      </EndProperty>
-      <EndProperty Name="Email">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="DizimistasFinanceiro" TypeName="IgrejaBD.DizimistasFinanceiro" StoreEntitySet="FinanceiroSet">
       <EndProperty Name="Dizimistas">
         <ScalarProperty Name="Id" ColumnName="Dizimistas_Id" />

@@ -9,9 +9,10 @@ namespace Controllers
 {
     class FinanceiroController
     {
+        IgrejaBDContainer contexto = new IgrejaBDContainer();
+
         void inserir(Financeiro g)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.FinanceiroSet.Add(g);
             contexto.SaveChanges();
         }
@@ -19,13 +20,11 @@ namespace Controllers
 
         List<Financeiro> ListarTodoFinanceiro()
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.FinanceiroSet.ToList();
         }
 
         Financeiro BuscarPorNome(string nome)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.FinanceiroSet.Find(nome);
         }
 
@@ -35,7 +34,6 @@ namespace Controllers
 
             if (dExcluir != null)
             {
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
                 contexto.FinanceiroSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }

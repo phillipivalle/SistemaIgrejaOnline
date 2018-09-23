@@ -56,9 +56,6 @@
     <Compile Include="Dizimistas.cs">
       <DependentUpon>IgrejaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Email.cs">
-      <DependentUpon>IgrejaBD.tt</DependentUpon>
-    </Compile>
     <Compile Include="Financeiro.cs">
       <DependentUpon>IgrejaBD.tt</DependentUpon>
     </Compile>

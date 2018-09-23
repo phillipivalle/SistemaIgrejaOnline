@@ -9,22 +9,21 @@ namespace Controllers
 {
   public class IgrejaController
     {
-     public   void inserirIgreja(Igrejas f)
+        IgrejaBDContainer contexto = new IgrejaBDContainer();
+
+        public void inserirIgreja(Igrejas f)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             contexto.IgrejasSet.Add(f);
             contexto.SaveChanges();
         }
 
    public     List<Igrejas> ListarTodasIgrejas()
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.IgrejasSet.ToList();
         }
 
      public   Igrejas BuscarPorNome(string nome)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.IgrejasSet.Find(nome);
         }
 
@@ -35,7 +34,6 @@ namespace Controllers
 
             if (dExcluir != null)
             {
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
                 contexto.IgrejasSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
@@ -56,7 +54,6 @@ namespace Controllers
                 IgrejasAntigo.CNPJIgreja = NovosDadosIgrejas.CNPJIgreja;
                 IgrejasAntigo.SiteIgreja = NovosDadosIgrejas.SiteIgreja;
 
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
 
                 contexto.Entry(IgrejasAntigo).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,30 +21,52 @@ namespace IgrejaOnline.Views
     public partial class UsuariosCadastros : Window
     {
 
-
         public UsuariosCadastros()
         {
             InitializeComponent();
         }
 
-        private void GridListDizimista_Loaded(object sender, RoutedEventArgs e)
-        {
-            Controllers.User_Controller uc = new Controllers.User_Controller();
-            GridListDizimista.ItemsSource = uc.ListarTodosUser();
-            
-        }
-        private string login;
         private void ExcluirUser_Click(object sender, RoutedEventArgs e)
         {
-            Controllers.User_Controller uc = new Controllers.User_Controller();
-            Modelos.User excluido = new Modelos.User();
 
-            login = Convert.ToString(ColumLogin);
+            User usuarioSelecionado = (User)GridListUser.SelectedItem;
+
+            Controllers.User_Controller uc = new Controllers.User_Controller();
+            uc.Excluir(usuarioSelecionado);
+            MessageBox.Show("Excluido com sucesso!");
+            GridListUser.ItemsSource = uc.ListarTodosUser();
+
+
+
+        }
+
+
+        private void EditaUser_Click(object sender, RoutedEventArgs e)
+        {
+
+            User usuarioSelecionado = (User)GridListUser.SelectedItem;
+            Controllers.User_Controller uc = new Controllers.User_Controller();
+            EditUsuarioNew editNew = new EditUsuarioNew();
+
+            editNew.BoxNameUser.Text = usuarioSelecionado.Nome;
+            editNew.BoxID.Text = usuarioSelecionado.Id.ToString();
+            editNew.boxSenhaUser.Password = usuarioSelecionado.Senha;
+            editNew.BoxLoginUser.Text = usuarioSelecionado.Login;
+            editNew.BoxEmail.Text = usuarioSelecionado.Email;
+            editNew.funcao = usuarioSelecionado.Funcao;
+            editNew.Show();
+            this.Close();
             
-            uc.Excluir(excluido.Login);
-            uc.ListarTodosUser();
+        }
+
+        private void GridListUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            Controllers.User_Controller uc = new Controllers.User_Controller();
+            GridListUser.ItemsSource = uc.ListarTodosUser();
         }
     }
-    }
+}
+
+
     
 

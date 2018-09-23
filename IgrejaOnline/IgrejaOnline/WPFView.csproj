@@ -93,12 +93,6 @@
     <Compile Include="Views\EditUsuarioNew.xaml.cs">
       <DependentUpon>EditUsuarioNew.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ExcluindoDizimista.xaml.cs">
-      <DependentUpon>ExcluindoDizimista.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ExcluindoIgreja.xaml.cs">
-      <DependentUpon>ExcluindoIgreja.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
     </Compile>
@@ -202,14 +196,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EditUsuarioNew.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ExcluindoDizimista.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ExcluindoIgreja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,9 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\amex.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\PombinhaZinha.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image1.png" />

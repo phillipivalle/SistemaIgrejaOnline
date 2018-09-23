@@ -11,10 +11,10 @@ namespace Controllers
 
     public class DizimistaController
     {
+        IgrejaBDContainer contexto = new IgrejaBDContainer();
 
         public void inserirDizimista(Dizimistas fiel)
         {
-             IgrejaBDContainer contexto = new IgrejaBDContainer();
     
             {
                 contexto.DizimistasSet.Add(fiel);
@@ -23,33 +23,29 @@ namespace Controllers
             }
         }
 
-       public List<Dizimistas> ListarTodosDizimistas()
+     public List<Dizimistas> ListarTodosDizimistas()
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.DizimistasSet.ToList();
         }
 
-        List<Dizimistas> ListarDizimistasHomens(String sexom)
+     public   List<Dizimistas> ListarDizimistasHomens(String sexom)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
 
             return contexto.DizimistasSet.ToList();
         }
 
-        List<Dizimistas> ListarDizimistasMulheres(string sexo)
+     public  List<Dizimistas> ListarDizimistasMulheres(string sexo)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             var lista = from d in contexto.DizimistasSet
                         where d.Sexo == "M"
                         select d;
             return lista.ToList();
         }
 
-        List<Dizimistas> ListarDizimistasCrianca(int DataNasc)
+      public  List<Dizimistas> ListarDizimistasCrianca(int DataNasc)
         {
             DateTime hj = DateTime.Now;
 
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             var lista = from d in contexto.DizimistasSet
                         where d.DataNasci < hj.AddYears(-12)
                         select d;
@@ -57,27 +53,30 @@ namespace Controllers
         }
 
 
-        Dizimistas BuscarPorNome(string nome)
+       public Dizimistas BuscarPorNome(string nome)
         {
-            IgrejaBDContainer contexto = new IgrejaBDContainer();
             return contexto.DizimistasSet.Find(nome);
         }
 
-        void Excluir(string nome)
+        public Dizimistas BuscarID(int id)
         {
-            Dizimistas dExcluir = BuscarPorNome(nome);
+            return contexto.DizimistasSet.Find(id);
+        }
+
+      public  void Excluir(int id)
+        {
+            Dizimistas dExcluir = BuscarID(id);
 
             if (dExcluir != null)
             {
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
                 contexto.DizimistasSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
         }
 
-        void Editar(string nome, Dizimistas NovosDadosDizimista)
+       public void Editar(int id, Dizimistas NovosDadosDizimista)
         {
-            Dizimistas DizimistaAntigo = BuscarPorNome(nome);
+            Dizimistas DizimistaAntigo = BuscarID(id);
 
             if (DizimistaAntigo != null)
             {
@@ -99,7 +98,6 @@ namespace Controllers
                 DizimistaAntigo.NomeImpresso = NovosDadosDizimista.NomeImpresso;
                 DizimistaAntigo.Bandeira = NovosDadosDizimista.Bandeira;
 
-                IgrejaBDContainer contexto = new IgrejaBDContainer();
 
                 contexto.Entry(DizimistaAntigo).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();
