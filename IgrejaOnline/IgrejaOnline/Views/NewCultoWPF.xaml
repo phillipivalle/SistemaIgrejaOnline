@@ -36,7 +36,7 @@
         <Label x:Name="TitleNovoCulto" Content="Marcar novo culto" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
         <Label x:Name="NomeIgreja" Content="Nome da igreja:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0" Width="112"/>
         <Label x:Name="labelNasc" Content="Dia:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
-        <DatePicker x:Name="DataNascimento" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Foreground="#FF0C0D0D">
+        <DatePicker SelectedDateFormat="Short" x:Name="DataCultoBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Foreground="#FF0C0D0D">
             <DatePicker.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
                     <GradientStop Color="#FFA3AEB9" Offset="0"/>
@@ -54,9 +54,19 @@
         </DatePicker>
         <Label x:Name="HorarioCult" Content="Horario:" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="335,50,0,0" Grid.RowSpan="2"/>
         <TextBox x:Name="boxHorario" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="335,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Background="#FFC5D4D7"/>
-        <ComboBox Name="igrejaSelect" Grid.Column="1" HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="180"/>
+        <ComboBox  Name="igrejaSelect" Grid.Column="1" HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="180" Loaded="igrejaSelect_Loaded"/>
+        
+
         <Label x:Name="Pastorlab" Content="Pastor:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="335,0,0,0" Width="112"/>
-        <ComboBox x:Name="igrejaSelect_Copy" Grid.Column="1" HorizontalAlignment="Left" Margin="338,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="180"/>
+        <ComboBox  x:Name="pastorSelect" Grid.Column="1" HorizontalAlignment="Left" Margin="338,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="180" Loaded="pastorSelect_Loaded"/>
+        <Button Margin="10,52,0,0" x:Name="btnMarcarCulto" Grid.Column="1" Grid.Row="5" BorderBrush="#FF707070" Content="Marcar Culto" FontSize="24" Cursor="Hand" FontFamily="Franklin Gothic Demi Cond" HorizontalAlignment="Left" Width="505" Grid.RowSpan="2" Click="btnMarcarCulto_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF182729" Offset="0"/>
+                    <GradientStop Color="#FF7BB3B6" Offset="0.456"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

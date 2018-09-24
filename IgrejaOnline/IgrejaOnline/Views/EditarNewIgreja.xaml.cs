@@ -23,5 +23,26 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void btnEditarIgreja_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultaIgreja att = new ConsultaIgreja();
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            Modelos.Igrejas iInserir = new Modelos.Igrejas();
+            iInserir.Id = Convert.ToInt16(boxID.Text);
+            iInserir.NomeIgreja = boxNomeIgreja.Text;
+            iInserir.EnderecoIgreja = boxEnd.Text;
+            iInserir.NumeroIgreja = Convert.ToInt16(boxNumIgreja.Text);
+            iInserir.BairroIgreja = boxBairroIgreja.Text;
+            iInserir.UFIgreja = boxUFIgreja.Text;
+            iInserir.CNPJIgreja = boxCNPJ.Text;
+            iInserir.SiteIgreja = BoxSiteIgreja.Text;
+
+            ic.Editar(iInserir.Id, iInserir);
+            this.Close();
+            att.GridListIgrejas.SelectedItem = ic.ListarTodasIgrejas();
+            att.ShowDialog();
+
+        }
     }
 }

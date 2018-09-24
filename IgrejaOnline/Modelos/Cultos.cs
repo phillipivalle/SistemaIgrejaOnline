@@ -20,7 +20,8 @@ namespace Modelos
         public string LocalCulto { get; set; }
         public string PastorCulto { get; set; }
         public int PastoresId { get; set; }
-    
+        public int Igrejas_ID { get; set; }
+
         public virtual Igrejas Igrejas { get; set; }
         public virtual Pastores Pastores { get; set; }
     }

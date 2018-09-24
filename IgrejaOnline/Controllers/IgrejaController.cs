@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-  public class IgrejaController
+    public class IgrejaController
     {
         IgrejaBDContainer contexto = new IgrejaBDContainer();
 
@@ -17,20 +17,24 @@ namespace Controllers
             contexto.SaveChanges();
         }
 
-   public     List<Igrejas> ListarTodasIgrejas()
+        public List<Igrejas> ListarTodasIgrejas()
         {
             return contexto.IgrejasSet.ToList();
         }
 
-     public   Igrejas BuscarPorNome(string nome)
+        public Igrejas BuscarPorNome(string nome)
         {
             return contexto.IgrejasSet.Find(nome);
         }
 
 
-     public void Excluir(string nome)
+        public Igrejas BuscarID(int id)
         {
-            Igrejas dExcluir = BuscarPorNome(nome);
+            return contexto.IgrejasSet.Find(id);
+        }
+        public void Excluir(int id)
+        {
+            Igrejas dExcluir = BuscarID(id);
 
             if (dExcluir != null)
             {
@@ -39,10 +43,42 @@ namespace Controllers
             }
         }
 
+   
+        //    // LINQ (https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 
-      public void Editar(string nome, Igrejas NovosDadosIgrejas)
+        //public Int16 pesquisaBosta(string nome)
+        //{
+        //    int k7 = from p in contexto.IgrejasSet
+        //             where p.NomeIgreja == nome
+                                 
+        //}
+
+
+
+        public List<string> PesquisaNome()
         {
-            Igrejas IgrejasAntigo = BuscarPorNome(nome);
+            var lista = from ig in contexto.IgrejasSet
+                        select ig.NomeIgreja;
+            return lista.ToList();
+        }
+
+
+      
+        public List<int> PesquisaID(string nome) { 
+
+      var lista = from ig in contexto.IgrejasSet
+          where ig.NomeIgreja == nome
+
+                        select ig.Id;
+            return lista.ToList();
+
+        }
+
+
+
+        public void Editar(int id, Igrejas NovosDadosIgrejas)
+        {
+            Igrejas IgrejasAntigo = BuscarID(id);
 
             if(IgrejasAntigo != null)
             {
@@ -62,3 +98,4 @@ namespace Controllers
 
     }
 }
+

@@ -57,9 +57,9 @@ namespace IgrejaOnline.Views
             newEdit.boxSalario.Text = DizimistaSelecionado.Salario.ToString();
             newEdit.boxNomeCard.Text = DizimistaSelecionado.NomeImpresso;
             newEdit.bandeira = DizimistaSelecionado.Bandeira;
-
-            newEdit.Show();
             this.Close();
+            newEdit.ShowDialog();
+
 
 
 

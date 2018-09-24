@@ -33,8 +33,34 @@
             <RowDefinition Height="1*"/>
 
         </Grid.RowDefinitions>
-        <Label x:Name="TitleListaHorarioCultos" Content="Horários dos próximos cultos" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
-        <TextBox x:Name="ListaHorarios" Grid.Column="1" HorizontalAlignment="Left" Height="315" Grid.Row="1" Grid.RowSpan="6" TextWrapping="Wrap" Text="DOMINGO&#xD;&#xA;&#xD;&#xA;Manhã&#xD;&#xA;09:00 1° Culto Matutino&#xD;&#xA;09:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)&#xD;&#xA;09:00 CFM – Escola de Líderes – Saiba mais&#xD;&#xA;09:00 Escola Bíblica – Saiba mais&#xD;&#xA;10:30 Culto em Inglês (Capela)&#xD;&#xA;11:00 2° Culto Matutino&#xD;&#xA;11:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)&#xD;&#xA;11:00 Escola Bíblica – Saiba mais&#xD;&#xA;&#xD;&#xA;Tarde&#xD;&#xA;17:00 Culto em Italiano (2º domingo do mês)&#xD;&#xA;&#xD;&#xA;Noite&#xD;&#xA;19:00 Culto Vespertino&#xD;&#xA;19:00 Cultos Min. Infantil – (0 – 12 anos divididos em turmas por idade)" VerticalAlignment="Top" Width="528" TextChanged="TextBox_TextChanged" Background="#FFDAD7D7"/>
+        <Label x:Name="TitleListaHorarioCultos" Content="Horários dos cultos" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="GridListCultos" Grid.Column="1" HorizontalAlignment="Left" Height="291" Margin="10,0,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book"  >
 
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="220" x:Name="ColumDate" Binding="{Binding DataCulto}" Header="Data" Foreground="#FF000273"/>
+                <DataGridTextColumn Width="199" x:Name="ColumHorario" Binding="{Binding HorarioCulto}" Header="Horário"/>
+                <DataGridTextColumn Width="199" x:Name="ColumLocal" Binding="{Binding LocalCulto}" Header="Igreja"/>
+                <DataGridTextColumn Width="199" x:Name="ColumPastor" Binding="{Binding PastorCulto}" Header="Pastor"/>
+
+                <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="editarCulto" Content="Editar"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn x:Name="ColumExcluir" Header="Excluir">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="excluirCulto" Content="Excluir"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

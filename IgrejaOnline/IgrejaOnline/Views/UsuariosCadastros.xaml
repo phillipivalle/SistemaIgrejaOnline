@@ -40,8 +40,8 @@
 
             <DataGrid IsReadOnly="true" AutoGenerateColumns="False" x:Name="GridListUser" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,45,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" Loaded="GridListUser_Loaded" >
                 <DataGrid.Columns >
-                    <DataGridTextColumn Width="96" x:Name="ColumNome" Binding="{Binding Login}" Header="Login" Foreground="#FF000273"/>
-                    <DataGridTextColumn Width="150" x:Name="ColumLogin" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
+                    <DataGridTextColumn Width="96" x:Name="ColumLogin" Binding="{Binding Login}" Header="Login" Foreground="#FF000273"/>
+                    <DataGridTextColumn Width="150" x:Name="ColumFunc" Binding="{Binding Funcao}" Header="Funcao" Foreground="#FF000273"/>
                     <DataGridTextColumn Width="170" x:Name="ColumEmail" Binding="{Binding Email}" Header="E-mail"/>
                     <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
                         <DataGridTemplateColumn.CellTemplate >

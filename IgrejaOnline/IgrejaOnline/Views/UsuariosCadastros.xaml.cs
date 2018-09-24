@@ -54,8 +54,9 @@ namespace IgrejaOnline.Views
             editNew.BoxLoginUser.Text = usuarioSelecionado.Login;
             editNew.BoxEmail.Text = usuarioSelecionado.Email;
             editNew.funcao = usuarioSelecionado.Funcao;
-            editNew.Show();
             this.Close();
+            editNew.ShowDialog();
+          
             
         }
 

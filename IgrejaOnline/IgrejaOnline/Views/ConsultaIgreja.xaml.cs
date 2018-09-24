@@ -23,5 +23,42 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void GridListIgrejas_Loaded(object sender, RoutedEventArgs e)
+        {
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            GridListIgrejas.ItemsSource = ic.ListarTodasIgrejas();
+        }
+
+        private void editarIgreja_Click(object sender, RoutedEventArgs e)
+        {
+
+            Modelos.Igrejas igrejaSelecionada = (Modelos.Igrejas)GridListIgrejas.SelectedItem;
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            EditarNewIgreja newEdit = new EditarNewIgreja();
+
+            newEdit.boxID.Text = igrejaSelecionada.Id.ToString();
+            newEdit.boxNomeIgreja.Text = igrejaSelecionada.NomeIgreja;
+            newEdit.boxEnd.Text = igrejaSelecionada.EnderecoIgreja;
+            newEdit.boxNumIgreja.Text = igrejaSelecionada.NumeroIgreja.ToString();
+            newEdit.boxBairroIgreja.Text = igrejaSelecionada.BairroIgreja;
+            newEdit.boxUFIgreja.Text = igrejaSelecionada.UFIgreja;
+            newEdit.boxCNPJ.Text = igrejaSelecionada.CNPJIgreja;
+            newEdit.BoxSiteIgreja.Text = igrejaSelecionada.SiteIgreja;
+            
+            newEdit.Show();
+            this.Close();
+
+        }
+
+        private void excluirIgreja_Click(object sender, RoutedEventArgs e)
+        {
+            Modelos.Igrejas igrejaSelecionada = (Modelos.Igrejas)GridListIgrejas.SelectedItem;
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            ic.Excluir(igrejaSelecionada.Id);
+            MessageBox.Show("Igreja excluida com sucesso!");
+            GridListIgrejas.ItemsSource = ic.ListarTodasIgrejas();
+
+        }
     }
 }

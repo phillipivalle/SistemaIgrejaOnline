@@ -17,19 +17,53 @@ namespace Controllers
             contexto.SaveChanges();
         }
 
-      public  List<Pastores> ListarTodosPastores()
+
+        public string PesquisaID(string nome)
+        {
+
+            var lista = from past in contexto.PastoresSet
+                        where past.Nome == nome
+
+                        select past.Id;
+            return lista.ToString();
+
+        }
+
+
+
+        public  List<Pastores> ListarTodosPastores()
         {
             return contexto.PastoresSet.ToList();
         }
 
-        Pastores BuscarPorNome(string nome)
+     public  Pastores BuscarPorNome(string nome)
         {
             return contexto.PastoresSet.Find(nome);
         }
 
-        void Excluir (string nome)
+        public List<string> PesquisaNome()
         {
-            Pastores dExcluir = BuscarPorNome(nome);
+            var lista = from p in contexto.PastoresSet
+                        select p.Nome;
+            return lista.ToList();
+        }
+            public List<int> pesquisaID(string nome)
+            {
+                var lista = from p in contexto.PastoresSet
+                            where p.Nome == nome
+                            select p.Id;
+                return lista.ToList();
+            }
+        
+
+       public Pastores buscarID(int id)
+        {
+            return contexto.PastoresSet.Find(id);
+        } 
+
+       public void Excluir (int id)
+        {
+            Pastores dExcluir = buscarID(id);
 
             if(dExcluir != null)
             {
@@ -38,9 +72,9 @@ namespace Controllers
             }
         }
 
-        void Editar (string nome, Pastores NovosDadosPastores)
+     public   void Editar (int id, Pastores NovosDadosPastores)
         {
-            Pastores PastoresAntigo = BuscarPorNome(nome);
+            Pastores PastoresAntigo = buscarID(id);
 
             if(PastoresAntigo != null)
             {

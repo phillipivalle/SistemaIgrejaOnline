@@ -18,6 +18,7 @@ namespace Controllers
     
             {
                 contexto.DizimistasSet.Add(fiel);
+                
                 contexto.SaveChanges();
 
             }
@@ -28,11 +29,23 @@ namespace Controllers
             return contexto.DizimistasSet.ToList();
         }
 
-     public   List<Dizimistas> ListarDizimistasHomens(String sexom)
+     public   List<Dizimistas> ListarDizimistasSexo(String sexom)
         {
-
-            return contexto.DizimistasSet.ToList();
+            var listM = from m in contexto.DizimistasSet
+                        where m.Sexo == sexom
+                        select m;
+            return listM.ToList();
         }
+
+        //public List<Dizimistas> listDizimistaIdade(DateTime date)
+        //{
+        //    var data = from d in contexto.DizimistasSet
+        //               where d.DataNasci == date
+        //               select d;
+
+        //    return data;
+        //}
+
 
      public  List<Dizimistas> ListarDizimistasMulheres(string sexo)
         {

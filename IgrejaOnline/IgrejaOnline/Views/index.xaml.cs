@@ -23,65 +23,35 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
-        
+        public string fun;
         public bool yesOrNot;
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             {
-                
                 Modelos.User QualUsu = new Modelos.User();
                 Controllers.User_Controller uc = new Controllers.User_Controller();
-                PaginaInicial page = new PaginaInicial();
-                page.Show();
-                //yesOrNot = uc.verificarLogin(boxUsuario.Text, BoxSenhaUsu.Password);
-               //if ( yesOrNot == true)
-               // {
+           
+                yesOrNot = uc.verificarLogin(boxUsuario.Text, BoxSenhaUsu.Password);
+                fun = uc.buscaFuncao(boxUsuario.Text);
+                
+                if (yesOrNot == true)
+                {
+                    PaginaInicial caralho = new PaginaInicial();
+                    caralho.Show();
+                    }
 
-               //     QualUsu = uc.BuscarPorLogin(boxUsuario.Text);
-               //     if(QualUsu.Funcao == "adm")
-               //     {
-               //         PaginaInicial comeco = new PaginaInicial();
-               //         comeco.Show();
-               //     }
-               //     else
-               //     {
-               //         if(QualUsu.Funcao == "tesoureiro")
-               //         {
-               //             PaginaInicialTesoureiro comeco = new PaginaInicialTesoureiro();
-               //             comeco.ShowDialog();
-               //         }
-               //         else
-               //         {
-               //             if(QualUsu.Funcao == "gestorPessoas")
-               //             {
-               //                 PaginaInicialGestorDePessoas comeco = new PaginaInicialGestorDePessoas();
-               //                 comeco.ShowDialog();
-               //             }
-               //             else
-               //             {
-               //                 if(QualUsu.Funcao == "admEventos")
-               //                 {
-               //                     PaginaInicialGestorEventos comeco = new PaginaInicialGestorEventos();
-               //                     comeco.ShowDialog();
-               //                 }
-               //             }
-               //         }
-               //     }
-                   
-               // }
-               // else
-               // {
-               //     MessageBox.Show("Login ou senha inválido!");
-               // }
-                
-                
+                }
 
             }
-
         }
     }
-}
 
-        
-   
+            
+
+
+
+
+
+
+
 

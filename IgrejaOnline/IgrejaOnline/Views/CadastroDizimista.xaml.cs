@@ -34,8 +34,7 @@ namespace IgrejaOnline.Views
                 Controllers.DizimistaController dc = new Controllers.DizimistaController();
                 // instância do dizimista que irá receber os valores "fiel";
                 Modelos.Dizimistas fiel = new Modelos.Dizimistas();
-
-
+                
 
                 string temp = DataNascimento.Text;
 
@@ -57,6 +56,7 @@ namespace IgrejaOnline.Views
                 fiel.NomeImpresso = boxNomeCard.Text;
                 fiel.Bandeira = bandeiraTemp;
 
+                 
                 dc.inserirDizimista(fiel);
                 MessageBox.Show("Cadastrado com sucesso!!!");
                 this.Close();

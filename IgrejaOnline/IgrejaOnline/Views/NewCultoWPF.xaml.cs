@@ -23,5 +23,59 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void igrejaSelect_Loaded(object sender, RoutedEventArgs e)
+        {
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            igrejaSelect.ItemsSource = ic.PesquisaNome();
+            
+        }
+
+
+        private void pastorSelect_Loaded(object sender, RoutedEventArgs e)
+        {
+            Controllers.PastorController pc = new Controllers.PastorController();
+            pastorSelect.ItemsSource = pc.PesquisaNome();
+        }
+       public string igrejan;
+       public string pastorn;
+   
+        private void btnMarcarCulto_Click(object sender, RoutedEventArgs e)
+        {
+          
+
+            Controllers.CultoController cc = new Controllers.CultoController();
+            Controllers.PastorController pc = new Controllers.PastorController();
+            Controllers.IgrejaController ic = new Controllers.IgrejaController();
+
+           Modelos.Cultos inserindoCulto = new Modelos.Cultos();
+           Modelos.Pastores pm = new Modelos.Pastores();
+           Modelos.Igrejas ig = new Modelos.Igrejas();
+
+
+            List<int> ptid = pc.pesquisaID(pastorSelect.SelectedValue.ToString());
+            List<int> igid = ic.PesquisaID(igrejaSelect.SelectedValue.ToString());
+
+            for (int i = 0; i < ptid.Count; i++)
+            {
+                inserindoCulto.PastoresId = ptid[i];
+            }
+            for (int i = 0; i < igid.Count; i++)
+            {
+                inserindoCulto.PastoresId = igid[i];
+            }
+
+
+            inserindoCulto.DataCulto = Convert.ToDateTime(DataCultoBox.Text);
+            inserindoCulto.HorarioCulto = boxHorario.Text;
+            inserindoCulto.LocalCulto = ig.NomeIgreja;
+            inserindoCulto.PastorCulto = pm.Nome;
+            
+            cc.inserirCulto(inserindoCulto); 
+            MessageBox.Show("Culto marcado com sucesso!!");
+        }
+
+        
+
     }
 }

@@ -36,13 +36,30 @@
         <Label x:Name="TitleListaIgrejas" Content="Igrejas Cadastradas" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
         <Label x:Name="labelNomeBusca" Content="Informe um nome para buscar:" Grid.Column="1" Margin="124,32,133,42" Width="271" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E" Grid.RowSpan="3"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC8D5D8"/>
-        <DataGrid  AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,45,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" >
-            <!--ItemsSource="{Binding LocalDaLista}"-->
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="GridListIgrejas" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,45,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" Loaded="GridListIgrejas_Loaded"  >
+            
             <DataGrid.Columns>
-                <DataGridTextColumn Width="220" x:Name="ColumName" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
-                <DataGridTextColumn Width="199" x:Name="ColumCNPJ" Binding="{Binding CNPF}" Header="CNPJ"/>
-                <DataGridTextColumn Width="45" x:Name="ColumCidade"  Header="Editar"/>
-                <DataGridTextColumn x:Name="ColumDataNasc" Header="Excluir"/>
+                <DataGridTextColumn Width="220" x:Name="ColumName" Binding="{Binding NomeIgreja}" Header="Nome" Foreground="#FF000273"/>
+                <DataGridTextColumn Width="199" x:Name="ColumCNPJ" Binding="{Binding CNPJIgreja}" Header="CNPJ"/>
+
+                <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="editarIgreja" Content="Editar" Click="editarIgreja_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn x:Name="ColumExcluir" Header="Excluir">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button  x:Name="excluirIgreja" Content="Excluir" Click="excluirIgreja_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
             </DataGrid.Columns>
 
             <DataGrid.Background>

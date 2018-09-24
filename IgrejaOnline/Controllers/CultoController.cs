@@ -7,28 +7,28 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class CultoController
+  public  class CultoController
     {
         IgrejaBDContainer contexto = new IgrejaBDContainer();
 
-        void inserirCulto(Cultos h)
+  public void inserirCulto(Cultos h)
         {
             contexto.CultosSet.Add(h);
             contexto.SaveChanges();
         }
 
-        List<Cultos> ListarTodosCultos()
+        public List<Cultos> ListarTodosCultos()
         {
             return contexto.CultosSet.ToList();
         }
 
 
-        Cultos BuscarPorNome(string nome)
+       public Cultos BuscarPorNome(string nome)
         {
             return contexto.CultosSet.Find(nome);
         }
 
-        void Excluir(string nome)
+       public void Excluir(string nome)
         {
             Cultos dExcluir = BuscarPorNome(nome);
 
@@ -41,7 +41,7 @@ namespace Controllers
 
 
 
-        void Editar(string nome, Cultos NovosDadosCulto)
+       public void Editar(string nome, Cultos NovosDadosCulto)
         {
             Cultos CultoAntigo = BuscarPorNome(nome);
 
@@ -58,8 +58,5 @@ namespace Controllers
                 contexto.SaveChanges();
             }
         }
-
-
-
     }
 }

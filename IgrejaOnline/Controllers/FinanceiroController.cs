@@ -7,30 +7,38 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class FinanceiroController
+   public class FinanceiroController
     {
         IgrejaBDContainer contexto = new IgrejaBDContainer();
 
-        void inserir(Financeiro g)
+      
+       public void inserir(Financeiro g)
         {
             contexto.FinanceiroSet.Add(g);
             contexto.SaveChanges();
         }
 
 
-        List<Financeiro> ListarTodoFinanceiro()
+     public   List<Financeiro> ListarTodoFinanceiro()
         {
             return contexto.FinanceiroSet.ToList();
         }
 
-        Financeiro BuscarPorNome(string nome)
+      public  Financeiro BuscarPorNome(string nome)
         {
             return contexto.FinanceiroSet.Find(nome);
         }
 
-        void Excluir(string nome)
+
+        public Financeiro buscarID(int id)
         {
-            Financeiro dExcluir = BuscarPorNome(nome);
+            return contexto.FinanceiroSet.Find(id);
+        }
+
+
+     public   void Excluir(int id)
+        {
+            Financeiro dExcluir = buscarID(id);
 
             if (dExcluir != null)
             {
