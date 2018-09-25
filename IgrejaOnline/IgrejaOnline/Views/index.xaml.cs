@@ -33,13 +33,12 @@ namespace IgrejaOnline.Views
            
                 yesOrNot = uc.verificarLogin(boxUsuario.Text, BoxSenhaUsu.Password);
                 fun = uc.buscaFuncao(boxUsuario.Text);
-                
+
                 if (yesOrNot == true)
                 {
-                    PaginaInicial caralho = new PaginaInicial();
-                    caralho.Show();
-                    }
-
+                    PaginaInicial pag1 = new PaginaInicial();
+                    pag1.Show();
+                }
                 }
 
             }

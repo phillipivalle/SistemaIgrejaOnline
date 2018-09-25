@@ -47,14 +47,15 @@ namespace Controllers
             contexto.UserSet.Add(d);
             contexto.SaveChanges();
         }
-
+        private string fun;
         public string buscaFuncao (string login)
         {
             var temp = from d in contexto.UserSet
                        where d.Login == login
 
                        select d.Funcao;
-            return temp.ToString();
+            fun = temp.ToString();
+            return fun;
         }
 
 

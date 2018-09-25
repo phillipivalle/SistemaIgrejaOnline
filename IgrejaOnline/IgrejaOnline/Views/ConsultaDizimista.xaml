@@ -32,7 +32,7 @@
         <Label x:Name="labelNomeBusca" Content="Informe um nome para buscar:" Grid.Column="1" Margin="124,0,133,0" Width="271" FontFamily="Franklin Gothic Book" FontSize="20" Grid.Row="1" Foreground="#FF02298E"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" Background="#FFC8D5D8"/>
         <DataGrid IsReadOnly="true" AutoGenerateColumns="False" x:Name="GridListDizimista" Grid.Column="1" HorizontalAlignment="Left" Height="246" Margin="10,66,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" Loaded="GridListDizimista_Loaded">
-            
+
             <DataGrid.Columns>
                 <DataGridTextColumn Width="160" x:Name="ColumName" Binding="{Binding Nome}" Header="Nome" Foreground="#FF000273"/>
                 <DataGridTextColumn Width="150" x:Name="ColumCPF" Binding="{Binding CPF}" Header="CPF"/>
