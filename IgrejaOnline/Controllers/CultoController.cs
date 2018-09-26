@@ -14,14 +14,11 @@ namespace Controllers
 
   public void inserirCulto(Cultos h)
         {
+            IgrejaBDContainer insericult = new IgrejaBDContainer();
 
-            
-            contexto.CultosSet.Add(h);
-            
-            contexto.SaveChanges();
-            
+            insericult.CultosSet.Add(h);
+            insericult.SaveChanges();
            
-            
         }
 
         public List<Cultos> ListarTodosCultos()

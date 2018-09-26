@@ -47,6 +47,7 @@ namespace IgrejaOnline.Views
             Controllers.CultoController cc = new Controllers.CultoController();
             Controllers.PastorController pc = new Controllers.PastorController();
             Controllers.IgrejaController ic = new Controllers.IgrejaController();
+            
 
             Modelos.Cultos inserindoCulto = new Modelos.Cultos();
             Modelos.Igrejas im = ic.pesquisaID(igrejaSelect.SelectedValue.ToString());
