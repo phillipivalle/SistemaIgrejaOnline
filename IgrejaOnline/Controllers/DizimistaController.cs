@@ -13,6 +13,7 @@ namespace Controllers
     {
         IgrejaBDContainer contexto = new IgrejaBDContainer();
 
+        //inserindo dizimistas no banco
         public void inserirDizimista(Dizimistas fiel)
         {
     
@@ -24,37 +25,24 @@ namespace Controllers
             }
         }
 
+    //listando todos dizimistas
      public List<Dizimistas> ListarTodosDizimistas()
         {
             return contexto.DizimistasSet.ToList();
         }
 
+
+     //listando dizimistas por sexo
      public   List<Dizimistas> ListarDizimistasSexo(String sexom)
         {
             var listM = from m in contexto.DizimistasSet
                         where m.Sexo == sexom
                         select m;
             return listM.ToList();
+
         }
 
-        //public List<Dizimistas> listDizimistaIdade(DateTime date)
-        //{
-        //    var data = from d in contexto.DizimistasSet
-        //               where d.DataNasci == date
-        //               select d;
-
-        //    return data;
-        //}
-
-
-     public  List<Dizimistas> ListarDizimistasMulheres(string sexo)
-        {
-            var lista = from d in contexto.DizimistasSet
-                        where d.Sexo == "M"
-                        select d;
-            return lista.ToList();
-        }
-
+    //listando dizimistas crianças
       public  List<Dizimistas> ListarDizimistasCrianca(int DataNasc)
         {
             DateTime hj = DateTime.Now;
@@ -65,17 +53,19 @@ namespace Controllers
             return lista.ToList();
         }
 
-
+        //buscando por nome
        public Dizimistas BuscarPorNome(string nome)
         {
             return contexto.DizimistasSet.Find(nome);
         }
 
+        //buscando por id
         public Dizimistas BuscarID(int id)
         {
             return contexto.DizimistasSet.Find(id);
         }
 
+        //excluindo dizimista
       public  void Excluir(int id)
         {
             Dizimistas dExcluir = BuscarID(id);
@@ -87,6 +77,7 @@ namespace Controllers
             }
         }
 
+        //editando dizimistas
        public void Editar(int id, Dizimistas NovosDadosDizimista)
         {
             Dizimistas DizimistaAntigo = BuscarID(id);
@@ -111,7 +102,7 @@ namespace Controllers
                 DizimistaAntigo.NomeImpresso = NovosDadosDizimista.NomeImpresso;
                 DizimistaAntigo.Bandeira = NovosDadosDizimista.Bandeira;
 
-
+                
                 contexto.Entry(DizimistaAntigo).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();
             }

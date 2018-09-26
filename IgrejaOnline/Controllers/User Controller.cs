@@ -11,6 +11,8 @@ namespace Controllers
 {
     public class User_Controller
     {
+        //variavel conferindo senha e login
+        //
         bool senhaSim, loginSim;
         IgrejaBDContainer contexto = new IgrejaBDContainer();
 

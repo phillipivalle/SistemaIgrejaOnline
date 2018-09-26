@@ -36,12 +36,12 @@ namespace IgrejaOnline.Views
                 Modelos.Dizimistas fiel = new Modelos.Dizimistas();
                 
 
-                string temp = DataNascimento.Text;
+                
 
                 fiel.Nome = boxNome.Text;
                 fiel.CPF = boxCpf.Text;
                 fiel.Sexo = sexoTemp;
-                fiel.DataNasci = Convert.ToDateTime(temp);
+                fiel.DataNasci = Convert.ToDateTime(DataNascimento.Text);
                 fiel.Endereco = boxEnd.Text;
                 fiel.Numero = Convert.ToInt32(boxN.Text);
                 fiel.Bairro = boxBairro.Text;

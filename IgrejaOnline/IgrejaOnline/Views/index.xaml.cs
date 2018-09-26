@@ -24,6 +24,7 @@ namespace IgrejaOnline.Views
             InitializeComponent();
         }
        
+        //criando variavel para verificação de login e senha
         public bool yesOrNot;
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -31,6 +32,7 @@ namespace IgrejaOnline.Views
                 
                 Controllers.User_Controller uc = new Controllers.User_Controller();
 
+                //instanciando usuario receber dados do usuario
                 Modelos.User QualUsu = uc.buscaFuncao(boxUsuario.Text);
                 yesOrNot = uc.verificarLogin(boxUsuario.Text, BoxSenhaUsu.Password);
                 
