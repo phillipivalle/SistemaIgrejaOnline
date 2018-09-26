@@ -31,12 +31,12 @@ namespace Controllers
 
 
 
-        public  List<Pastores> ListarTodosPastores()
+        public List<Pastores> ListarTodosPastores()
         {
             return contexto.PastoresSet.ToList();
         }
 
-     public  Pastores BuscarPorNome(string nome)
+        public Pastores BuscarPorNome(string nome)
         {
             return contexto.PastoresSet.Find(nome);
         }
@@ -47,36 +47,37 @@ namespace Controllers
                         select p.Nome;
             return lista.ToList();
         }
-            public List<int> pesquisaID(string nome)
-            {
-                var lista = from p in contexto.PastoresSet
-                            where p.Nome == nome
-                            select p.Id;
-                return lista.ToList();
-            }
-        
 
-       public Pastores buscarID(int id)
+        public Pastores pesquisaID(string nome)
+        {
+            var lista = from p in contexto.PastoresSet
+                        where p.Nome == nome
+                        select p;
+            return lista.FirstOrDefault();
+        }
+
+
+        public Pastores buscarID(int id)
         {
             return contexto.PastoresSet.Find(id);
-        } 
+        }
 
-       public void Excluir (int id)
+        public void Excluir(int id)
         {
             Pastores dExcluir = buscarID(id);
 
-            if(dExcluir != null)
+            if (dExcluir != null)
             {
                 contexto.PastoresSet.Remove(dExcluir);
                 contexto.SaveChanges();
             }
         }
 
-     public   void Editar (int id, Pastores NovosDadosPastores)
+        public void Editar(int id, Pastores NovosDadosPastores)
         {
             Pastores PastoresAntigo = buscarID(id);
 
-            if(PastoresAntigo != null)
+            if (PastoresAntigo != null)
             {
                 PastoresAntigo.Nome = NovosDadosPastores.Nome;
                 PastoresAntigo.PastorCPF = NovosDadosPastores.PastorCPF;
@@ -91,11 +92,11 @@ namespace Controllers
 
 
                 contexto.Entry(PastoresAntigo).State = System.Data.Entity.EntityState.Modified;
-                contexto.SaveChanges(); 
+                contexto.SaveChanges();
             }
 
-        }    
-    
+        }
+
 
     }
 }

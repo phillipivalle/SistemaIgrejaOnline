@@ -17,6 +17,14 @@ namespace Controllers
             contexto.SaveChanges();
         }
 
+        public Igrejas pesquisaID(string nome)
+        {
+            var lista = from p in contexto.IgrejasSet
+                        where p.NomeIgreja == nome
+                        select p;
+            return lista.FirstOrDefault();
+        }
+
         public List<Igrejas> ListarTodasIgrejas()
         {
             return contexto.IgrejasSet.ToList();
@@ -64,15 +72,15 @@ namespace Controllers
 
 
       
-        public List<int> PesquisaID(string nome) { 
+      //  public User PesquisaID(string nome) { 
 
-      var lista = from ig in contexto.IgrejasSet
-          where ig.NomeIgreja == nome
+      //var lista = from ig in contexto.IgrejasSet
+      //    where ig.NomeIgreja == nome
 
-                        select ig.Id;
-            return lista.ToList();
+      //                  select ig.Id;
+      //      return lista.ToList();
 
-        }
+      //  }
 
 
 

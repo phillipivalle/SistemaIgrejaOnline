@@ -1,6 +1,7 @@
 ﻿using Modelos;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,10 @@ namespace Controllers
 
   public void inserirCulto(Cultos h)
         {
+           
             contexto.CultosSet.Add(h);
             contexto.SaveChanges();
+            
         }
 
         public List<Cultos> ListarTodosCultos()

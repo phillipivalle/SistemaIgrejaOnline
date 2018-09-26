@@ -11,7 +11,8 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Cultos
     {
         public int Id { get; set; }
@@ -19,7 +20,11 @@ namespace Modelos
         public string HorarioCulto { get; set; }
         public string LocalCulto { get; set; }
         public string PastorCulto { get; set; }
+
+        [ForeignKey("Pastores")]
         public int PastoresId { get; set; }
+
+        [ForeignKey("Igrejas")]
         public int Igrejas_ID { get; set; }
 
         public virtual Igrejas Igrejas { get; set; }
