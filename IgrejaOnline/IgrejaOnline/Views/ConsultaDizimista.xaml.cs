@@ -38,6 +38,9 @@ namespace IgrejaOnline.Views
         private void EditaDizimista_Click(object sender, RoutedEventArgs e)
         {
             Modelos.Dizimistas DizimistaSelecionado = (Modelos.Dizimistas)GridListDizimista.SelectedItem;
+            
+
+
             Controllers.DizimistaController dc = new Controllers.DizimistaController();
             EditarDizimista newEdit = new EditarDizimista();
             newEdit.boxID.Text = DizimistaSelecionado.Id.ToString();

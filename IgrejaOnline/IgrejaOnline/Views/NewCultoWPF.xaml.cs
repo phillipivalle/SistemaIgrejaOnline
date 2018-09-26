@@ -57,7 +57,7 @@ namespace IgrejaOnline.Views
 
             inserindoCulto.Igrejas = im;
             inserindoCulto.Pastores = pm;
-
+            
             inserindoCulto.DataCulto = Convert.ToDateTime(DataCultoBox.Text);
             inserindoCulto.HorarioCulto = boxHorario.Text;
             inserindoCulto.LocalCulto = im.NomeIgreja ;

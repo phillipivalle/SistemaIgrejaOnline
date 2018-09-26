@@ -23,21 +23,53 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
-        public string fun;
+       
         public bool yesOrNot;
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             {
-                Modelos.User QualUsu = new Modelos.User();
+                
                 Controllers.User_Controller uc = new Controllers.User_Controller();
-           
+
+                Modelos.User QualUsu = uc.buscaFuncao(boxUsuario.Text);
                 yesOrNot = uc.verificarLogin(boxUsuario.Text, BoxSenhaUsu.Password);
-                fun = uc.buscaFuncao(boxUsuario.Text);
+                
 
                 if (yesOrNot == true)
                 {
-                    PaginaInicial pag1 = new PaginaInicial();
-                    pag1.Show();
+                    if (QualUsu.Funcao == "adm")
+                    {
+                        PaginaInicial pag1 = new PaginaInicial();
+                        pag1.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        if(QualUsu.Funcao == "tesoureiro")
+                        {
+                            PaginaInicialTesoureiro pag2 = new PaginaInicialTesoureiro();
+                            pag2.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            if(QualUsu.Funcao == "gestaoPessoas")
+                            {
+                                PaginaInicialGestorDePessoas pag3 = new PaginaInicialGestorDePessoas();
+                                pag3.ShowDialog();
+                                this.Close();
+                            }
+                            else
+                            {
+                                if(QualUsu.Funcao == "admEventos")
+                                {
+                                    PaginaInicialGestorEventos pag4 = new PaginaInicialGestorEventos();
+                                    pag4.ShowDialog();
+                                    this.Close();
+                                }
+                            }
+                        }
+                    }
                 }
                 }
 

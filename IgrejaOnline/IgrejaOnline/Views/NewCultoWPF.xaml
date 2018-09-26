@@ -36,7 +36,7 @@
         <Label x:Name="TitleNovoCulto" Content="Marcar novo culto" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
         <Label x:Name="NomeIgreja" Content="Nome da igreja:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0" Width="112"/>
         <Label x:Name="labelNasc" Content="Dia:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.116,0.799" FontFamily="Franklin Gothic Book" FontSize="14" Foreground="#FF000064" Margin="10,0,0,0"/>
-        <DatePicker SelectedDateFormat="Short" x:Name="DataCultoBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Foreground="#FF0C0D0D">
+        <DatePicker  SelectedDateFormat="Short" x:Name="DataCultoBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Foreground="#FF0C0D0D">
             <DatePicker.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
                     <GradientStop Color="#FFA3AEB9" Offset="0"/>

@@ -34,18 +34,18 @@
 
         </Grid.RowDefinitions>
         <Label x:Name="TitleListaHorarioCultos" Content="Horários dos cultos" Grid.Column="1" Grid.Row="0" Margin="0,-4,10,44" Width="508" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontFamily="Franklin Gothic Book" Height="64" FontSize="36" Foreground="#FF000064" Grid.RowSpan="2" FontStyle="Italic" FontWeight="Bold"/>
-        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="GridListCultos" Grid.Column="1" HorizontalAlignment="Left" Height="291" Margin="10,0,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book"  >
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="GridListCultos" Grid.Column="1" HorizontalAlignment="Left" Height="291" Margin="10,0,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="508" FontFamily="Franklin Gothic Book" Loaded="GridListCultos_Loaded"  >
 
             <DataGrid.Columns>
-                <DataGridTextColumn Width="220" x:Name="ColumDate" Binding="{Binding DataCulto}" Header="Data" Foreground="#FF000273"/>
-                <DataGridTextColumn Width="199" x:Name="ColumHorario" Binding="{Binding HorarioCulto}" Header="Horário"/>
-                <DataGridTextColumn Width="199" x:Name="ColumLocal" Binding="{Binding LocalCulto}" Header="Igreja"/>
-                <DataGridTextColumn Width="199" x:Name="ColumPastor" Binding="{Binding PastorCulto}" Header="Pastor"/>
+                <DataGridTextColumn  Width="80" x:Name="ColumDate" Binding="{Binding DataCulto}" Header="Data" Foreground="#FF000273"/>
+                <DataGridTextColumn Width="50" x:Name="ColumHorario" Binding="{Binding HorarioCulto}" Header="Horário"/>
+                <DataGridTextColumn Width="140" x:Name="ColumLocal" Binding="{Binding LocalCulto}" Header="Igreja"/>
+                <DataGridTextColumn Width="140" x:Name="ColumPastor" Binding="{Binding PastorCulto}" Header="Pastor"/>
 
                 <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate>
-                            <Button  x:Name="editarCulto" Content="Editar"></Button>
+                            <Button  x:Name="editarCulto" Content="Editar" Click="editarCulto_Click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -53,7 +53,7 @@
                 <DataGridTemplateColumn x:Name="ColumExcluir" Header="Excluir">
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate>
-                            <Button  x:Name="excluirCulto" Content="Excluir"></Button>
+                            <Button  x:Name="excluirCulto" Content="Excluir" Click="excluirCulto_Click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

@@ -14,9 +14,13 @@ namespace Controllers
 
   public void inserirCulto(Cultos h)
         {
-           
+
+            
             contexto.CultosSet.Add(h);
+            
             contexto.SaveChanges();
+            
+           
             
         }
 
@@ -31,9 +35,14 @@ namespace Controllers
             return contexto.CultosSet.Find(nome);
         }
 
-       public void Excluir(string nome)
+        public Cultos BuscarID(int id)
         {
-            Cultos dExcluir = BuscarPorNome(nome);
+            return contexto.CultosSet.Find(id);
+        }
+
+       public void Excluir(int id)
+        {
+            Cultos dExcluir = BuscarID(id);
 
             if (dExcluir != null)
             {

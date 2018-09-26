@@ -24,9 +24,28 @@ namespace IgrejaOnline.Views
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void GridListCultos_Loaded(object sender, RoutedEventArgs e)
         {
+            Controllers.CultoController cc = new Controllers.CultoController();
 
+            GridListCultos.ItemsSource = cc.ListarTodosCultos();
+
+        }
+
+        private void editarCulto_Click(object sender, RoutedEventArgs e)
+        {
+            Modelos.Cultos cultoSelecionado = (Modelos.Cultos)GridListCultos.SelectedItem;
+            
+
+        }
+
+        private void excluirCulto_Click(object sender, RoutedEventArgs e)
+        {
+            Modelos.Cultos cultoSelecionado = (Modelos.Cultos)GridListCultos.SelectedItem;
+            Controllers.CultoController cc = new Controllers.CultoController();
+            cc.Excluir(cultoSelecionado.Id);
+            MessageBox.Show("Culto excluído!");
+            GridListCultos.ItemsSource = cc.ListarTodosCultos();
         }
     }
 }
