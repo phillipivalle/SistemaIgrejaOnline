@@ -15,13 +15,21 @@ using System.Windows.Shapes;
 namespace IgrejaOnline.Views
 {
     /// <summary>
-    /// Lógica interna para ListaAdultos.xaml
+    /// Lógica interna para Saldos.xaml
     /// </summary>
-    public partial class ListaAdultos : Window
+    public partial class Saldos : Window
     {
-        public ListaAdultos()
+        public Saldos()
         {
             InitializeComponent();
+        }
+
+        
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //meramente ilustrativo
+            ValorDoExu.Content = "3.000.000.000";
         }
     }
 }

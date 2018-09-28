@@ -8,18 +8,14 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-  public  class CultoController
+  public  class CultoController : BaseController
     {
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
+       
 
-
-  public void inserirCulto(Cultos h)
+        public void inserirCulto(Cultos h)
         {
-            IgrejaBDContainer insericult = new IgrejaBDContainer();
-
-            insericult.CultosSet.Add(h);
-            insericult.SaveChanges();
-           
+            contexto.CultosSet.Add(h);
+            contexto.SaveChanges();  
         }
 
         public List<Cultos> ListarTodosCultos()

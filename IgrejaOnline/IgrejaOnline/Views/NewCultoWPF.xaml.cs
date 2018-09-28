@@ -17,7 +17,7 @@ namespace IgrejaOnline.Views
     /// <summary>
     /// Lógica interna para NewCultoWPF.xaml
     /// </summary>
-    public partial class NewCultoWPF : Window
+    public partial class NewCultoWPF : Window 
     {
         public NewCultoWPF()
         {
@@ -38,8 +38,8 @@ namespace IgrejaOnline.Views
             Controllers.PastorController pc = new Controllers.PastorController();
             pastorSelect.ItemsSource = pc.PesquisaNome();
         }
-      
 
+      
         private void btnMarcarCulto_Click(object sender, RoutedEventArgs e)
         {
 
@@ -50,19 +50,24 @@ namespace IgrejaOnline.Views
             
 
             Modelos.Cultos inserindoCulto = new Modelos.Cultos();
-            Modelos.Igrejas im = ic.pesquisaID(igrejaSelect.SelectedValue.ToString());
-            Modelos.Pastores pm = pc.pesquisaID(pastorSelect.SelectedValue.ToString());
+            //Modelos.Igrejas im = ic.pesquisaID(igrejaSelect.SelectedValue.ToString());
+            //Modelos.Pastores pm = pc.pesquisaID(pastorSelect.SelectedValue.ToString());
 
-            inserindoCulto.PastoresId = pm.Id;
-            inserindoCulto.Igrejas_ID = im.Id;
-
-            inserindoCulto.Igrejas = im;
-            inserindoCulto.Pastores = pm;
             
+            
+           inserindoCulto.Igrejas = ic.pesquisaID(igrejaSelect.SelectedValue.ToString()); 
+           inserindoCulto.Pastores = pc.pesquisaID(pastorSelect.SelectedValue.ToString());
+
+            inserindoCulto.Igrejas_ID = inserindoCulto.Igrejas.Id;
+            inserindoCulto.LocalCulto = inserindoCulto.Igrejas.NomeIgreja;
+
+            inserindoCulto.PastoresId = inserindoCulto.Pastores.Id;
+            inserindoCulto.PastorCulto = inserindoCulto.Pastores.Nome;
+
             inserindoCulto.DataCulto = Convert.ToDateTime(DataCultoBox.Text);
             inserindoCulto.HorarioCulto = boxHorario.Text;
-            inserindoCulto.LocalCulto = im.NomeIgreja ;
-            inserindoCulto.PastorCulto = pm.Nome;
+
+
 
             
             cc.inserirCulto(inserindoCulto);

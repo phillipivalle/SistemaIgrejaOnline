@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    public class PastorController
+    public class PastorController : BaseController
     {
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
+
 
         public void inserirPastor(Pastores e)
         {
@@ -55,6 +55,7 @@ namespace Controllers
                         select p;
             return lista.FirstOrDefault();
         }
+
 
 
         public Pastores buscarID(int id)

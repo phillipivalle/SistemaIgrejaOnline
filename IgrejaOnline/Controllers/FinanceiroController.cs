@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-   public class FinanceiroController
+   public class FinanceiroController : BaseController
     {
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
+    
 
       
        public void inserir(Financeiro g)
         {
+          
             contexto.FinanceiroSet.Add(g);
             contexto.SaveChanges();
+            
         }
 
 

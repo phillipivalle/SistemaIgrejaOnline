@@ -49,37 +49,7 @@ namespace IgrejaOnline.Views
             ListaMulheres ListMulheresDizimistas = new ListaMulheres();
             ListMulheresDizimistas.ShowDialog();
         }
-
-        private void FaixaCrianca_Click(object sender, RoutedEventArgs e)
-        {
-            ListaCrianças ListCrianca = new ListaCrianças();
-            ListCrianca.ShowDialog();
-        }
-
-        private void FaixaAdolescente_Click(object sender, RoutedEventArgs e)
-        {
-            ListAdolescentes ListAdolescente = new ListAdolescentes();
-            ListAdolescente.ShowDialog();
-        }
-
-        private void FaixaAdultos_Click(object sender, RoutedEventArgs e)
-        {
-            ListaAdultos ListAdultos = new ListaAdultos();
-            ListAdultos.ShowDialog();
-        }
-
-        private void FaixaIdosos_Click(object sender, RoutedEventArgs e)
-        {
-            ListaIdosos ListIdosos = new ListaIdosos();
-            ListIdosos.ShowDialog();
-        }
-
-        private void btnAniversariantes_Click(object sender, RoutedEventArgs e)
-        {
-            ListaAniversariantes ListNiver = new ListaAniversariantes();
-            ListNiver.ShowDialog();
-        }
-
+        
         private void btnNewPastor_Click(object sender, RoutedEventArgs e)
         {
             CadastroPastor CadastrandoPastor = new CadastroPastor();
@@ -128,11 +98,6 @@ namespace IgrejaOnline.Views
             ListaHorario.ShowDialog();
         }
 
-        private void btnSaldo_Click(object sender, RoutedEventArgs e)
-        {
-            SaldosWPF SaldoAtual = new SaldosWPF();
-            SaldoAtual.ShowDialog();
-        }
 
         private void btnCadastrarNovoUsuario_Click(object sender, RoutedEventArgs e)
         {
@@ -156,6 +121,12 @@ namespace IgrejaOnline.Views
         {
             DoacoesWPF Doacao = new DoacoesWPF();
             Doacao.ShowDialog();
+        }
+
+        private void btnSaldo_Click(object sender, RoutedEventArgs e)
+        {
+            Saldos saldoAtual = new Saldos();
+            saldoAtual.ShowDialog();
         }
     }
 }

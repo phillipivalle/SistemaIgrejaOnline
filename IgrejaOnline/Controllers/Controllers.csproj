@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseController.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CultoController.cs" />
     <Compile Include="DizimistaController.cs" />

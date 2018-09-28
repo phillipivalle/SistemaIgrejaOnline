@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    public class IgrejaController
+    public class IgrejaController : BaseController
     {
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
-
+        
         public void inserirIgreja(Igrejas f)
         {
             contexto.IgrejasSet.Add(f);
@@ -52,15 +51,6 @@ namespace Controllers
         }
 
    
-        //    // LINQ (https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-
-        //public Int16 pesquisaBosta(string nome)
-        //{
-        //    int k7 = from p in contexto.IgrejasSet
-        //             where p.NomeIgreja == nome
-                                 
-        //}
-
 
 
         public List<string> PesquisaNome()
@@ -72,16 +62,7 @@ namespace Controllers
 
 
       
-      //  public User PesquisaID(string nome) { 
-
-      //var lista = from ig in contexto.IgrejasSet
-      //    where ig.NomeIgreja == nome
-
-      //                  select ig.Id;
-      //      return lista.ToList();
-
-      //  }
-
+      
 
 
         public void Editar(int id, Igrejas NovosDadosIgrejas)

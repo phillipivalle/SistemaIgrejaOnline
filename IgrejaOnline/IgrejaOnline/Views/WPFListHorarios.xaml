@@ -42,14 +42,7 @@
                 <DataGridTextColumn Width="140" x:Name="ColumLocal" Binding="{Binding LocalCulto}" Header="Igreja"/>
                 <DataGridTextColumn Width="140" x:Name="ColumPastor" Binding="{Binding PastorCulto}" Header="Pastor"/>
 
-                <DataGridTemplateColumn x:Name="ColumEditar" Header="Editar">
-                    <DataGridTemplateColumn.CellTemplate >
-                        <DataTemplate>
-                            <Button  x:Name="editarCulto" Content="Editar" Click="editarCulto_Click"></Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
+               
                 <DataGridTemplateColumn x:Name="ColumExcluir" Header="Excluir">
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate>

@@ -16,7 +16,7 @@ namespace Modelos
     {
         public int Id { get; set; }
         public string SaldoTot { get; set; }
-        public decimal ValorDoado { get; set; }
+        public string ValorDoado { get; set; }
         public string DizimistaDoador { get; set; }
         public string IgrejaBeneficiada { get; set; }
     

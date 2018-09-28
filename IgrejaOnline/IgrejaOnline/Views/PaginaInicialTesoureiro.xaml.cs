@@ -26,16 +26,15 @@ namespace IgrejaOnline.Views
 
 
 
-        private void btnSaldo_Click(object sender, RoutedEventArgs e)
-        {
-            SaldosWPF SaldoTesoureiro = new SaldosWPF();
-            SaldoTesoureiro.ShowDialog();
-        }
-
         private void btnFazendoDoacao_Click(object sender, RoutedEventArgs e)
         {
             DoacoesWPF doacaoTesoureiro = new DoacoesWPF();
             doacaoTesoureiro.ShowDialog();
+        }
+
+        private void btnSaldo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

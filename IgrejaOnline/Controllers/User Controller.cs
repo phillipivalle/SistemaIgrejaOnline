@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    public class User_Controller
+    public class User_Controller : BaseController
     {
         //variavel conferindo senha e login
         //
         bool senhaSim, loginSim;
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
+        
 
         public bool verificarLogin(string log, string senha)
         {

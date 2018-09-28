@@ -76,7 +76,7 @@ namespace IgrejaOnline.Views
             newDizimista.Bandeira = bandeira;
 
             dc.Editar(newDizimista.Id, newDizimista);
-            MessageBox.Show("Cadastrado com sucesso!!!");
+            MessageBox.Show("Editado com sucesso!!!");
             this.Close();
             att.GridListDizimista.ItemsSource = dc.ListarTodosDizimistas();
             att.ShowDialog();

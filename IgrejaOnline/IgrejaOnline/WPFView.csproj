@@ -96,23 +96,8 @@
     <Compile Include="Views\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListaAdultos.xaml.cs">
-      <DependentUpon>ListaAdultos.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaAniversariantes.xaml.cs">
-      <DependentUpon>ListaAniversariantes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaCrianças.xaml.cs">
-      <DependentUpon>ListaCrianças.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListAdolescentes.xaml.cs">
-      <DependentUpon>ListAdolescentes.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ListaHomens.xaml.cs">
       <DependentUpon>ListaHomens.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaIdosos.xaml.cs">
-      <DependentUpon>ListaIdosos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaMulheres.xaml.cs">
       <DependentUpon>ListaMulheres.xaml</DependentUpon>
@@ -138,8 +123,8 @@
     <Compile Include="Views\PastorEdit.xaml.cs">
       <DependentUpon>PastorEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SaldosWPF.xaml.cs">
-      <DependentUpon>SaldosWPF.xaml</DependentUpon>
+    <Compile Include="Views\Saldos.xaml.cs">
+      <DependentUpon>Saldos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UsuariosCadastros.xaml.cs">
       <DependentUpon>UsuariosCadastros.xaml</DependentUpon>
@@ -203,27 +188,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ListaAdultos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListaAniversariantes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListaCrianças.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListAdolescentes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ListaHomens.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListaIdosos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,7 +224,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SaldosWPF.xaml">
+    <Page Include="Views\Saldos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

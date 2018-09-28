@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/20/2018 20:05:58
+-- Date Created: 09/27/2018 22:09:48
 -- Generated from EDMX file: C:\Users\Phillipi\Source\Repos\SistemaIgrejaOnline\IgrejaOnline\Modelos\IgrejaBD.edmx
 -- --------------------------------------------------
 
@@ -135,7 +135,7 @@ GO
 CREATE TABLE [dbo].[FinanceiroSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [SaldoTot] nvarchar(max)  NOT NULL,
-    [ValorDoado] decimal(18,0)  NOT NULL,
+    [ValorDoado] nvarchar(max)  NOT NULL,
     [DizimistaDoador] nvarchar(max)  NOT NULL,
     [IgrejaBeneficiada] nvarchar(max)  NOT NULL,
     [Dizimistas_Id] int  NOT NULL,

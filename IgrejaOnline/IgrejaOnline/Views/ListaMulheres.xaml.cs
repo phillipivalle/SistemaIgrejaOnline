@@ -23,5 +23,53 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
         }
+
+        private void GridListMulher_Loaded(object sender, RoutedEventArgs e)
+        {
+            Controllers.DizimistaController dc = new Controllers.DizimistaController();
+            GridListMulher.ItemsSource = dc.ListarDizimistasSexo("F");
+        }
+
+        private void EditaDizimista_Click(object sender, RoutedEventArgs e)
+        {
+            Modelos.Dizimistas DizimistaSelecionado = (Modelos.Dizimistas)GridListMulher.SelectedItem;
+
+
+
+            Controllers.DizimistaController dc = new Controllers.DizimistaController();
+            EditarDizimista newEdit = new EditarDizimista();
+            newEdit.boxID.Text = DizimistaSelecionado.Id.ToString();
+            newEdit.boxNome.Text = DizimistaSelecionado.Nome;
+            newEdit.boxCpf.Text = DizimistaSelecionado.CPF;
+            newEdit.sexo = DizimistaSelecionado.Sexo;
+            newEdit.BoxDataNascimento.Text = DizimistaSelecionado.DataNasci.ToString();
+            newEdit.boxEnd.Text = DizimistaSelecionado.Endereco;
+            newEdit.boxNum.Text = DizimistaSelecionado.Numero.ToString();
+            newEdit.boxBairro.Text = DizimistaSelecionado.Bairro;
+            newEdit.boxCEP.Text = DizimistaSelecionado.CEP;
+            newEdit.boxCidade.Text = DizimistaSelecionado.Cidade;
+            newEdit.boxUF.Text = DizimistaSelecionado.UF;
+            newEdit.boxNumCartao.Text = DizimistaSelecionado.NCartao;
+            newEdit.boxValidade.Text = DizimistaSelecionado.Validade.ToString();
+            newEdit.boxSeguranca.Text = DizimistaSelecionado.CodSeguranca;
+            newEdit.boxSalario.Text = DizimistaSelecionado.Salario.ToString();
+            newEdit.boxNomeCard.Text = DizimistaSelecionado.NomeImpresso;
+            newEdit.bandeira = DizimistaSelecionado.Bandeira;
+            this.Close();
+            newEdit.ShowDialog();
+
+
+
+        }
+
+        private void ExcluirDizimista_Click(object sender, RoutedEventArgs e)
+        {
+            Modelos.Dizimistas DizimistaSelecionado = (Modelos.Dizimistas)GridListMulher.SelectedItem;
+            Controllers.DizimistaController dc = new Controllers.DizimistaController();
+            dc.Excluir(DizimistaSelecionado.Id);
+            MessageBox.Show("Excluido com sucesso");
+            GridListMulher.ItemsSource = dc.ListarTodosDizimistas();
+
+        }
     }
 }

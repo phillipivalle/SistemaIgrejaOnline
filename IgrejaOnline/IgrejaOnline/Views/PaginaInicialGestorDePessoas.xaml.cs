@@ -55,35 +55,7 @@ namespace IgrejaOnline.Views
             GestorListaHomens.ShowDialog();
         }
 
-        private void btnAniversariantes_Click(object sender, RoutedEventArgs e)
-        {
-            ListaAniversariantes GestorListaNiver = new ListaAniversariantes();
-            GestorListaNiver.ShowDialog();
-        }
-
-        private void FaixaCrianca_Click(object sender, RoutedEventArgs e)
-        {
-            ListaCrianças GestorListaCrianca = new ListaCrianças();
-            GestorListaCrianca.ShowDialog();
-        }
-
-        private void FaixaAdolescente_Click(object sender, RoutedEventArgs e)
-        {
-            ListAdolescentes GestorListaAdolescente = new ListAdolescentes();
-            GestorListaAdolescente.ShowDialog();
-        }
-
-        private void FaixaAdultos_Click(object sender, RoutedEventArgs e)
-        {
-            ListaAdultos GestorListaAdulto = new ListaAdultos();
-            GestorListaAdulto.ShowDialog();
-        }
-
-        private void FaixaIdosos_Click(object sender, RoutedEventArgs e)
-        {
-            ListaIdosos GestorListaIdosos = new ListaIdosos();
-            GestorListaIdosos.ShowDialog();
-        }
+       
 
         private void btnNewPastor_Click(object sender, RoutedEventArgs e)
         {

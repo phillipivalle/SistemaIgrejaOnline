@@ -109,7 +109,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SaldoTot" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ValorDoado" Type="decimal" Nullable="false" />
+    <Property Name="ValorDoado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DizimistaDoador" Type="nvarchar(max)" Nullable="false" />
     <Property Name="IgrejaBeneficiada" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Dizimistas_Id" Type="int" Nullable="false" />
@@ -278,7 +278,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SaldoTot" Type="String" Nullable="false" />
-          <Property Name="ValorDoado" Type="Decimal" Nullable="false" />
+          <Property Name="ValorDoado" Type="String" Nullable="false" />
           <Property Name="DizimistaDoador" Type="String" Nullable="false" />
           <Property Name="IgrejaBeneficiada" Type="String" Nullable="false" />
           <NavigationProperty Name="Dizimistas" Relationship="IgrejaBD.DizimistasFinanceiro" FromRole="Financeiro" ToRole="Dizimistas" />

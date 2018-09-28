@@ -6,23 +6,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controllers
+namespace Controllers 
 {
 
-    public class DizimistaController
+    public class DizimistaController : BaseController
     {
-        IgrejaBDContainer contexto = new IgrejaBDContainer();
+     
 
         //inserindo dizimistas no banco
         public void inserirDizimista(Dizimistas fiel)
         {
     
-            {
+            
                 contexto.DizimistasSet.Add(fiel);
                 
                 contexto.SaveChanges();
 
-            }
+            
         }
 
     //listando todos dizimistas
@@ -43,15 +43,17 @@ namespace Controllers
         }
 
     //listando dizimistas crianças
-      public  List<Dizimistas> ListarDizimistasCrianca(int DataNasc)
-        {
-            DateTime hj = DateTime.Now;
+      //public  List<Dizimistas> ListarDizimistasCrianca()
+      //  {
+      //      DateTime hj = DateTime.Now;
 
-            var lista = from d in contexto.DizimistasSet
-                        where d.DataNasci < hj.AddYears(-12)
-                        select d;
-            return lista.ToList();
-        }
+      //      int ano = hj.Year;
+
+      //      var lista = from d in contexto.DizimistasSet
+      //                  where 
+      //                  select d;
+      //      return lista.ToList();
+      //  }
 
         //buscando por nome
        public Dizimistas BuscarPorNome(string nome)
@@ -59,12 +61,28 @@ namespace Controllers
             return contexto.DizimistasSet.Find(nome);
         }
 
+
+        public List<string> PesquisaNome()
+        {
+            var lista = from p in contexto.DizimistasSet
+                        select p.Nome;
+            return lista.ToList();
+        }
+
         //buscando por id
         public Dizimistas BuscarID(int id)
         {
-            return contexto.DizimistasSet.Find(id);
+
+         return  contexto.DizimistasSet.Find(id);
         }
 
+        public Dizimistas pesquisandoID(string nome)
+        {
+            var lista = from p in contexto.DizimistasSet
+                        where p.Nome == nome
+                        select p;
+            return lista.FirstOrDefault();
+        }
         //excluindo dizimista
       public  void Excluir(int id)
         {

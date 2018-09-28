@@ -32,12 +32,7 @@ namespace IgrejaOnline.Views
 
         }
 
-        private void editarCulto_Click(object sender, RoutedEventArgs e)
-        {
-            Modelos.Cultos cultoSelecionado = (Modelos.Cultos)GridListCultos.SelectedItem;
-            
-
-        }
+        
 
         private void excluirCulto_Click(object sender, RoutedEventArgs e)
         {

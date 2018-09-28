@@ -22,19 +22,10 @@
                     <MenuItem 
 x:Name="btnNovoDizimista" Header="Novo Dizimista" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-19,0" Width="195" Click="btnNovoDizimista_Click"/>
                     <MenuItem x:Name="btnConsulta" Header="Consultas" Background="#FF84B3BE" BorderBrush="#FF84B3BE" OpacityMask="#FF84B3BE" Margin="0,0,-26,0">
-                        <Menu x:Name="MenuConsultas" Height="78" VerticalAlignment="Top" Width="91" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
+                        <Menu x:Name="MenuConsultas" Height="49" VerticalAlignment="Top" Width="91" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
                             <MenuItem x:Name="btnTotalDizimistas" FlowDirection="LeftToRight" Header="Total" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTotalDizimistas_Click"/>
                             <MenuItem x:Name="btnTotHomens" FlowDirection="LeftToRight" Header="Homens" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTotHomens_Click"/>
                             <MenuItem x:Name="btnTotMulheres" FlowDirection="LeftToRight" Header="Mulheres" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTotMulheres_Click"/>
-                            <MenuItem x:Name="MenuFaixaEtaria" Header="Faixa Etária" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92">
-                                <Menu x:Name="MenuFaixa" Height="63" FlowDirection="LeftToRight" VerticalAlignment="Top" Width="76" Background="#FF84B3BE" BorderBrush="#FF84B3BE" FontFamily="Franklin Gothic Book">
-                                    <MenuItem x:Name="FaixaCrianca" FlowDirection="LeftToRight" Header="Crianças" BorderBrush="#FF84B3BE" Background="#FF84B3BE"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaCrianca_Click"/>
-                                    <MenuItem x:Name="FaixaAdolescente" FlowDirection="LeftToRight" Header="Adolescentes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaAdolescente_Click"/>
-                                    <MenuItem x:Name="FaixaAdultos" Header="Adultos" FlowDirection="LeftToRight" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaAdultos_Click"/>
-                                    <MenuItem x:Name="FaixaIdosos" FlowDirection="LeftToRight" Header="Idosos" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FaixaIdosos_Click"/>
-                                </Menu>
-                            </MenuItem>
-                            <MenuItem FlowDirection="LeftToRight"  x:Name="btnAniversariantes" Header="Aniversariantes" BorderBrush="#FF84B3BE" Background="#FF84B3BE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Click="btnAniversariantes_Click"/>
                         </Menu>
                     </MenuItem>
                 </MenuItem>

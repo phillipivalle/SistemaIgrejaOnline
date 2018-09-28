@@ -36,6 +36,7 @@ namespace IgrejaOnline.Views
                 uCad.Funcao = funcao;
                 uCad.Senha = boxSenhaUser.Password;
                 uc.inserirUser(uCad);
+                MessageBox.Show("Cadastrado com sucesso!");
             }
             else
             {

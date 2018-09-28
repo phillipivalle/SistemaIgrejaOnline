@@ -23,10 +23,7 @@ namespace IgrejaOnline.Views
         {
             InitializeComponent();
 
-            Controllers.DizimistaController dc = new Controllers.DizimistaController();
-            List<Modelos.Dizimistas> listaDizimista = new List<Modelos.Dizimistas>();
-
-            listaDizimista = dc.ListarTodosDizimistas();
+            
         }
 
         private void GridListDizimista_Loaded(object sender, RoutedEventArgs e)
